@@ -1,0 +1,145 @@
+.eqshop
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 32%)
+    grid-gap: 30px
+    justify-content: space-between
+  &__item
+    position: relative
+    display: block
+    border-radius: 20px
+    transition: .5s ease
+    &:hover
+      box-shadow: 0px 10px 10px rgba(2, 15, 25, 0.2)
+      &:before
+        opacity: 1
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      display: block
+      top: 0
+      left: 0
+      background: linear-gradient(0deg, rgba(2, 15, 25, 0.7), rgba(2, 15, 25, 0.7))
+      border-radius: 20px
+      position: absolute
+      transition: .5s ease
+      opacity: .8
+  &__pic
+    width: 100%
+    vertical-align: middle
+  &__caption
+    position: absolute
+    +fs(24px)
+    font-weight: 600
+    color: $c2
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    display: block
+    text-align: center
+    width: 100%
+  &__elems
+    margin-top: 3rem
+    display: grid
+    justify-content: space-between
+    grid-template-columns: repeat(6, 15%)
+    grid-gap: 30px
+  &__elem
+    position: relative
+    display: block
+    border-radius: 20px
+    transition: .5s ease
+    &:hover
+      box-shadow: 0px 10px 10px rgba(2, 15, 25, 0.2)
+      &:before
+        opacity: 1
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      display: block
+      top: 0
+      left: 0
+      background: linear-gradient(0deg, rgba(2, 15, 25, 0.7), rgba(2, 15, 25, 0.7))
+      border-radius: 20px
+      position: absolute
+      transition: .5s ease
+      opacity: .8
+    &_more
+      background: $c4
+      &:before
+        content: none
+      &:hover
+        background: $c5
+  &__holder
+    position: absolute
+    +fs(20px)
+    font-weight: 600
+    color: $c2
+    bottom: 20px
+    left: 0
+    display: flex
+    align-items: center
+    text-align: center
+    width: 100%
+    padding: 0 20px
+    box-sizing: border-box
+    height: 64px
+    justify-content: center
+  &__icon
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -70%)
+
+.eqrest
+  &__list
+    display: grid
+    grid-template-columns: repeat(6, 15%)
+    grid-gap: 30px
+    justify-content: space-between
+  &__item
+    position: relative
+    display: block
+    border-radius: 20px
+    transition: .5s ease
+    &:hover
+      box-shadow: 0px 10px 10px rgba(2, 15, 25, 0.2)
+      &:before
+        opacity: 1
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      display: block
+      top: 0
+      left: 0
+      background: linear-gradient(0deg, rgba(2, 15, 25, 0.7), rgba(2, 15, 25, 0.7))
+      border-radius: 20px
+      position: absolute
+      transition: .5s ease
+      opacity: .8
+    &_more
+      background: $c4
+      &:before
+        content: none
+      &:hover
+        background: $c5
+  &__pic
+    width: 100%
+    vertical-align: middle
+  &__caption
+    position: absolute
+    +fs(24px)
+    font-weight: 600
+    color: $c2
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    display: block
+    text-align: center
+    width: 100%
+    padding: 0 3rem
+    box-sizing: border-box
+    line-height: 1.4

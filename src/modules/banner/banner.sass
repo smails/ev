@@ -1,0 +1,78 @@
+.banner
+  margin: 3rem 0
+  & + .prodcat
+    margin-top: 3rem
+  &__slide
+    padding: 3rem 3rem 3rem 6rem
+    box-sizing: border-box
+    background: $c9
+    border-radius: 30px
+    transform: scale(.9)
+    transition: all .5s ease
+    &:before
+      content: ''
+      display: block
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: #ECF3F9
+      border-radius: 30px
+      transition: .2s ease
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &__title
+    margin: 3rem 0
+  &__sign
+    +fs(20px)
+    font-weight: 500
+    color: $c5
+  &__list
+    display: grid
+    grid-template-columns: repeat(2, 290px)
+    grid-gap: 20px 30px
+    margin-top: 4.5rem
+  &__item
+    line-height: 1.4
+    padding-left: 28px
+    background-image: url(../icon/icon-check.svg)
+    background-repeat: no-repeat
+    background-position: left center
+  &__control
+    display: flex
+    align-items: center
+    margin-top: 4.5rem
+  &__btn
+    width: 264px
+    margin-right: 5rem
+  .slick-slide
+    height: 500px
+    &.slick-active
+      .banner__slide
+        transform: scale(1)
+        &:before
+          opacity: 0
+      & + .slick-slide
+        .banner__slide
+          &:before
+            background: #F7F7F7
+  .slick-arrow
+    transform: translateY(-100%)
+    &:before
+      content: ''
+      width: 100px
+      height: 100px
+      background: rgba(255, 255, 255, 0.5)
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      border-radius: 100%
+      z-index: -1
+  .slick-prev
+    left: 9vw
+  .slick-next
+    right: 9vw

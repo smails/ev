@@ -1,0 +1,45 @@
+.prodcat
+  &__list
+    display: grid
+    margin-top: 3rem
+    &_five
+      grid-template-columns: repeat(5, 18.5%)
+      grid-gap: 30px
+    &_six
+      grid-template-columns: repeat(6, 15.1%)
+      grid-auto-rows: 256px
+      grid-gap: 30px
+  &__item
+    display: block
+    background: #F7F7F7
+    border: 2px solid transparent
+    border-radius: 30px
+    box-sizing: border-box
+    transition: .5s ease
+    text-align: center
+    padding: 2rem
+    display: flex
+    justify-content: space-between
+    flex-flow: column
+    &:hover
+      border-color: $c4
+    &_big
+      grid-row-start: 1
+      grid-column-start: 5
+      grid-row-end: 3
+      grid-column-end: 7
+  &__pic
+    max-width: 100%
+    vertical-align: middle
+  &__caption
+    +fs(20px)
+    font-weight: 700
+    line-height: 1.35
+    margin-top: 0.6rem
+    height: 54px
+    display: flex
+    justify-content: center
+    align-items: center
+    &_big
+      +fs(30px)
+      margin-top: 3rem

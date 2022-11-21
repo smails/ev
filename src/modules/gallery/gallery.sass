@@ -1,0 +1,28 @@
+.gallery
+  &__list
+    display: grid
+    margin-top: 3rem
+    grid-auto-rows: 230px
+    grid-gap: 30px
+    &_top
+      grid-template-columns: 1fr repeat(3, 21.9%)
+    &_bottom
+      grid-template-columns: repeat(3, 21.9%) 1fr
+  &__item
+    &_first
+      grid-row-start: 1
+      grid-row-end: 3
+      grid-column-start: 1
+      grid-column-end: 2
+    &_last
+      grid-row-start: 1
+      grid-row-end: 3
+      grid-column-start: 4
+      grid-column-end: 5
+  &__control
+    display: flex
+    justify-content: center
+    margin-top: 3rem
+  &__pic
+    vertical-align: middle
+    width: 100%

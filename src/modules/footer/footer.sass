@@ -1,0 +1,98 @@
+.footer
+  padding: 7rem 0 4rem
+  background: $c3
+  &__inner
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__logo
+    margin-right: 5vw
+  &__wrap
+    flex-grow: 1
+  &__nav
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 4rem
+  &__col
+    padding-right: 3rem
+    margin-right: 3rem
+    box-sizing: border-box
+    border-right: 2px solid $c10
+    flex-grow: .3
+  &__cation
+    font-weight: 700
+    margin-bottom: 3rem
+  &__item
+    margin-bottom: 1rem
+    line-height: 1.4
+  &__grid
+    display: grid
+    grid-template-columns: repeat(2, 200px)
+  &__sign
+    line-height: 1.4
+  &__info
+    max-width: 280px
+    box-sizing: border-box
+  &__phone
+    padding-left: 30px
+    background-image: url(../icon/icon-phone.svg)
+    background-repeat: no-repeat
+    background-position: left top
+    background-size: 14px
+    font-weight: 700
+    a
+      transition: .5s ease
+      margin-bottom: 1.2rem
+      display: block
+      &:hover
+        color: $c4
+  &__map
+    padding-left: 30px
+    background-image: url(../icon/icon-map.svg)
+    background-repeat: no-repeat
+    background-position: left top
+    margin-bottom: 1.2rem
+    display: block
+    line-height: 1.4
+  &__time
+    padding-left: 30px
+    background-image: url(../icon/icon-clock.svg)
+    background-repeat: no-repeat
+    background-position: left center
+    background-size: 14px
+    display: block
+    margin-bottom: 1.2rem
+    span
+      display: inline-block
+      width: 1px
+      height: 16px
+      margin: 0 .6rem 0 .3rem
+      background: $c4
+      vertical-align: middle
+  &__mail
+    padding-left: 30px
+    background-image: url(../icon/icon-mail.svg)
+    background-repeat: no-repeat
+    background-position: left center
+    background-size: 14px
+    transition: .5s ease
+    display: block
+    margin-bottom: 1.2rem
+    &:hover
+      color: $c4
+  &__call
+    margin-top: 2.8rem
+    +fs(16px)
+    padding: 11px 20px
+
+.copyright
+  padding: 13px 0
+  background: $c4
+  color: $c5
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__link
+    font-weight: 700

@@ -1,0 +1,178 @@
+.header
+  overflow: hidden
+  &__top
+    padding: 1.25rem 0
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: calc((100vw - 1690px) / -2)
+      width: calc(100vw - 9px)
+      height: 100%
+      background: $c3
+      display: block
+      z-index: -1
+      +screen('max', 1690)
+        left: -20px
+  &__left
+    display: flex
+    align-items: center
+  &__logo
+    display: block
+    margin-right: 3rem
+  &__map
+    padding-left: 30px
+    color: $c5
+    background-image: url(../icon/icon-map.svg)
+    background-repeat: no-repeat
+    background-position: left center
+    background-size: contain
+    margin-right: 5rem
+  &__time
+    padding-left: 30px
+    background-image: url(../icon/icon-clock.svg)
+    background-repeat: no-repeat
+    background-position: left center
+    background-size: contain
+    span
+      display: inline-block
+      width: 1px
+      height: 16px
+      margin: 0 .6rem 0 .3rem
+      background: $c4
+      vertical-align: middle
+  &__mail
+    padding-left: 30px
+    background-image: url(../icon/icon-mail.svg)
+    background-repeat: no-repeat
+    background-position: left center
+    background-size: contain
+    transition: .5s ease
+    &:hover
+      color: $c4
+  &__phone
+    padding-left: 30px
+    background-image: url(../icon/icon-phone.svg)
+    background-repeat: no-repeat
+    background-position: left center
+    background-size: contain
+    transition: .5s ease
+    margin-left: 5rem
+    font-weight: 700
+    &:hover
+      color: $c4
+  &__call
+    margin: 0 3rem
+    +fs(16px)
+    padding: 11px 20px
+  &__middle
+    margin: 2rem 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__control
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  &__nav
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: calc((100vw - 1690px) / -2)
+      width: calc(100vw - 9px)
+      height: 100%
+      background: $c4
+      display: block
+      z-index: -1
+      +screen('max', 1690)
+        left: -20px
+  &__list
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-grow: 1
+    padding-left: 5rem
+  &__item
+    margin-bottom: 0
+  &__link
+    color: $c2
+    transition: .5s ease
+    &:hover
+      color: $c1
+  &__catalog
+    padding: 1rem 3.8rem
+    color: $c2
+    background: $c5
+    font-weight: 700
+    cursor: pointer
+    display: flex
+    align-items: center
+    &:hover
+      path
+        stroke: $c4
+    svg
+      margin-right: 2rem
+      vertical-align: middle
+    path
+      transition: .5s ease
+  &__search
+    flex-grow: 1
+  &__field
+    border: 2px solid $c10
+    padding: 8px 44px
+    width: 100%
+    border-radius: 100px
+    display: block
+    transition: .5s ease
+    background-image: url(../icon/icon-search.svg)
+    background-position: 10px center
+    background-repeat: no-repeat
+    &::placeholder
+      color: #AEAEAE
+    &:hover
+      border-color: $c5
+    &:focus
+      border-color: $c4
+.basket-mini
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  &:hover
+    .basket-mini__count
+      background: $c7
+    .basket-mini__total
+      color: $c5
+    path
+      fill: $c5
+  &__info
+    position: relative
+    path
+      transition: .5s ease
+  &__count
+    text-align: center
+    +fs(10px)
+    font-weight: 700
+    color: $c2
+    width: 20px
+    height: 20px
+    border-radius: 100%
+    background: $c4
+    line-height: 20px
+    position: absolute
+    top: -8px
+    right: -8px
+    transition: .5s ease
+  &__total
+    font-weight: 700
+    margin-left: 1.5rem
+    transition: .5s ease
+    cursor: default
