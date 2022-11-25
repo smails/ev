@@ -1,17 +1,30 @@
 .clients
   background: $c3
   padding: 7rem 0
+  +screen('max', 600)
+    padding: 4.25rem 0
   &__list
     display: grid
     grid-template-columns: repeat(6, 15%)
     grid-auto-rows: 128px
-    grid-gap: 30px
+    grid-gap: 1.55vw
     justify-content: space-between
+    +screen('max', 1200)
+      grid-template-columns: repeat(5, 18%)
+    +screen('max', 1023)
+      grid-template-columns: repeat(4, 23%)
+    +screen('max', 600)
+      grid-template-columns: repeat(2, 47%)
+      grid-gap: 20px
+      grid-auto-rows: 74px
   &__item
     background: $c2
     display: flex
     justify-content: center
     align-items: center
+    border-radius: 15px
+    padding: 10px
+    box-sizing: border-box
   &__pic
     vertical-align: middle
     max-width: 100%

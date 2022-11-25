@@ -5,20 +5,42 @@
   box-sizing: border-box
   border: 2px solid $c3
   border-radius: 30px
+  +screen('max', 1023)
+    text-align: center
+  +screen('max', 600)
+    padding: 4rem 3rem
   &_text-white
     color: $c2
   &_type-1
     border: none
-    background: linear-gradient(0deg, rgba(2, 15, 25, 0.6), rgba(2, 15, 25, 0.6)), url(../img/bg-call-1.png)
-    background-repeat: no-repeat
-    background-position: center
+    background: linear-gradient(0deg, rgba(2, 15, 25, 0.6), rgba(2, 15, 25, 0.6)), url(../img/bg-call-1.png) center/cover no-repeat
+    +screen('max', 600)
+      background: linear-gradient(0deg, rgba(2, 15, 25, 0.6), rgba(2, 15, 25, 0.6)), url(../img/bg-call-1--mobile.png) center/cover no-repeat
+      padding: 6rem 3rem
+  &__title
+    +screen('max', 600)
+      margin-bottom: 3rem
   &__sign
     margin-top: 1rem
+    max-width: 73%
+    line-height: 1.4
+    +screen('max', 1023)
+      max-width: 100%
+    +screen('max', 600)
+      +fs(12px)
   &__btn
     position: absolute
     top: 50%
     transform: translateY(-50%)
     right: 8vw
+    +screen('max', 1200)
+      right: 4vw
+    +screen('max', 1023)
+      position: relative
+      top: 0
+      right: 0
+      transform: translateY(0%)
+      margin-top: 3rem
 
 .action
   &__box
@@ -29,30 +51,44 @@
     margin: 0 auto
     padding: 7rem
     box-sizing: border-box
+    +screen('max', 600)
+      padding: 4.25rem 2.95rem
   &__title
     margin-bottom: 4rem
+    +screen('max', 600)
+      margin-bottom: 2.9rem
   &__wrap
     display: flex
     align-items: flex-start
     justify-content: space-between
     gap: 40px
+    +screen('max', 600)
+      display: block
   &__info
     width: 48%
     text-align: right
+    +screen('max', 600)
+      width: 100%
   &__sign
     line-height: 1.4
     margin-bottom: 4rem
     text-align: left
     max-width: 375px
+    +screen('max', 600)
+      +fs(12px)
   &__pic
     max-width: 100%
     vertical-align: middle
+    +screen('max', 600)
+      display: none
   &__form
     width: 50%
+    +screen('max', 600)
+      width: 100%
   &__field
-    margin-bottom: 3rem
+    margin-bottom: 30px
   &__checkbox
-    margin-bottom: 3rem
+    margin-bottom: 30px
     display: block
   &__btn
     display: block

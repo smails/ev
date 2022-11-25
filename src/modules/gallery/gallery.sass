@@ -2,18 +2,26 @@
   &__list
     display: grid
     margin-top: 3rem
-    grid-auto-rows: 230px
-    grid-gap: 30px
+    grid-gap: 1.55vw
+    +screen('max', 600)
+      grid-gap: 20px
     &_top
       grid-template-columns: 1fr repeat(3, 21.9%)
+      +screen('max', 600)
+        grid-template-columns: repeat(2, 47%)
     &_bottom
       grid-template-columns: repeat(3, 21.9%) 1fr
+      +screen('max', 600)
+        display: none
   &__item
     &_first
       grid-row-start: 1
       grid-row-end: 3
       grid-column-start: 1
       grid-column-end: 2
+      +screen('max', 600)
+        grid-column-start: 1
+        grid-column-end: 3
     &_last
       grid-row-start: 1
       grid-row-end: 3

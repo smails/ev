@@ -1,23 +1,16 @@
 //- mixins
 include ../modules/products/prodcat
 include ../modules/callback/callback
+include ../static/pug/breadcrumb
 include ../static/pug/head
 
-+head('Главная')
+
++head('Каталог торгового оборудования')
 body
   +header()
-  include ../modules/banner/banner
-  +prodcat()
-  include ../modules/popular/popular-mini
-  include ../modules/equipment/shop
-  include ../modules/equipment/restaurant
-  include ../modules/why/why
-  include ../modules/about/index
+  +breadcrumb(['Главная', 'Каталог торгового оборудования'], 'Каталог торгового оборудования')
+  include ../modules/catalog/list
   include ../modules/callback/form
-  include ../modules/clients/clients
-  +callback('2')
-  include ../modules/gallery/gallery
-  include ../modules/review/review
   +b.content-text.section
     +e.inner.inner
       +e.txt 

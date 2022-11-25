@@ -11,22 +11,42 @@ $('.banner').slick({
   cssEase: 'cubic-bezier(0.770, 0.000, 0.175, 1.000)',
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 1500,
       settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
+        centerPadding: '180px',
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 1400,
       settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
+        centerPadding: '150px',
       }
-    }
+    },
+    {
+      breakpoint: 1300,
+      settings: {
+        centerPadding: '110px',
+      }
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        centerPadding: '50px',
+      }
+    },
+    {
+      breakpoint: 1023,
+      settings: {
+        centerPadding: '20px',
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        centerPadding: '0',
+        arrows: false,
+      }
+    },
   ]
 });

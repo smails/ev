@@ -3,14 +3,27 @@
     display: grid
     margin-top: 3rem
     &_five
-      grid-template-columns: repeat(5, 18.5%)
-      grid-gap: 30px
+      grid-template-columns: repeat(5, 18.6%)
+      grid-gap: 1.55vw
+      +screen('max', 1023)
+        grid-template-columns: repeat(3, 32%)
+      +screen('max', 600)
+        grid-template-columns: repeat(2, 47%)
+        grid-gap: 20px
     &_six
-      grid-template-columns: repeat(6, 15.1%)
+      grid-template-columns: repeat(6, 15.2%)
       grid-auto-rows: 256px
-      grid-gap: 30px
+      grid-gap: 1.55vw
+      +screen('max', 1200)
+        grid-template-columns: repeat(5, 18.6%)
+        grid-auto-rows: 220px
+      +screen('max', 1023)
+        grid-template-columns: repeat(3, 32%)
+      +screen('max', 600)
+        grid-template-columns: repeat(2, 47%)
+        grid-gap: 20px
+        justify-content: center
   &__item
-    display: block
     background: #F7F7F7
     border: 2px solid transparent
     border-radius: 30px
@@ -21,16 +34,38 @@
     display: flex
     justify-content: space-between
     flex-flow: column
+    position: relative
+    +screen('max', 600)
+      background: none
+      border: none
+      padding: 0
     &:hover
       border-color: $c4
     &_big
       grid-row-start: 1
-      grid-column-start: 5
       grid-row-end: 3
+      grid-column-start: 5
       grid-column-end: 7
+      +screen('max', 1200)
+        grid-row-start: auto
+        grid-row-end: auto
+        grid-column-start: auto
+        grid-column-end: auto
+    picture
+      +screen('max', 600)
+        background: #F7F7F7
+        border: 2px solid transparent
+        border-radius: 30px
+        box-sizing: border-box
+        padding: 25px
+        display: block
   &__pic
     max-width: 100%
     vertical-align: middle
+    +screen('max', 1200)
+      max-width: 120px
+    +screen('max', 600)
+      max-width: 100px
   &__caption
     +fs(20px)
     font-weight: 700
@@ -40,6 +75,14 @@
     display: flex
     justify-content: center
     align-items: center
+    +screen('max', 1500)
+      +fs(18px)
+    +screen('max', 1200)
+      +fs(16px)
+    +screen('max', 600)
+      margin-top: 1rem
     &_big
       +fs(30px)
       margin-top: 3rem
+      +screen('max', 1200)
+        +fs(16px)

@@ -1,23 +1,30 @@
 html
   font-size: 10px
+  +screen('max', 1300)
+    font-size: 7px
 body
   font-size: 16px
   font-weight: 400
   font-family: $font-family
   color: $c1
   line-height: 1
+  +screen('max', 1300)
+    font-size: 14px
+  +screen('max', 600)
+    font-size: 16px
 
 .inner
   max-width: 1690px
   width: 100%
   padding: 0 20px
   margin: 0 auto
-  +screen('max', 1690)
+  +screen('max', 1730)
     box-sizing: border-box
 
 .section
   margin: 7rem 0
-
+  +screen('max', 600)
+    margin: 4.25rem 0
 .slick-arrow
   position: absolute
   top: 50%
@@ -68,3 +75,15 @@ body
       display: block
       cursor: pointer
       transition: .5s ease
+
+.breadcrumb
+  margin: 3rem 0 20px
+  &__link
+    position: relative
+    line-height: 1
+    &:after
+      content: '/'
+      color: #AEAEAE
+      padding: 0 10px
+    a
+      color: #AEAEAE
