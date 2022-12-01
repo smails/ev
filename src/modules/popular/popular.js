@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import 'slick-carousel'
 
+
 $('.popular-mini__list').slick({
   slidesToShow: 5,
   speed: 700,
@@ -36,21 +37,16 @@ $('.popular-cat__list').slick({
   cssEase: 'cubic-bezier(0.770, 0.000, 0.175, 1.000)',
   responsive: [
     {
-      breakpoint: 1300,
+      breakpoint: 1023,
       settings: {
         slidesToShow: 3
       }
     },
     {
-      breakpoint: 1023,
-      settings: {
-        slidesToShow: 2
-      }
-    },
-    {
       breakpoint: 600,
       settings: {
-        arrows: false
+        arrows: false,
+        slidesToShow: 2
       }
     },
   ]

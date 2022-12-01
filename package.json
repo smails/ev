@@ -47,6 +47,8 @@
   },
   "dependencies": {
     "jquery": "^3.6.1",
+    "nouislider": "^15.6.1",
+    "select2": "^4.1.0-rc.0",
     "slick-carousel": "^1.8.1"
   }
 }

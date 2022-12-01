@@ -1,17 +1,17 @@
 //- mixins
-include ../modules/products/prodcat
 include ../modules/callback/callback
 include ../modules/callback/form
+include ../modules/search/search
 include ../static/pug/breadcrumb
 include ../static/pug/head
 
 
-+head('Каталог торгового оборудования')
++head('Поиск')
 body
   +header()
-  +breadcrumb(['Главная', 'Каталог торгового оборудования'], 'Каталог торгового оборудования')
-  include ../modules/catalog/list
-  +form()
+  +breadcrumb(['Главная', 'Поиск'], 'Поиск')
+  +search('full')
+  +form('Не нашли, что искали?')
   +b.content-text.section
     +e.inner.inner
       +e.txt 

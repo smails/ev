@@ -1,13 +1,13 @@
 .eqshop
   &__list
     display: grid
-    grid-template-columns: repeat(3, 32%)
+    grid-template-columns: repeat(3, 1fr)
     grid-gap: 1.55vw
     justify-content: space-between
     +screen('max', 1023)
-      grid-template-columns: repeat(2, 49%)
+      grid-template-columns: repeat(2, 1fr)
     +screen('max', 600)
-      grid-template-columns: repeat(1, 100%)
+      grid-template-columns: repeat(1, 1fr)
       grid-gap: 20px
       grid-auto-rows: 100px
   &__item
@@ -57,12 +57,12 @@
     margin-top: 3rem
     display: grid
     justify-content: space-between
-    grid-template-columns: repeat(6, 15%)
+    grid-template-columns: repeat(6, 1fr)
     grid-gap: 1.55vw
     +screen('max', 1023)
-      grid-template-columns: repeat(3, 32%)
+      grid-template-columns: repeat(3, 1fr)
     +screen('max', 600)
-      grid-template-columns: repeat(2, 49%)
+      grid-template-columns: repeat(2, 1fr)
       display: none
   &__elem
     position: relative
@@ -135,13 +135,13 @@
 .eqrest
   &__list
     display: grid
-    grid-template-columns: repeat(6, 15%)
+    grid-template-columns: repeat(6, 1fr)
     grid-gap: 1.55vw
     justify-content: space-between
     +screen('max', 1023)
-      grid-template-columns: repeat(4, 24%)
+      grid-template-columns: repeat(4, 1fr)
     +screen('max', 600)
-      grid-template-columns: repeat(1, 100%)
+      grid-template-columns: repeat(1, 1fr)
       grid-gap: 20px
       grid-auto-rows: 100px
   &__item

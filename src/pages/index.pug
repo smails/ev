@@ -1,6 +1,7 @@
 //- mixins
 include ../modules/products/prodcat
 include ../modules/callback/callback
+include ../modules/callback/form
 include ../static/pug/head
 
 +head('Главная')
@@ -13,7 +14,7 @@ body
   include ../modules/equipment/restaurant
   include ../modules/why/why
   include ../modules/about/index
-  include ../modules/callback/form
+  +form()
   include ../modules/clients/clients
   +callback('2')
   include ../modules/gallery/gallery

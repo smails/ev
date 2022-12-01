@@ -1,16 +1,15 @@
 //- mixins
-include ../modules/products/prodcat
 include ../modules/callback/callback
 include ../modules/callback/form
 include ../static/pug/breadcrumb
 include ../static/pug/head
 
 
-+head('Каталог торгового оборудования')
++head('Торговые стеллажи')
 body
   +header()
-  +breadcrumb(['Главная', 'Каталог торгового оборудования'], 'Каталог торгового оборудования')
-  include ../modules/catalog/list
+  +breadcrumb(['Главная', 'Каталог торгового оборудования', 'Торговые стеллажи'], 'Торговые стеллажи')
+  include ../modules/products/list
   +form()
   +b.content-text.section
     +e.inner.inner
