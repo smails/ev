@@ -15,6 +15,7 @@
     height: 100%
     +screen('max', 600)
       padding: 1.45rem
+      border-radius: 15px
     &_sale
       border-color: #FB4D3D
   &__top
@@ -82,6 +83,10 @@
   .slick-slide
     margin-right: 3rem
     height: 404px
+    opacity: .2
+    transition: .3s ease .2s
+    &.slick-active
+      opacity: 1
     +screen('max', 1300)
       height: 370px
     +screen('max', 600)
@@ -145,6 +150,7 @@
       padding: 2rem 1.5rem 3rem
     +screen('max', 600)
       padding: 1.45rem
+      border-radius: 10px
     &_sale
       border-color: #FB4D3D
   &__top
@@ -212,6 +218,10 @@
   .slick-slide
     margin-right: 3rem
     height: 404px
+    opacity: .2
+    transition: .3s ease .2s
+    &.slick-active
+      opacity: 1
     +screen('max', 1600)
       height: 356px
     +screen('max', 1200)

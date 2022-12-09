@@ -53,7 +53,7 @@
     background-repeat: no-repeat
     background-position: left center
     background-size: 14px
-    transition: .5s ease
+    transition: .3s ease
     &:hover
       color: $c4
   &__phone
@@ -62,7 +62,7 @@
     background-repeat: no-repeat
     background-position: left center
     background-size: 14px
-    transition: .5s ease
+    transition: .3s ease
     margin-left: 5rem
     font-weight: 700
     +screen('max', 1300)
@@ -111,7 +111,7 @@
     margin-bottom: 0
   &__link
     color: $c2
-    transition: .5s ease
+    transition: .3s ease
     &:hover
       color: $c1
   &__catalog
@@ -129,16 +129,17 @@
       margin-right: 2rem
       vertical-align: middle
     path
-      transition: .5s ease
+      transition: .3s ease
   &__search
     flex-grow: 1
+    position: relative
   &__field
     border: 2px solid $c10
     padding: 8px 44px
     width: 100%
     border-radius: 100px
     display: block
-    transition: .5s ease
+    transition: .3s ease
     background-image: url(../icon/icon-search.svg)
     background-position: 10px center
     background-repeat: no-repeat
@@ -148,6 +149,15 @@
       border-color: $c5
     &:focus
       border-color: $c4
+  &__reset
+    position: absolute
+    top: 50%
+    right: 15px
+    background: none
+    transform: translateY(-50%)
+    display: none
+    cursor: pointer
+
 .basket-mini
   display: flex
   align-items: center
@@ -162,7 +172,7 @@
   &__info
     position: relative
     path
-      transition: .5s ease
+      transition: .3s ease
   &__count
     text-align: center
     +fs(10px)
@@ -176,11 +186,11 @@
     position: absolute
     top: -8px
     right: -8px
-    transition: .5s ease
+    transition: .3s ease
   &__total
     font-weight: 700
     margin-left: 1.5rem
-    transition: .5s ease
+    transition: .3s ease
     cursor: default
 
 .header-mobile
@@ -207,7 +217,7 @@
     width: 20px
     height: 16px
     position: relative
-    transition: .5s ease-in-out
+    transition: .3s ease-in-out
     cursor: pointer
     background: none
     margin-right: 2rem
@@ -254,3 +264,177 @@
     background-position: center
     background-size: contain
     margin-right: 3vw
+
+.menu-fix
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 9
+  width: 100%
+  padding: 2rem 0
+  background: $c2
+  visibility: hidden
+  transform: translateY(-200%)
+  transition: .3s linear
+  border-bottom: 1px solid $c10
+  +screen('max', 1200)
+    display: none
+  &.view
+    visibility: visible
+    transform: translateY(0%)
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__left
+    display: flex
+    align-items: center
+  &__catalog
+    margin: 0 3rem
+    padding: 8px 9px
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    width: 120px
+    border-radius: 10px
+    background: $c4
+    color: $c2
+    font-weight: 700
+    cursor: pointer
+    transition: .3s ease
+    &:hover
+      background: $c5
+      .menu-fix__icon
+        background: $c4
+  &__icon
+    flex-shrink: 0
+    padding: 6px 4.5px
+    box-sizing: border-box
+    display: inline-block
+    background: $c5
+    border-radius: 5px
+    margin-right: 10px
+    max-width: 24px
+    transition: .3s ease
+  &__search
+    position: relative
+    width: 40px
+    height: 40px
+  &__open-search
+    position: absolute
+    top: 50%
+    left: 10px
+    transform: translateY(-45%)
+    width: 20px
+    height: 18px
+    background-image: url(../icon/icon-search.svg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    z-index: 4
+    cursor: pointer
+  &__search-action
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 810px
+    z-index: 3
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    visibility: hidden
+    opacity: 0
+    transition: .3s linear
+    &.view
+      width: 43vw
+      visibility: visible
+      opacity: 1
+  &__field
+    border: 2px solid $c10
+    padding: 8px 44px
+    width: 100%
+    border-radius: 100px
+    display: block
+    transition: .3s ease
+    &::placeholder
+      color: #AEAEAE
+    &:hover
+      border-color: $c5
+    &:focus
+      border-color: $c4
+  &__close
+    margin-left: 3rem
+    cursor: pointer
+    transition: .3s ease
+    &:hover
+      color: $c4
+  &__middle
+    margin: 0 1.5vw 0 1.2vw
+    flex-grow: 1
+    &.hidden
+      opacity: 0
+  &__list
+    display: flex
+    align-items: center
+    position: relative
+  &__hidden
+    display: flex
+    align-items: center
+    +screen('max', 1500)
+      display: block
+  &__item
+    margin: 0 1vw
+    &_last
+      display: none
+      +screen('max', 1500)
+        display: block
+    &_hidden
+      +screen('max', 1500)
+        margin-bottom: 2.2rem
+        text-align: center
+  &__link
+    transition: .3s ease
+    &:hover, &.active
+      color: $c4
+  &__right
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  &__call
+    margin: 0 3rem
+    +fs(16px)
+    padding: 11px 20px
+    flex-shrink: 0
+  &__act
+    display: block
+    margin-bottom: .5rem
+    font-weight: 700
+    +fs(16px)
+    text-align: right
+  &__hidden
+    +screen('max', 1500)
+      position: absolute
+      background: $c2
+      box-shadow: 0px 0px 50px rgba(51, 51, 51, 0.1)
+      border-radius: 5px
+      right: 0
+      top: 150%
+      padding: 20px 30px 0
+      box-sizing: border-box
+      display: none
+  &__open-nav
+    height: 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: none
+    cursor: pointer
+  &__reset
+    position: absolute
+    top: 50%
+    right: 110px
+    background: none
+    transform: translateY(-50%)
+    display: none
+    cursor: pointer

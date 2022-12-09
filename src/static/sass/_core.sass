@@ -45,13 +45,27 @@ body
     background-size: contain
     position: relative
     z-index: 1
+    border-radius: 100%
+    transition: .5s ease
 
 .slick-prev
   &:after
+    background-color: $c4
     background-image: url(../icon/icon-arrow-prev.svg)
+  &:hover
+    &:after
+      background-color: $c5
+      box-shadow: 0px 0px 50px rgba(238, 238, 238, 0.5)
+      background-image: url(../icon/icon-arrow-prev.svg)
 .slick-next
   &:after
+    background-color: $c4
     background-image: url(../icon/icon-arrow-next.svg)
+  &:hover
+    &:after
+      background-color: $c5
+      box-shadow: 0px 0px 50px rgba(238, 238, 238, 0.5)
+      background-image: url(../icon/icon-arrow-next.svg)
 
 .slick-dots
   display: flex
@@ -74,7 +88,7 @@ body
       background: #EAEAEA
       display: block
       cursor: pointer
-      transition: .5s ease
+      transition: .3s ease
 
 .breadcrumb
   margin: 3rem 0 20px

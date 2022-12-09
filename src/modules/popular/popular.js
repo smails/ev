@@ -4,9 +4,8 @@ import 'slick-carousel'
 
 $('.popular-mini__list').slick({
   slidesToShow: 5,
-  speed: 700,
+  speed: 300,
   useTransform: true,
-  cssEase: 'cubic-bezier(0.770, 0.000, 0.175, 1.000)',
   responsive: [
     {
       breakpoint: 1300,
@@ -24,7 +23,6 @@ $('.popular-mini__list').slick({
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
-        arrows: false
       }
     },
   ]
@@ -32,9 +30,8 @@ $('.popular-mini__list').slick({
 
 $('.popular-cat__list').slick({
   slidesToShow: 4,
-  speed: 700,
+  speed: 300,
   useTransform: true,
-  cssEase: 'cubic-bezier(0.770, 0.000, 0.175, 1.000)',
   responsive: [
     {
       breakpoint: 1023,
@@ -45,7 +42,6 @@ $('.popular-cat__list').slick({
     {
       breakpoint: 600,
       settings: {
-        arrows: false,
         slidesToShow: 2
       }
     },

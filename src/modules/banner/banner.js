@@ -6,7 +6,7 @@ $('.banner').slick({
   centerPadding: '240px',
   slidesToShow: 1,
   dots: true,
-  speed: 700,
+  speed: 300,
   useTransform: true,
   cssEase: 'cubic-bezier(0.770, 0.000, 0.175, 1.000)',
   responsive: [
