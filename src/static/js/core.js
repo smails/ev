@@ -42,3 +42,13 @@ $('.toogle-text').click(function(e){
     $(this).text('Читать далее....')
   }
 })
+
+$('.toogle-more').click(function(e){
+  e.preventDefault();
+  $(this).prev().slideToggle();
+  if($(this).text().trim() == 'Показать еще'){
+    $(this).text('Свернуть')
+  } else{
+    $(this).text('Показать еще')
+  }
+})

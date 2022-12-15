@@ -9,10 +9,10 @@ include ../callback/callback-card
         +e.IMG.slide-main(src='/img/product--slide-1.png' alt='')
         +e.IMG.slide-main(src='/img/product--slide-1.png' alt='')
       +e.slider-thumb
-        +e.IMG.slide-main(src='/img/product--slide-1.png' alt='')
-        +e.IMG.slide-main(src='/img/product--slide-1.png' alt='')
-        +e.IMG.slide-main(src='/img/product--slide-1.png' alt='')
-        +e.IMG.slide-main(src='/img/product--slide-1.png' alt='')
+        +e.IMG.slide-thumb(src='/img/product--slide-1.png' alt='')
+        +e.IMG.slide-thumb(src='/img/product--slide-1.png' alt='')
+        +e.IMG.slide-thumb(src='/img/product--slide-1.png' alt='')
+        +e.IMG.slide-thumb(src='/img/product--slide-1.png' alt='')
     +e.content
       +e.H1.title Овощной стеллаж с зеркальным фризом и подсветкой полок
       +e.P.art Артикул: ПС001
@@ -24,7 +24,8 @@ include ../callback/callback-card
         +e.A.calc.btn_orange.js-open-modal(href="#calc") Рассчитать стоимость?
         +e.BUTTON.add.btn-outline_green В корзину
       +b.select-size
-        +e.P.title Размеры высота x ширина x глубина, см
+        +e.P.title Размеры 
+          span высота x ширина x глубина, см
         select(name="size")
           option(value="225 x 65 x 40-30-30-30-30") 225 x 65 x 40-30-30-30-30
           option(value="225 x 65 x 40-30-30-30-30") 225 x 65 x 40-30-30-30-30
@@ -42,7 +43,7 @@ include ../callback/callback-card
           +e.BUTTON.btn(data-color="3000")
             +e.IMG.pic(src='/img/color-main-3.png' alt='')
           +e.BUTTON.more
-            +e.IMG.pic(src='/icon/icon-plus.svg' alt='')
+            +e.IMG.more-pic(src='/icon/icon-plus.svg' alt='')
       +b.colrs
         +e.P.title Цвет отделки: 
           span H1424 ST22
@@ -54,7 +55,7 @@ include ../callback/callback-card
           +e.BUTTON.btn(data-color=" H1424 ST40")
             +e.IMG.pic(src='/img/color-finish-3.png' alt='')
           +e.BUTTON.more
-            +e.IMG.pic(src='/icon/icon-plus.svg' alt='')
+            +e.IMG.more-pic(src='/icon/icon-plus.svg' alt='')
       +e.A.call.js-open-modal(href="#call") Заказать изготовление по индивидуальным размерам
 
 +b.product-info
@@ -67,7 +68,7 @@ include ../callback/callback-card
           p Используется для выкладки продуктов питания и непродовольственных товаров. Фриз стеллажа пристенного можно использовать для размещения бренда продукции, рекламы товара, важной информации.
           .hidden
             p В целом, конечно, начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации инновационных методов управления процессами. А также непосредственные участники технического прогресса будут превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Но разбавленное изрядной долей эмпатии, рациональное мышление предопределяет высокую востребованность модели развития... 
-          a(href="#" class="toogle-text bold") Показать еще
+          a(href="#" class="toogle-more bold") Показать еще
       +e.line
         +e.H2.title Характеристики
         +e.P.sign Покраска в любой цвет и комбинации цветов
@@ -92,7 +93,7 @@ include ../callback/callback-card
             tr
               th Наименование параметра
               th Ширина, мм
-              th Ширина, мм
+              th Глубина, мм
               th Высота, мм
           tbody
             tr
@@ -120,10 +121,13 @@ include ../callback/callback-card
               td 1326
               td 300-800
               td 1100-2900
-        +e.H3.caption Габаритные размеры
-        +e.IMG.scheme(src='/img/scheme-1.jpg' alt='')
-        +e.H3.caption Допустимые нагрузки на полку и стеллаж
-        +e.IMG.scheme(src='/img/scheme-1.jpg' alt='')
+        +e.line
+          +e.H3.caption.text-center Габаритные размеры
+          +e.IMG.scheme(src='/img/scheme-1.jpg' alt='')
+        +e.line
+          +e.H3.caption.text-center Допустимые нагрузки на полку и стеллаж
+          +e.IMG.scheme(src='/img/scheme-1.jpg' alt='')
         +e.BUTTON.rollup.btn-outline_green Свернуть все размеры
         +call_card('Замер')
+        include ../hall/hall
     +e.right

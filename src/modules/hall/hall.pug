@@ -1,0 +1,37 @@
++b.hall
+  +e.inner.inner
+    +e.H2.title Наш выставочный зал
+    +e.P.sign.sign-box Посетите наш выставочный зал! Он находится по адресу: Москва, Нижняя Первомайская ул., 43а, Офис 1
+    +e.list
+      - for(var i = 0; i < 5; i++){
+        if i == 0
+          +e.item_first
+            +e.IMG.pic_big(src='/img/gallery-'+ i +'.png' alt='')
+        else if i == 4
+          +e.item_last(data-sign="+10")
+            +e.IMG.pic(src='/img/gallery-'+ i +'.png' alt='')
+        else
+          +e.item
+            +e.IMG.pic(src='/img/gallery-'+ i +'.png' alt='')
+      - }
+
++b.conditions
+  +e.inner.inner
+    +e.H2.title Условия доставки
+    +e.P.sign Мы осуществляем доставку по всей России и СНГ. Наши менеджеры помогут организовать доставку в Ваш регион!
+    +e.list
+      +e.item
+        +e.P.caption Москва и до 10 км от МКАД
+        +e.P.text От 6500 рублей. 
+          br
+          | Стоимость уточняйте у менеджеров
+      +e.item
+        +e.P.caption Россия и СНГ
+        +e.P.text Транспортными компаниями. 
+          br
+          | Расчитаем и организуем.
+      +e.item
+        +e.P.caption Самовывоз
+        +e.P.text Бесплатно. 
+          br
+          | с 9:00 до 17:00 г. Электросталь

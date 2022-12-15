@@ -9,6 +9,11 @@ body
   +header()
   +breadcrumb(['Главная', 'Каталог торгового оборудования', 'Торговые стеллажи', 'Овощной стеллаж с зеркальным фризом и подсветкой полок'], 'Овощной стеллаж с зеркальным фризом и подсветкой полок')
   include ../modules/products/single-1
+  include ../modules/staff/staff
+  include ../modules/interest/interest
+  +callback('3')
+  include ../modules/viewed/viewed
+  include ../modules/clients/clients-mini
   +b.content-text.section
     +e.inner.inner
       +e.txt 

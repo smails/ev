@@ -43,3 +43,26 @@ $('.catalog-nav__more').click((elem) => {
     elem.target.textContent = 'Показать все'
   }
 })
+
+
+$('.product-main__slider-main').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  fade: true,
+  asNavFor: '.product-main__slider-thumb'
+});
+$('.product-main__slider-thumb').slick({
+  slidesToShow: 8,
+  slidesToScroll: 1,
+  asNavFor: '.product-main__slider-main',
+  arrows: true,
+  focusOnSelect: true
+});
+
+$('.select-size select').select2({
+  minimumResultsForSearch: Infinity,
+  width: 'style',
+  selectOnClose: true,
+  dropdownParent: $('select').parent(),
+})

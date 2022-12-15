@@ -95,3 +95,31 @@
   &__btn
     display: block
     width: 100%
+
+.call-card
+  padding: 7rem 8rem 7rem 0
+  width: 100%
+  box-sizing: border-box
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: calc((100vw - 1690px) / -2)
+    width: calc((100% + ((100vw - 1690px) / 2)))
+    height: 100%
+    background: $c6
+    display: block
+    z-index: -1
+    border-radius: 0px 20px 20px 0px
+  &__inner
+    display: flex
+    align-items: center
+  &__content
+    margin-left: 3vw
+  &__title
+    margin-bottom: 3rem
+  &__text
+    line-height: 1.4
+    margin-bottom: 3rem
+  
