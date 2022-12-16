@@ -1,0 +1,34 @@
+.staff
+  &__inner
+    max-width: 1536px
+  &__title
+    margin-bottom: 2rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 3.1vw
+  &__item
+    text-align: center
+    border: 2px solid $c3
+    border-radius: 20px
+    padding: 5rem 4.5rem
+    box-sizing: border-box
+  &__pic
+    max-width: 239px
+    max-height: 239px
+    border-radius: 100%
+    border: 2px solid $c3
+    box-sizing: border-box
+  &__caption
+    +fs(20px)
+    font-weight: 700
+    margin-top: 2.7rem
+    line-height: 1.5
+  &__phone
+    +fs(26px)
+    color: $c4
+    margin-top: 2.7rem
+    transition: .3s ease
+    display: inline-block
+    &:hover
+      color: $c5

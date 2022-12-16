@@ -5,6 +5,7 @@
     &_five
       grid-template-columns: repeat(5, 1fr)
       grid-gap: 1.55vw
+      grid-auto-rows: calc(100vw / 5.5)
       +screen('max', 1023)
         grid-template-columns: repeat(3, 1fr)
       +screen('max', 600)
@@ -12,7 +13,7 @@
         grid-gap: 7.2vw
     &_six
       grid-template-columns: repeat(6, 1fr)
-      grid-auto-rows: 256px
+      grid-auto-rows: calc(100vw / 6.5)
       grid-gap: 1.55vw
       +screen('max', 1200)
         grid-template-columns: repeat(5, 1fr)
@@ -63,8 +64,12 @@
     vertical-align: middle
     &_big
       max-width: 414px
+      +screen('max', 1500)
+        max-width: 350px
     &_middle
       max-width: 208px
+      +screen('max', 1500)
+        max-width: 170px
     &_small
       max-width: 120px
     +screen('max', 1200)
@@ -81,7 +86,7 @@
     justify-content: center
     align-items: center
     +screen('max', 1500)
-      +fs(18px)
+      +fs(15px)
     +screen('max', 1200)
       +fs(16px)
     +screen('max', 600)
@@ -89,6 +94,8 @@
     &_big
       +fs(30px)
       margin-top: 3rem
+      +screen('max', 1500)
+        +fs(25px)
       +screen('max', 1200)
         +fs(16px)
 
@@ -494,3 +501,5 @@
     display: block
     max-width: 305px
     margin: 0 auto
+  &__caption
+    margin-bottom: 2rem
