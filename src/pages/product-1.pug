@@ -2,6 +2,7 @@
 include ../modules/callback/callback
 include ../static/pug/breadcrumb
 include ../static/pug/head
+include ../modules/viewed/viewed
 
 
 +head('Овощной стеллаж с зеркальным фризом и подсветкой полок')
@@ -12,7 +13,7 @@ body
   include ../modules/staff/staff
   include ../modules/interest/interest
   +callback('2')
-  include ../modules/viewed/viewed
+  +viewed()
   include ../modules/clients/clients-mini
   +b.content-text.section
     +e.inner.inner

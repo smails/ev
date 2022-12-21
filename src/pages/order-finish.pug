@@ -1,0 +1,13 @@
+//- mixins
+include ../static/pug/breadcrumb
+include ../static/pug/head
+
+
++head('Оформление заказа')
+body
+  +header()
+  +breadcrumb(['Главная', 'Оформление заказа'], 'Оформление заказа')
+  include ../modules/order/finish
+  include ../modules/interest/interest
+  include ../modules/footer/footer
+  include ../static/pug/scripts

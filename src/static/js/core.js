@@ -52,3 +52,24 @@ $('.toogle-more').click(function(e){
     $(this).text('Показать еще')
   }
 })
+
+
+$(document).on('click', '.number__btn_plus', function () {
+  const val = parseInt($(this).prev().val());
+  if (val < 999) {
+    $(this).prev().val(val + 1);
+  }
+});
+$(document).on('click', '.number__btn_minus', function () {
+  const val = parseInt($(this).next().val());
+  if (val > 1) {
+    $(this).next().val(val - 1);
+  }
+});
+$(document).on('keyup', '.number__field', function () {
+  this.value = this.value.replace(/[^0-9]/, '');
+  const val = parseInt($(this).val());
+  if (val > 999) {
+    $(this).val(999);
+  }
+});

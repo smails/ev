@@ -36,8 +36,7 @@
       grid-column-start: 1
       grid-column-end: 2
       +screen('max', 600)
-        grid-column-end: 3
-        grid-row-end: 4
+        display: none
     &_last
       &:before
         opacity: 1
@@ -49,7 +48,7 @@
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
-        color: #fff
+        color: $c2
         z-index: 3
         line-height: .95
   &__pic
@@ -67,16 +66,32 @@
     margin-bottom: 2rem
   &__sign
     margin-bottom: 2rem
+    line-height: 1.5
+    +screen('max', 600)
+      +fs(12px)
   &__list
-    display: grid
-    grid-template-columns: repeat(3, 1fr)
+    display: flex
+    flex-wrap: wrap
   &__item
     border: 1px solid $c3
+    box-sizing: border-box
+    width: 33%
+    +screen('max', 600)
+      width: 50%
+    &:last-of-type
+      +screen('max', 600)
+        width: 100%
   &__caption
     background: $c6
     color: #929292
     font-weight: 700
     padding: 2.7rem 2rem
+    +screen('max', 600)
+      +fs(10px)
+      padding: 1rem
   &__text
     padding: 5.5rem 2rem
     line-height: 1.4
+    +screen('max', 600)
+      +fs(10px)
+      padding: 1rem

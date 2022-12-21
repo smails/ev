@@ -202,7 +202,7 @@
   left: 0
   border-radius: 20px
   padding: 20px
-  background: #fff
+  background: $c2
   transition: .3s ease
   +screen('max', 1023)
     padding: 10px
@@ -313,15 +313,24 @@
     border-radius: 10px
 
 .product-main
+  +screen('max', 600)
+    overflow: hidden
   &__inner
     display: flex
     justify-content: space-between
     align-items: flex-start
     gap: 15px
-  &__slider
+    +screen('max', 600)
+      display: block
+  &__pictures
     max-width: 915px
     flex-shrink: 0
     width: 55%
+    +screen('max', 600)
+      width: 100%
+      height: 228px
+    .slick-slide
+      height: auto
     .slick-list
       max-width: 815px
       margin: 0 auto
@@ -337,6 +346,14 @@
       background-repeat: no-repeat
       background-position: center
       right: 0
+    &_full
+      max-width: 100%
+      width: 100%
+  &__slider-thumb
+    +screen('max', 600)
+      display: none
+  &__slide-main
+    max-width: 100%
   &__slide-thumb
     width: 100%
     border-radius: 10px
@@ -344,12 +361,18 @@
     margin-top: 4rem
   &__content
     max-width: 610px
+    +screen('max', 600)
+      margin-top: 1.3rem
   &__title
     +fs(26px)
     font-weight: 400
+    +screen('max', 600)
+      +fs(18px)
   &__art
     color: #929292
     margin-top: 2rem
+    +screen('max', 600)
+      +fs(12px)
   &__prices
     display: flex
     align-items: flex-end
@@ -359,14 +382,14 @@
     font-weight: 600
     margin-right: 2rem
     +screen('max', 600)
-      +fs(22px)
+      +fs(24px)
   &__old-price
     position: relative
     +fs(26px)
     color: #B9BCC1
     position: relative
     +screen('max', 600)
-      display: none
+      +fs(18px)
     &:before
       content: ''
       width: 100%
@@ -377,23 +400,66 @@
       left: 0
       transform: rotate(176.03deg) translateY(-30%)
   &__mgcall
-    margin-top: 1rem
+    margin-top: 10px
     text-decoration-line: underline
     color: #929292
     display: inline-block
+    +screen('max', 600)
+      +fs(12px)
   &__control
     display: flex
     align-items: center
     margin-top: 2rem
+    +screen('max', 1200)
+      display: block
   &__add
     margin-left: 2rem
     color: $c1
+    +screen('max', 1200)
+      margin-left: 0
+      margin-top: 2rem
+    +screen('max', 600)
+      width: 100%
   &__call
     padding: .4rem 1.3rem
     background: $c3
     border-radius: 5px
     margin-top: 3rem
     display: inline-block
+    +screen('max', 600)
+      display: none
+  &__clrs-popup
+    width: 100vw
+    left: -20px
+    padding: 15px 0
+    background-image: url(../img/colrs-mobile.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    position: relative
+    text-align: center
+    font-weight: 700
+    color: $c2
+    margin-top: 4rem
+    +screen('min', 600)
+      display: none
+  &__calc
+    +screen('max', 600)
+      width: 100%
+  &__allgallery
+    display: block
+    max-width: 305px
+    margin: 0 auto
+  &__img
+    width: 100%
+    max-width: 1000px
+    margin-bottom: 3rem
+  &__line
+    display: grid
+    grid-gap: 30px
+    justify-content: space-between
+    grid-template-columns: repeat(2, 1fr)
+    max-width: 1000px
 
 .select-size
   margin-top: 2rem
@@ -404,6 +470,8 @@
       color: #929292
 
 .colrs
+  +screen('max', 600)
+    display: none
   &__title
     margin: 1rem 0 3rem
   &__list
@@ -417,7 +485,7 @@
     align-items: center
     border-radius: 100%
     margin-right: 0.5rem
-    background: #fff
+    background: $c2
     cursor: pointer
     transition: .3s ease
     &.active
@@ -434,7 +502,7 @@
     display: flex
     justify-content: center
     align-items: center
-    background: #fff
+    background: $c2
     border-radius: 100%
   &__more-pic
     vertical-align: middle
@@ -445,24 +513,37 @@
   margin-top: 4rem
   &__inner
     display: flex
-    align-items: flex-start
+    gap: 30px
   &__left
     width: 65%
     max-width: 1050px
     flex-shrink: 0
+    +screen('max', 1200)
+      max-width: 100%
+      width: 100%
+  &__right
+    +screen('max', 1200)
+      display: none
   &__line
     margin-bottom: 3rem
+    &_desck
+      +screen('max', 600)
+        display: none
   &__title
     margin-bottom: 2rem
   &__text
     line-height: 1.4
     max-width: 690px
+    +screen('max', 600)
+      +fs(12px)
     p
       margin-bottom: 2rem
     .hidden
       display: none
   &__sign
     margin-bottom: 2rem
+    +screen('max', 600)
+      +fs(12px)
   &__list
     max-width: 690px
   &__item
@@ -471,6 +552,8 @@
     padding: .8rem 1.4rem
     line-height: 1.5
     margin-bottom: 0
+    +screen('max', 600)
+      +fs(10px)
     &:nth-of-type(2n + 1)
       background: #fbfbf3
     p
@@ -482,6 +565,8 @@
     color: $c4
     margin-top: 2rem
     background: none
+    +screen('max', 600)
+      +fs(12px)
   &__table
     margin-bottom: 3rem
     td,th
@@ -493,6 +578,12 @@
       color: #929292
     td
       padding: 1rem 1.2rem
+      a
+        text-decoration: underline
+    &.center
+      th, td
+        &:not(&:first-of-type)
+          text-align: center
   &__scheme
     max-width: 100%
     margin: 0 auto
@@ -501,5 +592,124 @@
     display: block
     max-width: 305px
     margin: 0 auto
+  &__viewtable
+    display: block
+    max-width: 305px
+    margin: 0 auto
   &__caption
     margin-bottom: 2rem
+  &__sticky
+    position: sticky
+    top: 110px
+
+.type-coldsupply
+  margin-top: 3rem
+  &__title
+    margin-bottom: 2rem
+  &__control
+    display: flex
+  &__btn
+    padding: 10px 20px
+    background: $c2
+    border: 2px solid #EAEAEA
+    border-radius: 10px
+    box-sizing: border-box
+    margin-right: 2rem
+    display: flex
+    align-items: center
+    transition: border .3s ease
+    cursor: pointer
+    svg
+      margin-right: 1rem
+    .fill
+      fill: $c1
+      transition: .3s ease
+    .stroke
+      stroke: $c1
+      transition: .3s ease
+    &:hover
+      border-color: $c4
+    &.active
+      border-color: $c4
+      .fill
+        fill: $c4
+      .stroke
+        stroke: $c4
+
+.additionally
+  margin-top: 3rem
+  position: relative
+  &__title
+    margin-bottom: 3rem
+  &__buttons
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 1.55vw
+    grid-auto-rows: 80px
+  &__btn
+    font-weight: 700
+    padding: 1.8rem 3.1vw
+    box-sizing: border-box
+    background: $c2
+    border: 1px solid $c3
+    border-radius: 10px
+    transition: .3s ease
+    display: flex
+    align-items: center
+    text-align: left
+    cursor: pointer
+    svg
+      margin-right: 1rem
+      vertical-align: middle
+      flex-shrink: 0
+    path
+      fill: $c4
+      transition: .3s ease
+    .hidden
+      opacity: 0
+    &.active
+      color: $c2
+      background: $c4
+      border-color: $c4
+      g
+        opacity: 0
+      .hidden
+        opacity: 1
+      path
+        fill: $c2
+  &__call
+    position: absolute
+    bottom: 10px
+    right: 0
+
+.option-repair
+  &__title
+    margin-bottom: 3rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 1.55vw
+    grid-auto-rows: 364px
+    +screen('max', 1500)
+      grid-auto-rows: 440px
+  &__item
+    background: $c2
+    border: 1px solid $c3
+    border-radius: 10px
+    padding: 3rem
+    box-sizing: border-box
+    display: flex
+    align-items: flex-start
+    gap: 1.55vw
+  &__pic
+    width: 150px
+    flex-shrink: 0
+  &__caption
+    +fs(20px)
+    font-weight: 700
+    margin-bottom: 2rem
+    line-height: 1.4
+    margin-top: 1rem
+  &__text
+    line-height: 1.4
+    color: #929292

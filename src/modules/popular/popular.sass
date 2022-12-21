@@ -4,8 +4,10 @@
   +screen('max', 600)
     padding: 4.25rem 0
   &_nostyle
-      padding: 0
-      background: none
+    padding: 0
+    background: none
+  &_mb7
+    margin-bottom: 7rem
   &__inner
     max-width: 1537px
   &__item
@@ -92,6 +94,8 @@
       opacity: 1
     +screen('max', 1300)
       height: 370px
+    +screen('max', 1023)
+      height: 320px
     +screen('max', 600)
       height: 260px
       margin-right: 1.45rem

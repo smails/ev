@@ -57,7 +57,7 @@ $('.product-main__slider-thumb').slick({
   slidesToScroll: 1,
   asNavFor: '.product-main__slider-main',
   arrows: true,
-  focusOnSelect: true
+  focusOnSelect: true,
 });
 
 $('.select-size select').select2({
@@ -65,4 +65,8 @@ $('.select-size select').select2({
   width: 'style',
   selectOnClose: true,
   dropdownParent: $('select').parent(),
+})
+
+$('.additionally__btn').click(function () {
+  $(this).toggleClass('active')
 })

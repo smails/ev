@@ -1,8 +1,8 @@
 include ../callback/callback-card
-
+include ../callback/form-equipment
 +b.product-main
   +e.inner.inner
-    +e.slider
+    +e.pictures
       +e.slider-main
         +e.IMG.slide-main(src='/img/product--slide-1.png' alt='')
         +e.IMG.slide-main(src='/img/product--slide-1.png' alt='')
@@ -20,6 +20,7 @@ include ../callback/callback-card
         +e.new-price 3 924 руб.
         +e.old-price 25 851
       +e.A.mgcall(href="#") Оптовые цены уточняйте у менеджеров
+      +e.BUTTON.clrs-popup Любые цвета
       +e.control
         +e.A.calc.btn_orange.js-open-modal(href="#calc") Рассчитать стоимость?
         +e.BUTTON.add.btn-outline_green В корзину
@@ -131,3 +132,4 @@ include ../callback/callback-card
         +call_card('Замер')
         include ../hall/hall
     +e.right
+      +form-eq('sticky')

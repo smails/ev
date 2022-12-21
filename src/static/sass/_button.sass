@@ -54,3 +54,33 @@
 .toogle-more
   color: $c4
   display: inline-block
+
+.number
+  background: $c2
+  border: 2px solid $c3
+  border-radius: 30px
+  width: 130px
+  height: 45px
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  &__btn
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    cursor: pointer
+    user-select: none
+    path
+      transition: .3s ease
+    &:hover
+      path
+        fill: $c7
+    &_minus
+      left: 25px
+    &_plus
+      right: 25px
+  &__field
+    font-weight: 700
+    text-align: center
+    width: 30px
