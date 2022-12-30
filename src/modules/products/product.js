@@ -70,3 +70,12 @@ $('.select-size select').select2({
 $('.additionally__btn').click(function () {
   $(this).toggleClass('active')
 })
+
+$('.addoption__btn input').change(function(){
+  if ($(this).is(":checked")) {
+    $(this).parent().addClass('active')
+  }
+  else {
+    $(this).parent().removeClass('active')
+  }
+});

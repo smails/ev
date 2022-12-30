@@ -5,7 +5,7 @@
     &_five
       grid-template-columns: repeat(5, 1fr)
       grid-gap: 1.55vw
-      grid-auto-rows: calc(100vw / 5.5)
+      // grid-auto-rows: calc(100vw / 5.5)
       +screen('max', 1023)
         grid-template-columns: repeat(3, 1fr)
       +screen('max', 600)
@@ -13,7 +13,7 @@
         grid-gap: 7.2vw
     &_six
       grid-template-columns: repeat(6, 1fr)
-      grid-auto-rows: calc(100vw / 6.5)
+      // grid-auto-rows: calc(100vw / 6.5)
       grid-gap: 1.55vw
       +screen('max', 1200)
         grid-template-columns: repeat(5, 1fr)
@@ -260,7 +260,6 @@
     position: relative
     +fs(18px)
     color: #595959
-    position: relative
     +screen('max', 600)
       display: none
     &:before
@@ -439,6 +438,7 @@
     position: relative
     text-align: center
     font-weight: 700
+    display: block
     color: $c2
     margin-top: 4rem
     +screen('min', 600)
@@ -504,6 +504,7 @@
     align-items: center
     background: $c2
     border-radius: 100%
+    box-sizing: border-box
   &__more-pic
     vertical-align: middle
     width: 16px

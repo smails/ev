@@ -73,3 +73,49 @@ $(document).on('keyup', '.number__field', function () {
     $(this).val(999);
   }
 });
+
+$('.js-open-modal').click((e) => {
+  e.preventDefault();
+  $('.modal').hide();
+  const modal = e.target.getAttribute('href') != null ? e.target.getAttribute('href') : e.target.parentElement.getAttribute('href');
+  $(`[data-modal="${modal.substring(1)}"]`).fadeIn();
+});
+
+$('.js-close-modal').click((e) => {
+  $('.modal').hide();
+});
+
+$('.js-open-popup').click((e) => {
+  e.preventDefault();
+  $('.popup').fadeIn();
+});
+
+$('.js-close-popup').click((e) => {
+  $('.popup').hide();
+});
+
+
+$('.addoption__call').click(function () {
+  $('.addoption__steps').css( 'left', '-100%');
+  $('.addoption__step').first().css('opacity', '0');
+  $('.addoption__step').last().css('opacity', '1');
+  $('.modal__back').addClass('step');
+  $('[data-modal="addparam"]').find('.modal__title').text('Заполните форму');
+})
+$('.addoption__back').click(function () {
+  $('.addoption__steps').css( 'left', '0%');
+  $('.addoption__step').first().css('opacity', '1');
+  $('.addoption__step').last().css('opacity', '0');
+  $('[data-modal="addparam"]').find('.modal__title').text('Выберите дополнительные опции');
+})
+
+$('.modal__back').click(function () {
+  $('.addoption__steps').css( 'left', '0%');
+  $('.addoption__step').first().css('opacity', '1');
+  $('.addoption__step').last().css('opacity', '0');
+  $('[data-modal="addparam"]').find('.modal__title').text('Выберите дополнительные опции');
+  if(!$(this).hasClass('step')){
+    $('.modal').hide();
+  }
+})
+

@@ -438,3 +438,249 @@
     transform: translateY(-50%)
     display: none
     cursor: pointer
+
+.catalog-menu
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(2, 15, 25, 0.8)
+  z-index: 9999
+  display: none
+  &.open
+    .catalog-menu__container
+      opacity: 1
+      visibility: visible
+      transform: translateX(0%)
+  &__container
+    display: inline-flex
+    position: relative
+    width: 100%
+    max-width: 1243px
+    height: 100%
+    transform: translateX(-100%)
+    opacity: 0
+    visibility: hidden
+    transition: .3s ease
+  &__close
+    transition: .3s ease
+    z-index: 3
+    cursor: pointer
+    &.open
+      position: absolute
+      left: calc(100% + 20px)
+      +screen('max', 1200)
+        left: 97%
+      path
+        stroke: $c2
+  &__small
+    max-width: 303px
+    width: 30%
+    flex-shrink: 0
+    background: $c2
+    +screen('max', 1200)
+      max-width: 220px
+  &__head
+    padding: 3rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+    box-sizing: border-box
+    border-bottom: 2px solid $c3
+  &__big
+    border-left: 2px solid $c3
+    padding: 3rem 5rem
+    box-sizing: border-box
+    width: 74%
+    max-width: 940px
+    background: $c2
+    display: none
+  &__nav
+    padding: 3rem 3.8rem 3rem 3rem
+    box-sizing: border-box
+  &__item
+    margin-bottom: 2rem
+  &__link
+    font-weight: 700
+    transition: .5s ease
+    line-height: 1.25
+  &__mobile-move
+    +screen('min', 600)
+      display: none
+  &__mobile-title
+    +screen('min', 600)
+      display: none
+  &__boxes
+    margin-top: 3rem
+  &__box
+    display: none
+  &__info
+    position: relative
+
+.search-cat
+  position: relative
+  &.noempty
+    .search-cat__field
+      border-color: transparent
+  &__field
+    border: 2px solid $c10
+    padding: 8px 44px
+    width: 100%
+    border-radius: 100px
+    display: block
+    transition: .3s ease
+    background-image: url(../icon/icon-search.svg)
+    background-position: 10px center
+    background-repeat: no-repeat
+    position: relative
+    background-color: $c2
+    z-index: 2
+    &::placeholder
+      color: #AEAEAE
+    &:hover
+      border-color: $c5
+    &:focus
+      border-color: $c4
+  &__reset
+    position: absolute
+    top: 50%
+    right: 15px
+    background: none
+    transform: translateY(-50%)
+    display: none
+    cursor: pointer
+    z-index: 3
+  &__result
+    padding: 5px
+    box-sizing: border-box
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    background: $c2
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25)
+    border-radius: 25px
+    padding-top: 45px
+    box-sizing: border-box
+    transition: .3s ease
+  &__item
+    display: flex
+    align-items: center
+    padding: 8px 12px
+    transition: .3s ease
+    border-radius: 10px
+    &:hover
+      background: $c3
+  &__icon
+    vertical-align: middle
+    width: 48px
+    height: 48px
+  &__content
+    margin-left: 1rem
+  &__nav
+    margin-top: 1rem
+    +fs(12px)
+    color: #AEAEAE
+    display: block
+  &__cats
+    margin-top: 2rem
+    border-top: 2px solid $c10
+    padding-top: 2rem
+  &__control
+    text-align: center
+    margin: 2rem 0
+
+.catalog-links-box
+  &__title
+    margin-bottom: 6rem
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      margin-bottom: 2rem
+  &__row
+    display: flex
+    align-items: flex-start
+    gap: 30px
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      height: 70%
+  &__col
+    max-width: 250px
+    width: 33%
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      height: 100%
+      overflow: auto
+    &:last-of-type
+      max-width: 260px
+      margin-left: 20px
+    &::-webkit-scrollbar
+      width: 6px
+    &::-webkit-scrollbar-thumb
+      border-radius: 5px
+      background: #E5E5E5
+  &__contain
+    margin-bottom: 5rem
+  &__caption
+    font-weight: 700
+    margin-bottom: 1rem
+    color: $c4
+    line-height: 1.4
+  &__item
+    line-height: 1.4
+    &.hidden
+      display: none
+  &__more
+    background: none
+    font-weight: 700
+    padding-right: 25px
+    position: relative
+    cursor: pointer
+    &:after
+      content: ''
+      width: 12px
+      height: 7px
+      background-image: url(../icon/arrow-bottom.svg)
+      background-repeat: no-repeat
+      background-position: center
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      transition: .3s ease
+  &__banner
+    width: 100%
+    background: $c3
+    border-radius: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 260px
+    padding: 20px
+    box-sizing: border-box
+    +screen('max', 1200)
+      height: 220px
+  &__pic
+    max-width: 100%
+    max-height: 100%
+    object-fit: cover
+
+.catalog-call
+  position: absolute
+  max-width: 260px
+  right: 0
+  top: 55%
+  width: 30%
+  @media screen and ( max-height: 700px) and (orientation:landscape)
+    display: none
+  &__title
+    font-weight: 700
+    color: #AEAEAE
+    margin-bottom: 1rem
+  &__sign
+    line-height: 1.4
+  &__checkbox
+    +fs(13.75px)
+  &__action
+    margin-top: 2rem
+  &__field
+    margin-bottom: 1rem
+    max-width: 210px

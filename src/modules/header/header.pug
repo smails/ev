@@ -20,7 +20,7 @@ mixin header()
         +e.control
           +e.A.phone(href="tel:+7 495 320 02 54") +7 495 320 02 54
           +e.A.phone(href="tel:8 800 302 32 14") 8 800 302 32 14
-          +e.A.call.btn-outline_black.js-open-modal(href="#callback") Обратный звонок
+          +e.BUTTON.call.btn-outline_black.js-open-popup Обратный звонок
           +b.basket-mini
             +e.info
               svg(width='25' height='26' fill='none' xmlns='http://www.w3.org/2000/svg')
@@ -50,3 +50,4 @@ mixin header()
             +e.A.link(href="#") Контакты
   include fixmenu
   include headermobile
+  include catalogmenu

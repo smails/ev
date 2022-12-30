@@ -20,9 +20,9 @@ include ../callback/form-equipment
         +e.new-price 3 924 руб.
         +e.old-price 25 851
       +e.A.mgcall(href="#") Оптовые цены уточняйте у менеджеров
-      +e.BUTTON.clrs-popup Любые цвета
+      +e.A.clrs-popup.js-open-modal(href="#color") Любые цвета
       +e.control
-        +e.A.calc.btn_orange.js-open-modal(href="#calc") Рассчитать стоимость?
+        +e.A.calc.btn_orange.js-open-modal(href="#addparam") Рассчитать стоимость?
         +e.BUTTON.add.btn-outline_green В корзину
       +b.select-size
         +e.P.title Размеры 
@@ -43,7 +43,7 @@ include ../callback/form-equipment
             +e.IMG.pic(src='/img/color-main-2.png' alt='')
           +e.BUTTON.btn(data-color="3000")
             +e.IMG.pic(src='/img/color-main-3.png' alt='')
-          +e.BUTTON.more
+          +e.A.more.js-open-modal(href="#color")
             +e.IMG.more-pic(src='/icon/icon-plus.svg' alt='')
       +b.colrs
         +e.P.title Цвет отделки: 
@@ -55,9 +55,9 @@ include ../callback/form-equipment
             +e.IMG.pic(src='/img/color-finish-2.png' alt='')
           +e.BUTTON.btn(data-color=" H1424 ST40")
             +e.IMG.pic(src='/img/color-finish-3.png' alt='')
-          +e.BUTTON.more
+          +e.A.more.js-open-modal(href="#color")
             +e.IMG.more-pic(src='/icon/icon-plus.svg' alt='')
-      +e.A.call.js-open-modal(href="#call") Заказать изготовление по индивидуальным размерам
+      +e.A.call.js-open-modal(href="#calculation") Заказать изготовление по индивидуальным размерам
 
 +b.product-info
   +e.inner.inner

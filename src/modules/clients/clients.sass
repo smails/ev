@@ -14,7 +14,9 @@
     +screen('max', 1023)
       grid-template-columns: repeat(4, 1fr)
     +screen('max', 600)
-      display: flex
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 20px
+      grid-auto-rows: 100px
   &__item
     background: $c2
     display: flex
@@ -23,11 +25,10 @@
     border-radius: 15px
     padding: 10px 20px
     box-sizing: border-box
-    +screen('max', 600)
-      width: 200px
-      height: 100px
-      flex-shrink: 0
-      margin-right: 3rem
+    border: 2px solid transparent
+    transition: .3s ease
+    &:hover
+      border-color: $c4
     picture
       width: 100%
       height: 100%
@@ -52,6 +53,15 @@
       align-items: center
     &::-webkit-scrollbar
       height: 0
+    .clients__list
+      +screen('max', 600)
+        display: flex
+    .clients__item
+      +screen('max', 600)
+        width: 200px
+        height: 100px
+        flex-shrink: 0
+        margin-right: 3rem
   &__btn
     +screen('max', 600)
       background: $c2
