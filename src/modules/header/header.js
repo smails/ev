@@ -67,6 +67,11 @@ $('.catalog-menu__item').mouseenter(function () {
   }
 })
 
+$(".search-cat__reset").click(function () {
+  $(this).fadeOut();
+  $(".search-cat__result").slideUp();
+  $(".search-cat").removeClass("noempty");
+});
 $('.catalog-menu__close').click(function () {
   $('.catalog-menu').removeClass('open');
   setTimeout(() => {
