@@ -1,0 +1,121 @@
++b.modal(data-modal="addparam")
+  +e.container
+    +e.head
+      +e.back Назад
+      +e.close.js-close-modal
+        svg(width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M19 1 1 19M1 1l18 18' stroke='#020F19' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+    +e.middle
+      +e.P.title.display-3 Выберите дополнительные опции
+      +b.addoption
+        +e.left
+          +e.content
+            +e.IMG.pic(src='/img/product--slide-1.png' alt='')
+            +e.info
+              +e.P.title Овощной стеллаж с зеральным фризом и подсветкой полок
+              +e.prices
+                +e.new-price 11 924 руб.
+                +e.old-price 25 851 
+          +e.sign Дополнительные опции расчитываются нашими менеджерами
+        +e.right
+          +e.FORM.action
+            +e.steps
+              +e.step
+                +e.buttons
+                  each item in ["Шторки","Дополнительная полка","Подсветка полки","Наклонная полка","Двухступенчатая выкладка","Подсветка фронта","Доска для нарезки \ весы","Крючок для пакетов","Держатели для ножей","Античих","Соеденительный комплект","Делитель","Упаковка"]
+                    +e.LABEL.btn
+                      +e.INPUT.chb(type="checkbox")
+                      svg(width='26' height='26' fill='none' xmlns='http://www.w3.org/2000/svg' viewBox="0 0 26 26")
+                        g
+                          path(d='M13 .5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25ZM13 23a10 10 0 1 1 0-20 10 10 0 0 1 0 20Zm5-11.25h-3.75V8a1.25 1.25 0 0 0-2.5 0v3.75H8a1.25 1.25 0 0 0 0 2.5h3.75V18a1.25 1.25 0 0 0 2.5 0v-3.75H18a1.25 1.25 0 0 0 0-2.5Z' )
+                        g.hidden
+                          path(d='M13 .5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25ZM13 23a10 10 0 1 1 0-20 10 10 0 0 1 0 20Z' fill='#fff')
+                          path(fill-rule='evenodd' clip-rule='evenodd' d='M19.551 8.43c.591.58.6 1.53.02 2.121l-6.876 7a1.5 1.5 0 0 1-2.14 0L7.43 14.37a1.5 1.5 0 1 1 2.14-2.102l2.055 2.092 5.805-5.91a1.5 1.5 0 0 1 2.121-.02Z' fill='#fff')
+                      span=item
+                +e.control
+                  +e.select.btn-outline_green Применить
+                  +e.call.btn_green Оставить заявку
+              +e.step
+                +e.P.txt Оставьте свои контактыне данные  – наш менеджер свяжется с вами для уточнения деталей и подготовки расчета. Каждый расчет уникальный и готовится под специфику бизнеса нашего клиента.
+                +e.box
+                  +e.field.field__
+                    +e.INPUT.input.required(placeholder="Ваш телефон" type="tel")
+                  +e.field.field__
+                    +e.INPUT.input.required(placeholder="Ваше имя")
+                  +e.LABEL.checkbox.polit__
+                    +e.INPUT.hidden(type="checkbox" checked)
+                    +e.SPAN.txt Я даю согласие на хранение и обработку моих персональных данных компанией Евромаркет.
+                +e.control
+                  +e.back.btn-outline_green Назад
+                  +e.call.btn_orange Отправить
+
++b.modal(data-modal="calculation")
+  +e.container
+    +e.head
+      +e.back Назад
+      +e.close.js-close-modal
+        svg(width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M19 1 1 19M1 1l18 18' stroke='#020F19' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+    +e.middle
+      +e.P.title.display-3 Заказать рассчет стоимости оборудования
+      +b.modal-action
+        +e.row
+          +e.left
+            +e.IMG.pic(src='/img/product--slide-1.png' alt='')
+            +e.P.title Овощной стеллаж с зеральным фризом и подсветкой полок
+          +e.right
+            +e.sign Наши менеджеры рассчитают стоимость по вашим размерам и пожеланиям
+            +e.FORM.form
+              +e.field.field__
+                +e.INPUT.input.required(placeholder="Ваш телефон" type="tel")
+              +e.field.field__
+                +e.INPUT.input.required(placeholder="Ваше имя")
+              +e.field.field__
+                +e.TEXTAREA.input_area.required(placeholder="Комментарий или вопрос")
+              +e.LABEL.checkbox.polit__
+                +e.INPUT.hidden(type="checkbox" checked)
+                +e.SPAN.txt Я даю согласие на хранение и обработку моих персональных данных компанией Евромаркет.
+              +e.sub.btn_orange Отправить форму
+
++b.modal(data-modal="color")
+  +e.container
+    +e.head
+      +e.back Назад
+      +e.close.js-close-modal
+        svg(width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M19 1 1 19M1 1l18 18' stroke='#020F19' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+    +e.middle
+      +e.P.title.display-3 Выберите цвет изделия RAL
+      +b.modal-color
+        +e.over
+          +e.grid
+            - for(var i = 0; i < 90; i++){
+              +e.LABEL.item
+                +e.INPUT.hidden(type="radio" name="RAL")
+                +e.SPAN.box(data-sign="1000")
+                  +e.IMG.icon(src='/img/color-modal-1.png' alt='')
+            - }
+        +e.control
+          +e.back.js-close-modal.btn-outline_green Отмена
+
++b.popup
+  +e.container
+    +e.close.js-close-popup
+      svg(width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg')
+        path(d='M19 1 1 19M1 1l18 18' stroke='#020F19' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+    +e.P.title.display-2.text-center Заказать рассчет стоимости оборудования
+    +e.wrap
+      +e.info
+        +e.sign Оставьте свои контактыне данные  – наш менеджер свяжется с вами для уточнения деталей подготовки расчета. Каждый расчет уникальный и готовится под специфику бизнеса нашего клиента.
+        +e.IMG.pic(src='/img/mail-1.png' alt='')
+      +e.FORM.form
+        +e.field.field__
+          +e.INPUT.input.required(placeholder="Ваше имя")
+        +e.field.field__
+          +e.INPUT.input.required(placeholder="Ваш телефон" type="tel")
+        +e.field.field__
+          +e.TEXTAREA.input_area(placeholder="Комментарий или вопрос" )
+        +e.LABEL.checkbox.polit__
+          +e.INPUT.hidden(type="checkbox" checked)
+          +e.SPAN.txt Я даю согласие на хранение и обработку моих персональных данных компанией Евромаркет.
+        +e.BUTTON.btn.btn_orange Отправить форму

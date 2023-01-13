@@ -1,0 +1,144 @@
+.banner
+  margin: 3rem 0
+  +screen('max', 600)
+    margin: 0
+  & + .prodcat
+    margin-top: 3rem
+    +screen('max', 600)
+      margin-top: 4.2rem
+  &__slide
+    padding: 3rem 3rem 7rem 6rem
+    box-sizing: border-box
+    background: $c9
+    border-radius: 30px
+    transform: scale(.9)
+    transition: all .3s ease
+    +screen('max', 1023)
+      padding: 3rem 6rem 7rem 6rem
+    +screen('max', 600)
+      padding: 30px 20px
+      border-radius: 0
+    &:before
+      content: ''
+      display: block
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: #ECF3F9
+      border-radius: 30px
+      transition: .2s ease
+      z-index: 9
+    picture
+      position: absolute
+      top: 30px
+      right: 30px
+      +screen('max', 1200)
+        width: 37%
+        right: 15px
+      +screen('max', 1023)
+        position: relative
+        top: 0
+        right: 0
+        width: 50%
+        flex-shrink: 0
+      +screen('max', 600)
+        width: 150px
+  &__line
+    +screen('max', 1023)
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      margin-top: 20px
+  &__title
+    margin: 3rem 0 1rem
+    +screen('max', 600)
+      margin: 0 0 10px
+  &__sign
+    +fs(20px)
+    font-weight: 600
+    color: $c5
+    +screen('max', 600)
+      +fs(12px)
+      font-weight: 700
+  &__list
+    display: grid
+    grid-template-columns: repeat(2, 290px)
+    grid-gap: 20px 30px
+    margin-top: 4.5rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 150px)
+    +screen('max', 600)
+      display: block
+  &__item
+    line-height: 1.4
+    padding-left: 28px
+    background-image: url(../icon/icon-check.svg)
+    background-repeat: no-repeat
+    background-position: left center
+    +screen('max', 600)
+      margin-bottom: 10px
+    &:last-of-type, &:nth-last-of-type(2)
+      +screen('max', 600)
+        display: none
+  &__control
+    display: flex
+    align-items: center
+    margin-top: 4.5rem
+    +screen('max', 600)
+      display: block
+      text-align: center
+  &__btn
+    width: 264px
+    margin-right: 5rem
+    +screen('max', 600)
+      margin-right: 0
+      margin-bottom: 10px
+  &__pic
+    max-width: 440px
+    +screen('max', 1200)
+      width: 100%
+  .slick-slide
+    height: 500px
+    +screen('max', 1200)
+      height: 400px
+    +screen('max', 1023)
+      height: 615px
+    +screen('max', 600)
+      height: 475px
+    &.slick-active
+      .banner__slide
+        transform: scale(1)
+        &:before
+          opacity: 0
+          z-index: -1
+      & + .slick-slide
+        .banner__slide
+          &:before
+            background: #F7F7F7
+  .slick-arrow
+    transform: translateY(-100%)
+    &:before
+      content: ''
+      width: 100px
+      height: 100px
+      background: rgba(255, 255, 255, 0.5)
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      border-radius: 100%
+      z-index: -1
+  .slick-prev
+    left: 9vw
+    +screen('max', 1300)
+      left: 5vw
+    +screen('max', 1200)
+      left: 2vw
+  .slick-next
+    right: 9vw
+    +screen('max', 1300)
+      right: 5vw
+    +screen('max', 1200)
+      right: 3vw

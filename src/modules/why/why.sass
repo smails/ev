@@ -1,0 +1,64 @@
+.why
+  &__title
+    margin-bottom: 3rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 1.55vw
+    justify-content: space-between
+    +screen('max', 1200)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 600)
+      grid-template-columns: repeat(1, 1fr)
+      grid-gap: 20px
+      grid-auto-rows: 144px
+  &__item
+    border-radius: 15px
+    padding: 30px
+    position: relative
+    box-sizing: border-box
+    color: $c2
+    overflow: hidden
+    +screen('max', 600)
+      padding: 20px
+    &_green
+      background: linear-gradient(104.04deg, #ABB910 0%, #666F0F 100%)
+    &_sky
+      background: linear-gradient(104.04deg, #3D85C5 0%, #2E699E 100%)
+    &_blue
+      background: linear-gradient(104.04deg, #0D5394 0%, #08345C 100%)
+    &_black
+      background: linear-gradient(104.04deg, #020F19 0%, #020F19 100%)
+    &:before
+      content: ''
+      width: 280px
+      height: 280px
+      position: absolute
+      right: -140px
+      bottom: -140px
+      display: block
+      background: rgba(255, 255, 255, 0.3)
+      border-radius: 100%
+      +screen('max', 600)
+        width: 224px
+        height: 224px
+        right: -112px
+        bottom: -112px
+  &__caption
+    font-weight: 700
+    margin-bottom: 2rem
+  &__sign
+    line-height: 1.3
+    max-width: 65%
+    +screen('max', 1500)
+      max-width: 70%
+    +screen('max', 600)
+      +fs(12px)
+  &__pic
+    position: absolute
+    vertical-align: middle
+    right: 20px
+    bottom: 20px
+    z-index: 3
+    +screen('max', 600)
+      width: 60px

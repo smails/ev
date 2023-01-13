@@ -1,0 +1,20 @@
+mixin form(title='Заказать рассчет стоимости оборудования')
+  +b.action.section
+    +e.inner.inner
+      +e.box
+        +e.P.title.display-2.text-center=title
+        +e.wrap
+          +e.info
+            +e.sign Оставьте свои контактыне данные  – наш менеджер свяжется с вами для уточнения деталей и подготовки расчета. Каждый расчет уникальный и готовится под специфику бизнеса нашего клиента.
+            +e.IMG.pic(src='/img/mail-1.png' alt='')
+          +e.FORM.form
+            +e.field.field__
+              +e.INPUT.input.required(placeholder="Ваше имя")
+            +e.field.field__
+              +e.INPUT.input.required(placeholder="Ваш телефон" type="tel")
+            +e.field.field__
+              +e.TEXTAREA.input_area(placeholder="Комментарий или вопрос" )
+            +e.LABEL.checkbox.polit__
+              +e.INPUT.hidden(type="checkbox" checked)
+              +e.SPAN.txt Я даю согласие на хранение и обработку моих персональных данных компанией Евромаркет.
+            +e.BUTTON.btn.btn_orange Отправить форму

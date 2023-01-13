@@ -1,0 +1,33 @@
++b.gallery.section
+  +e.inner.inner
+    +e.H2.title Галерея
+    +e.P.sign.sign-box В целом, конечно, начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации инновационных методов управления процессами. 
+    +e.list_left
+      - for(var i = 0; i < 7; i++){
+        if i == 0
+          +e.item_first
+            +e.IMG.pic_big(src='/img/gallery-'+ i +'.png' alt='')
+        else
+          +e.item
+            +e.IMG.pic(src='/img/gallery-'+ i +'.png' alt='')
+      -}
+    +e.list_right
+      - for(var i = 7; i < 14; i++){
+        if i == 13
+          +e.item_last
+            +e.IMG.pic_big(src='/img/gallery-'+ i +'.png' alt='')
+        else
+          +e.item
+            +e.IMG.pic(src='/img/gallery-'+ i +'.png' alt='')
+      -}
+    +e.list_left(style="display: none")
+      - for(var i = 0; i < 7; i++){
+        if i == 0
+          +e.item_first
+            +e.IMG.pic_big(src='/img/gallery-'+ i +'.png' alt='')
+        else
+          +e.item
+            +e.IMG.pic(src='/img/gallery-'+ i +'.png' alt='')
+      -}
+    +e.control
+      +e.BUTTON.more.btn_green Показать еще

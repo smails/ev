@@ -1,0 +1,64 @@
+.gallery
+  &__list
+    display: grid
+    margin-top: 3rem
+    grid-gap: 1.55vw
+    grid-auto-rows: 230px
+    +screen('max', 600)
+      grid-gap: 5vw
+      grid-auto-rows: 25vw
+    &_left
+      grid-template-columns: 1.32fr repeat(3, 1fr)
+      +screen('max', 600)
+        grid-template-columns: repeat(2, 1fr)
+    &_right
+      grid-template-columns: repeat(3, 1fr) 1.32fr
+      +screen('max', 600)
+        display: none
+  &__item
+    position: relative
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      position: absolute
+      display: block
+      top: 0
+      left: 0
+      background: linear-gradient(0deg, rgba(2, 15, 25, 0.5), rgba(2, 15, 25, 0.5))
+      border-radius: 20px
+      z-index: 1
+      opacity: 0
+      transition: .3s ease
+    &:hover
+      &:before
+        opacity: 1
+    picture
+      width: 100%
+      height: 100%
+      display: block
+    &_first
+      grid-row-start: 1
+      grid-row-end: 3
+      grid-column-start: 1
+      grid-column-end: 2
+      +screen('max', 600)
+        grid-column-end: 3
+        grid-row-end: 4
+    &_last
+      grid-row-start: 1
+      grid-row-end: 3
+      grid-column-start: 4
+      grid-column-end: 5
+  &__control
+    display: flex
+    justify-content: center
+    margin-top: 3rem
+  &__pic
+    vertical-align: middle
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 20px
+    +screen('max', 600)
+      border-radius: 15px

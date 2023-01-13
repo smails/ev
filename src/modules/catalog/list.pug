@@ -1,0 +1,148 @@
+- var list1 = ["Торговые стеллажи", "Торговые стойки", "Оборудование для кассовых зон", "Торговое оборудование для магазинов", "Холодильное оборудование", "Торговая мебель", "Оборудование для ресторанов", "Рециркуляторы", "Покупательские тележки", "Брендированное оборудование",];
+- var list2 = ["Стеллажи для овощных магазинов", "Стеллажи для алкоголя", "Стеллажи для хлеба и выпечки", "Стойки для снеков", "Торговые стенды", "Рекламные стойки", "Деревянные стойки", "Стойки ресепшн", "Торговые островки",  "Барные стойки"]
++b.catalog-main-list
+  +e.inner.inner
+    +e.H1.title.title Каталог торгового оборудования
+    +e.wrap
+      +e.sidebar
+        +e.BUTTON.open-cat Категории
+        +b.catalog-nav
+          +e.A.cat(href="#") Расчитать стоимость
+          +e.A.cat Категория каталога
+          +e.line
+            +e.A.caption(href="#") Торговые стеллажи
+            +e.UL.list
+              +e.LI.item
+                +e.A.link(href="#") Угловые стеллажи
+              +e.LI.item
+                +e.A.link(href="#") Перфорированные стеллажи
+              +e.LI.item
+                +e.A.link(href="#") Торцевые стеллажи
+              +e.LI.item
+                +e.A.link(href="#") Стеллажи серии “Волна”
+              +e.LI.item
+                +e.A.link(href="#") Стеллажи серии “Волна”
+              +e.LI.item
+                +e.A.link(href="#") Стеллажи серии “Волна”
+              +e.LI.item
+                +e.A.link(href="#") Стеллажи серии “Волна”
+              +e.LI.item
+                +e.A.link(href="#") Стеллажи серии “Волна”
+              +e.LI.item
+                +e.A.link(href="#") Стеллажи серии “Волна”
+              +e.LI.item
+                +e.A.link(href="#") Стеллажи серии “Волна”
+            +e.BUTTON.more Показать все
+          +e.line
+            +e.A.caption(href="#") Для овощных магазинов
+            +e.UL.list
+              +e.LI.item
+                +e.A.link(href="#") Овощные стеллажи
+              +e.LI.item
+                +e.A.link(href="#") Овощные развалы
+              +e.LI.item
+                +e.A.link(href="#") Овощные телеги
+              +e.LI.item
+                +e.A.link(href="#") Охлаждающие горки
+            +e.BUTTON.more Показать все
+          +e.line
+            +e.A.caption(href="#") Для алкомаркетов
+            +e.UL.list
+              +e.LI.item
+                +e.A.link(href="#") Стеллажи для алкоголя
+              +e.LI.item
+                +e.A.link(href="#") Шкафы ветрины для алкоголя
+              +e.LI.item
+                +e.A.link(href="#") Деревянные стойки для вина
+            +e.BUTTON.more Показать все
+          +e.line
+            +e.A.caption(href="#") Для хлеба и выпечки
+            +e.UL.list
+              +e.LI.item
+                +e.A.link(href="#") Хлебные стеллажи
+              +e.LI.item
+                +e.A.link(href="#") Хлебные развалы
+              +e.LI.item
+                +e.A.link(href="#") Торцевые стеллажи
+              +e.LI.item
+                +e.A.link(href="#") Стеллажи серии “Волна”
+            +e.BUTTON.more Показать все
+          +e.line
+            +e.A.caption(href="#") Другое оборудование для магазинов
+            +e.UL.list
+              +e.LI.item
+                +e.A.link(href="#") Шкафы для сумок
+              +e.LI.item
+                +e.A.link(href="#") Складские стеллажи
+              +e.LI.item
+                +e.A.link(href="#") Прикассовое оборудование
+          +e.line
+            +e.A.caption(href="#") Торговые стойки
+            +e.UL.list
+              +e.LI.item
+                +e.A.link(href="#") Рекламные стойки
+              +e.LI.item
+                +e.A.link(href="#") Торговые стенды
+              +e.LI.item
+                +e.A.link(href="#") Металлические стойки
+              +e.LI.item
+                +e.A.link(href="#") Деревянные стойки
+            +e.BUTTON.more Показать все
+          +e.line
+            +e.A.caption(href="#") Брендированное оборудование
+            +e.UL.list
+              +e.LI.item
+                +e.A.link(href="#") Брендированные стеллажи
+              +e.LI.item
+                +e.A.link(href="#") Складские стеллажи
+          +e.banner
+            +e.IMG.pic(src='/img/stub-banner-sidebar.png' alt='')
+          +e.banner
+            +e.IMG.pic(src='/img/stub-banner-sidebar.png' alt='')
+      +e.content
+        +e.P.sign Завод "Евромаркет" занимается продажей торгового оборудования для магазинов и супермаркетов различной направленности. Собственное производство позволяет предложить клиентам выгодные условия на комплексное оснащение. Изготавливаем крупными партиями и мелким оптом.
+        +e.list
+          each item, idx in list1
+            if idx == 4
+              +e.banner-mini
+                +e.IMG.img(src='/img/banner-catalog-mini.png' alt='')
+            else if idx > 4
+              +e.A.item(href="#")
+                +e.IMG.pic(src='/img/product-'+ (idx - 1) +'.png' alt='')
+                +e.P.caption=list1[idx - 1]
+            else
+              +e.A.item(href="#")
+                +e.IMG.pic(src='/img/product-'+ idx +'.png' alt='')
+                +e.P.caption=item
+        +callback('1')
+        +e.list
+          each item, idx in list2
+            if idx == 0
+              +e.A.item(href="#")
+                +e.IMG.pic(src='/img/product-'+ idx +'.png' alt='')
+                +e.P.caption=item
+            else if idx == 1
+              +e.banner-mini_mobile
+                picture
+                  source(media="(max-width: 600px)", srcset="/img/banner-catalog-mini--mobile.png")
+                  +e.IMG.img(src='/img/banner-catalog-mini.png' alt='')
+            else if idx == 2 || idx == 3
+              +e.A.item(href="#")
+                +e.IMG.pic(src='/img/product-mini-'+ (idx - 1) +'.png' alt='')
+                +e.P.caption=list2[idx - 1]
+            else if idx > 3
+              +e.A.item(href="#")
+                +e.IMG.pic(src='/img/product-mini-'+ idx +'.png' alt='')
+                +e.P.caption=item
+        +e.banner
+          picture
+            source(media="(max-width: 600px)", srcset="/img/banner-catalog-full--mobile.png")
+            +e.IMG.img(src='/img/banner-catalog-full.png' alt='')
+        include ../popular/popular-cat
+        +callback('3')
+        include ../popular/popular-cat
+        +e.banner
+          picture
+            source(media="(max-width: 600px)", srcset="/img/banner-catalog-full--mobile.png")
+            +e.IMG.img(src='/img/banner-catalog-full.png' alt='')
+        include ../popular/popular-cat

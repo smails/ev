@@ -1,0 +1,21 @@
++b.eqshop.section
+  +e.inner.inner
+    +e.H2.title Комплексное оснащение для магазинов
+    +e.P.sign.sign-box Цены на оборудование для магазина зависят от наличия остекления и фурнитуры, площади помещения, материалов изготовления, сроков выполнения и индивидуальных параметров. Окончательная стоимость формируется с учётом доставки, материалов и объема заказа.
+    +e.list
+      each item, idx in [ "Продуктовый магазин", "Минимаркет", "Гастроном", "Дискаунтер", "Булочная и кондитерская", "Алкомаркет",]
+        +e.A.item(href="#")
+          +e.IMG.pic(src='/img/equipment-'+ idx +'.png' alt=item)
+          +e.P.caption=item
+    +e.elems
+      each item, idx in ["Мясной магазин", "Овощной магазин", "Рыбный магазин", "Винный магазин", "Фермерский магазин","Смотреть все магазины"]
+        if idx != 5
+          +e.A.elem(href="#")
+            +e.IMG.pic(src='/img/equipment-mini-'+ idx +'.png' alt=item)
+            +e.IMG.icon(src='/img/equipment-icon-'+ idx +'.png' alt=item)
+            +e.P.holder=item
+        else
+          +e.A.elem_more(href="#")
+            +e.IMG.icon(src='/img/equipment-icon-'+ idx +'.png' alt=item)
+            +e.P.holder=item
+    +e.A.more.btn_green(href="#") Смотреть все магазины

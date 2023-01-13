@@ -1,0 +1,508 @@
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(2, 15, 25, 0.8)
+  z-index: 999
+  display: none
+  &__container
+    position: absolute
+    top: 50%
+    left: 50%
+    border-radius: 20px
+    background: $c2
+    transform: translate(-50%, -50%)
+    padding: 4rem
+    box-sizing: border-box
+    max-width: 1186px
+    width: 100%
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      padding: 2rem
+    +screen('max', 600)
+      padding: 3rem 0 3rem 3rem
+      height: 100%
+      border-radius: 0
+  &__close
+    position: absolute
+    top: 4.8rem
+    right: 4rem
+    cursor: pointer
+    path
+      transition: .3s ease
+    &:hover
+      path
+        stroke: $c4
+  &__title
+    margin-bottom: 4rem
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +screen('max', 600)
+      position: relative
+      width: 100vw
+      left: -3rem
+      padding-bottom: 3rem
+      border-bottom: 1px solid $c3
+      margin-bottom: 1rem
+    .modal__close
+      +screen('max', 600)
+        top: 0rem
+        right: 3rem
+  &__back
+    +fs(20px)
+    font-weight: 700
+    padding-left: 18px
+    background-image: url(../icon/icon-arrow-back.svg)
+    background-size: 14px
+    background-position: left center
+    background-repeat: no-repeat
+    margin-left: 3rem
+    +screen('min', 600)
+      display: none
+  &__middle
+    +screen('max', 600)
+      overflow: auto
+      height: 100%
+      padding-right: 3rem
+      box-sizing: border-box
+
+.addoption
+  display: flex
+  justify-content: space-between
+  gap: 40px
+  +screen('max', 1023)
+    flex-wrap: wrap
+    gap: 30px
+  &__left
+    max-width: 350px
+    width: 32%
+    flex-shrink: 0
+    +screen('max', 1023)
+      max-width: 100%
+      width: 100%
+    picture
+      +screen('max', 1023)
+        width: 50%
+        flex-shrink: 0
+  &__right
+    +screen('max', 600)
+      width: 100%
+  &__pic
+    vertical-align: middle
+    width: 100%
+    border-radius: 20px
+    margin-bottom: 3rem
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      margin-bottom: 1rem
+    +screen('max', 600)
+      margin-bottom: 0
+  &__title
+    +fs(20px)
+    font-weight: 700
+    line-height: 1.35
+    margin-bottom: 3rem
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      margin-bottom: 1rem
+    +screen('max', 600)
+      +fs(12px)
+      font-weight: 400
+      margin-bottom: 1.5rem
+  &__prices
+    display: flex
+    align-items: flex-end
+    +screen('max', 600)
+      display: block
+  &__new-price
+    +fs(42px)
+    font-weight: 600
+    margin-right: 0.5rem
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      +fs(30px)
+    +screen('max', 600)
+      +fs(16px)
+      font-weight: 400
+  &__old-price
+    position: relative
+    +fs(32px)
+    color: #B9BCC1
+    font-weight: 700
+    display: inline-block
+    margin-left: 1rem
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      +fs(25px)
+    +screen('max', 600)
+      +fs(12px)
+      margin-left: 0
+      margin-top: 1rem
+    &:before
+      content: ''
+      width: 100%
+      height: 2px
+      background: #B9BCC1
+      position: absolute
+      top: 50%
+      left: 0
+      transform: rotate(176.03deg) translateY(-30%)
+  &__sign
+    margin-top: 3rem
+    padding: 2rem 3rem 2rem 10rem
+    border-radius: 10px
+    border: 1px solid $c3
+    background-image: url(../icon/icon-warning.svg)
+    background-repeat: no-repeat
+    background-position: 30px center
+    background-size: 40px
+    line-height: 1.4
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      margin-top: 1rem
+    +screen('max', 1023)
+      background-size: 30px
+    +screen('max', 600)
+      +fs(10px)
+  &__control
+    position: absolute
+    bottom: 0
+    right: 0
+    +screen('max', 600)
+      position: fixed
+      width: 100%
+      background: #fff
+      display: flex
+      flex-flow: column-reverse
+      justify-content: center
+      align-items: center
+      border-top: 1px solid $c3
+      padding: 3rem 0 2rem
+  &__buttons
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 10px
+    grid-auto-rows: 56px
+    +screen('max', 600)
+      grid-template-columns: repeat(2, 1fr)
+      grid-auto-rows: 40px
+  &__btn
+    font-weight: 700
+    padding: 1.8rem
+    box-sizing: border-box
+    background: $c2
+    +fs(12px)
+    border: 1px solid $c3
+    border-radius: 10px
+    transition: .3s ease
+    display: flex
+    align-items: center
+    text-align: left
+    cursor: pointer
+    line-height: 1.4
+    +screen('max', 600)
+      +fs(10px)
+      font-weight: 400
+    svg
+      margin-right: 1rem
+      vertical-align: middle
+      flex-shrink: 0
+      +screen('max', 600)
+        width: 16px
+    path
+      fill: $c4
+      transition: .3s ease
+    .hidden
+      opacity: 0
+    &.active
+      color: $c2
+      background: $c4
+      border-color: $c4
+      g
+        opacity: 0
+      .hidden
+        opacity: 1
+      path
+        fill: $c2
+  &__select
+    margin-right: 1rem
+  &__action
+    overflow: hidden
+    height: 100%
+  &__steps
+    display: flex
+    height: 100%
+    transition: .5s linear
+    position: relative
+    left: 0
+    +screen('max', 1023)
+      padding-bottom: 50px
+    +screen('max', 600)
+      padding-bottom: 180px
+  &__txt
+    line-height: 1.4
+  &__step
+    position: relative
+    width: 100%
+    flex-shrink: 0
+    transition: .5s linear
+    opacity: 0
+    &:first-of-type
+      opacity: 1
+      .addoption__control
+        z-index: 2
+    &:last-of-type
+      .addoption__control
+        z-index: 1
+  &__box
+    margin-top: 5rem
+    max-width: 435px
+    width: 100%
+  &__field
+    margin-top: 3rem
+  &__select
+    +screen('max', 600)
+      background: none
+      padding: 0
+      border: 0
+      text-decoration: underline
+      color: #AEAEAE
+      margin-top: 1.5rem
+      +fs(16px)
+  &__checkbox
+    margin-top: 3rem
+    display: block
+  &__call
+    margin-left: 1rem
+    width: 237px
+  &__back
+    width: 172px
+    +screen('max', 600)
+      display: none
+  &__chb
+    display: none
+  &__content
+    +screen('max', 1023)
+      display: flex
+      align-items: flex-start
+
+.modal-action
+  +screen('max', 600)
+    padding-bottom: 100px
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    +screen('max', 1023)
+      display: block
+  &__left
+    max-width: 630px
+    width: 60%
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      width: 50%
+    +screen('max', 1023)
+      width: 100%
+      max-width: 100%
+      display: flex
+  &__pic
+    width: 100%
+    +screen('max', 1023)
+      width: 155px
+  &__right
+    max-width: 435px
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      width: 50%
+    +screen('max', 1023)
+      width: 100%
+      max-width: 100%
+      margin-top: 3rem
+  &__title
+    +fs(20px)
+    font-weight: 700
+    line-height: 1.35
+    margin-top: 3rem
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      margin-bottom: 1rem
+    +screen('max', 600)
+      +fs(12px)
+      font-weight: 400
+      margin-bottom: 1.5rem
+  &__sign
+    margin-bottom: 3rem
+    padding: 2rem 3rem 2rem 10rem
+    border-radius: 10px
+    border: 1px solid $c3
+    background-image: url(../icon/icon-warning.svg)
+    background-repeat: no-repeat
+    background-position: 30px center
+    background-size: 40px
+    line-height: 1.4
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      margin-top: 1rem
+    +screen('max', 1200)
+      background-size: 30px
+    +screen('max', 600)
+      +fs(10px)
+  &__field
+    margin-top: 3rem
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      margin-top: 1rem
+  &__sub
+    width: 100%
+    margin-top: 3rem
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      margin-top: 1rem
+  &__checkbox
+    margin-top: 3rem
+    display: block
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      margin-top: 1rem
+
+.modal-color
+  &__over
+    max-height: 470px
+    overflow: auto
+    padding-right: 15px
+    box-sizing: border-box
+    +screen('max', 600)
+      padding-right: 0
+      max-height: 63vh
+    &::-webkit-scrollbar
+      width: 6px
+    &::-webkit-scrollbar-thumb
+      border-radius: 5px
+      background: #E5E5E5
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    gap: 1.2vw
+    padding-bottom: 7rem
+  &__item
+    width: 68px
+    margin-bottom: 20px
+    +screen('max', 600)
+      margin-bottom: 25px
+      width: 23%
+  &__box
+    position: relative
+    display: block
+    padding: 10px
+    box-sizing: border-box
+    border: 2px solid $c3
+    border-radius: 5px
+    cursor: pointer
+    transition: .5s ease
+    width: 100%
+    &:after
+      content: attr(data-sign)
+      text-align: center
+      position: absolute
+      width: 100%
+      top: calc(100% + 7px)
+      left: 0
+      +screen('max', 600)
+        +fs(12px)
+  &__hidden
+    display: none
+    &:checked + .modal-color__box
+      border-color: $c4
+  &__control
+    position: relative
+    +screen('max', 600)
+      text-align: center
+    &::before
+      content: ''
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 21.88%)
+      position: absolute
+      left: 0
+      top: -30px
+      height: 86px
+      width: 100%
+  &__back
+    position: relative
+    z-index: 2
+  &__icon
+    width: 100%
+
+.popup
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(2, 15, 25, 0.8)
+  z-index: 999
+  display: none
+  +screen('max', 600)
+    background: none
+  &__container
+    position: absolute
+    top: 50%
+    left: 50%
+    border-radius: 20px
+    background: $c3
+    transform: translate(-50%, -50%)
+    padding: 7rem
+    box-sizing: border-box
+    max-width: 1040px
+    width: 100%
+    @media screen and ( max-height: 700px) and (orientation:landscape)
+      padding: 2rem
+    +screen('max', 600)
+      padding: 3rem
+      height: calc(100% - 60px)
+      border-radius: 0
+      top: 60px
+      transform: none
+      left: 0
+  &__close
+    position: absolute
+    top: 4.8rem
+    right: 4rem
+    cursor: pointer
+    +screen('max', 600)
+      top: 3.8rem
+      right: 2rem
+    path
+      transition: .3s ease
+    &:hover
+      path
+        stroke: $c4
+  &__title
+    margin-bottom: 4rem
+    +screen('max', 600)
+      text-align: left
+  &__wrap
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 40px
+    +screen('max', 600)
+      display: block
+  &__info
+    width: 48%
+    text-align: right
+    +screen('max', 600)
+      width: 100%
+  &__sign
+    line-height: 1.4
+    margin-bottom: 4rem
+    text-align: left
+    max-width: 375px
+    +screen('max', 600)
+      +fs(12px)
+  &__pic
+    max-width: 100%
+    vertical-align: middle
+    +screen('max', 600)
+      display: none
+  &__form
+    width: 50%
+    +screen('max', 600)
+      width: 100%
+  &__field
+    margin-bottom: 30px
+  &__checkbox
+    margin-bottom: 30px
+    display: block
+  &__btn
+    display: block
+    width: 100%

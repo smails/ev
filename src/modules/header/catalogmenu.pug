@@ -1,0 +1,166 @@
+-var elms = [ "Торговые стеллажи", "Торговые стойки", "Оборудование для кассовых зон", "Другое оборудование для магазинов", "Холодильное оборудование", "Торговая мебель", "Оборудование для ресторанов", "Рециркуляторы", "Покупательские тележки", "Брендированное оборудование",]
++b.catalog-menu
+  +e.container
+    +e.small
+      +e.head
+        +e.A.logo(href="#")
+          +e.IMG.pic(src='/icon/icon-logo.svg' alt='')
+        +e.close.js-close-catalog
+          svg(width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M19 1 1 19M1 1l18 18' stroke='#020F19' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+      +e.nav
+        +e.UL.list
+          each item, index in elms
+            +e.LI.item(data-target=index+1)
+              +e.A.link(href="#")=item
+              +e.BUTTON.mobile-move
+    +e.big
+      +b.FORM.search-cat
+        +e.head
+          +e.INPUT.field(type="text" placeholder="Поиск...")
+          +e.BUTTON.reset(type="reset")
+            svg(width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M16.2 1.8 1.8 16.2m0-14.4 14.4 14.4' stroke='#AEAEAE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+        +e.result
+          +e.items
+            +e.A.item(href="#")
+              +e.IMG.icon(src='/img/product-mini-1.png' alt='')
+              +e.content
+                +e.P.txt Торговый 
+                  b стеллаж 
+                  | с пятью проволочными корзинами
+            +e.A.item(href="#")
+              +e.IMG.icon(src='/img/product-mini-2.png' alt='')
+              +e.content
+                +e.P.txt Торговый 
+                  b стеллаж 
+                  | без полок
+            +e.A.item(href="#")
+              +e.IMG.icon(src='/img/product-mini-3.png' alt='')
+              +e.content
+                +e.P.txt
+                  b Cтеллаж 
+                  | пристенный с фризом
+            +e.A.item(href="#")
+              +e.IMG.icon(src='/img/product-mini-4.png' alt='')
+              +e.content
+                +e.P.txt Сетчатый 
+                  b Cтеллаж 
+                  | с корзинами и фризом
+          +e.cats
+            +e.A.item(href="#")
+              +e.IMG.icon(src='/img/product-mini-2.png' alt='')
+              +e.content
+                +e.B.txt Торговые стеллажи
+                +e.nav Каталог / Стеллажи
+            +e.A.item(href="#")
+              +e.IMG.icon(src='/img/product-mini-2.png' alt='')
+              +e.content
+                +e.B.txt Стеллажи для овощных магазинов
+                +e.nav Каталог / Стеллажи
+            +e.A.item(href="#")
+              +e.IMG.icon(src='/img/product-mini-2.png' alt='')
+              +e.content
+                +e.B.txt Стеллажи для алкоголя
+                +e.nav Каталог / Стеллажи
+            +e.A.item(href="#")
+              +e.IMG.icon(src='/img/product-mini-2.png' alt='')
+              +e.content
+                +e.B.txt Стеллажи для хлеба и выпечки
+                +e.nav Каталог / Стеллажи
+            +e.A.item(href="#")
+              +e.IMG.icon(src='/img/product-mini-2.png' alt='')
+              +e.content
+                +e.B.txt Стеллажи для хлеба и выпечки
+                +e.nav Каталог / Стеллажи
+          +e.control
+            +e.A.more.btn-outline_green(href='/search-page-full.html') Смотреть все результаты
+      +e.info
+        +e.P.mobile-title Главное меню
+        +e.boxes
+          each item, index in elms
+            +e.box.catalog-links-box__(data-id=index+1)
+              +e.P.title.display-2=item
+              +e.row
+                +e.col
+                  +e.contain
+                    +e.A.caption(href="#") Стеллажи
+                    +e.UL.list
+                      +e.LI.item
+                        +e.A.link(href="#") Пристенные стеллажи
+                      +e.LI.item
+                        +e.A.link(href="#") Сетчатые стеллажи
+                      +e.LI.item
+                        +e.A.link(href="#") Островные стеллажи
+                      +e.LI.item
+                        +e.A.link(href="#") Угловые стеллажи
+                      +e.LI.item
+                        +e.A.link(href="#") Перфорированные стеллажи
+                      +e.LI.item
+                        +e.A.link(href="#") Торцевые стеллажи
+                      +e.LI.item
+                        +e.A.link(href="#") Деревянные стеллажи
+                      +e.LI.item
+                        +e.A.link(href="#") Стеллажи серии “Волна”
+                  +e.contain
+                    +e.A.caption(href="#") Для овощных магазинов
+                    +e.UL.list
+                      +e.LI.item
+                        +e.A.link(href="#") Овощные стеллажи
+                      +e.LI.item
+                        +e.A.link(href="#") Овощные развалы
+                      +e.LI.item
+                        +e.A.link(href="#") Овощные телеги
+                      +e.LI.item
+                        +e.A.link(href="#") Охлаждающие горки
+                      +e.LI.item
+                        +e.A.link(href="#") Деревянные стойки для овощей
+                      +e.LI.item.hidden
+                        +e.A.link(href="#") Деревянные стойки для овощей
+                      +e.LI.item.hidden
+                        +e.A.link(href="#") Деревянные стойки для овощей
+                    +e.BUTTON.more Показать еще
+                +e.col
+                  +e.contain
+                    +e.A.caption(href="#") Для алкоголя
+                    +e.UL.list
+                      +e.LI.item
+                        +e.A.link(href="#") Стеллажи для вина
+                      +e.LI.item
+                        +e.A.link(href="#") Шкафы витрины для алкоголя
+                      +e.LI.item
+                        +e.A.link(href="#") Деревянные стойки для вина
+                  +e.contain
+                    +e.A.caption(href="#") Для хлеба и выпечки
+                    +e.UL.list
+                      +e.LI.item
+                        +e.A.link(href="#") Хлебные стеллажи
+                      +e.LI.item
+                        +e.A.link(href="#") Хлебные развалы
+                      +e.LI.item
+                        +e.A.link(href="#") Витрины для хлеба
+                      +e.LI.item
+                        +e.A.link(href="#") Кондитерские стеллажи для конфет
+                      +e.LI.item
+                        +e.A.link(href="#") Деревянные хлебные стойки 
+                  +e.contain
+                    +e.A.caption(href="#") Другое оборудование для магазинов
+                    +e.UL.list
+                      +e.LI.item
+                        +e.A.link(href="#") Шкафы для сумок
+                      +e.LI.item
+                        +e.A.link(href="#") Складские стеллажи
+                      +e.LI.item
+                        +e.A.link(href="#") Прикассовое оборудование 
+                +e.col
+                  +e.banner
+                    +e.IMG.pic(src='/img/product-10.png' alt='')
+        +b.catalog-call
+          +e.P.title Не нашли, что искали?
+          +e.P.sign Оставьте телефон, и наш специалист подберет для вас необходимое оборудование.
+          +e.FORM.action
+            +e.field.field__
+              +e.INPUT.input.required(placeholder="Ваш телефон" type="tel")
+            +e.LABEL.checkbox.polit__
+              +e.INPUT.hidden(type="checkbox" checked)
+              +e.SPAN.txt Я даю согласие на хранение и обработку моих персональных данных компанией Евромаркет.

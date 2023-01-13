@@ -1,0 +1,16 @@
++b.clients.section
+  +e.inner.inner
+    +e.H2.title Наши клиенты
+    +e.P.sign.sign-box В целом, конечно, начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации инновационных методов управления процессами.
+    +e.list
+      - for(var i = 0; i < 24; i++){
+        +e.A.item(href="#")
+          +e.IMG.pic(src='/img/client-'+ i +'.png' alt='')
+      -}
+    +e.list(style="display: none")
+      - for(var i = 0; i < 24; i++){
+        +e.A.item(href="#")
+          +e.IMG.pic(src='/img/client-'+ i +'.png' alt='')
+      -}
+    +e.control
+      +e.BUTTON.more.btn_green Показать еще

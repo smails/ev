@@ -1,0 +1,12 @@
+mixin form-eq(clas)
+  +b.form-eq(class=clas)
+    +e.P.title.display-3.text-center Заказать рассчет стоимости оборудования
+    +e.FORM.form
+      +e.field.field__
+        +e.INPUT.input.required(placeholder="Ваше имя")
+      +e.field.field__
+        +e.INPUT.input.required(placeholder="Ваш телефон" type="tel")
+      +e.LABEL.checkbox.polit__
+        +e.INPUT.hidden(type="checkbox" checked)
+        +e.SPAN.txt Я даю согласие на хранение и обработку моих персональных данных компанией Евромаркет.
+      +e.BUTTON.btn.btn_orange Отправить форму

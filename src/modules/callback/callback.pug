@@ -1,0 +1,18 @@
+mixin callback(state)
+  if state == '1'
+    +b.callback-mini
+      +e.P.title.display-2 Заинтересовали позиции каталога?
+      +e.P.sign Закажите расчет стоимости оборудования - наши менеджеры с удовольствием проконсультируют Вас
+      +e.A.btn.btn_orange.js-open-modal(href="#callback") Оставить заявку
+  else if state == '2'
+    +b.callback-outer.section
+      +e.inner.inner
+        +b.callback-mini_type-1._text-white
+          +e.P.title.display-2 Станьте нашим клиентом
+          +e.P.sign Получите доступ к специальным скидкам и акциям только для постоянных клиентов. Оставьте заявку прямо сейчас.
+          +e.A.btn.btn_orange.js-open-modal(href="#callback") Оставить заявку
+  else if state == '3'
+    +b.callback-mini_type-1._text-white
+      +e.P.title.display-2 Станьте нашим клиентом
+      +e.P.sign Получите доступ к специальным скидкам и акциям только для постоянных клиентов. Оставьте заявку прямо сейчас.
+      +e.A.btn.btn_orange.js-open-modal(href="#callback") Оставить заявку

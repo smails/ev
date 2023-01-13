@@ -1,0 +1,50 @@
++b.menu-fix
+  +e.inner.inner
+    +e.left
+      +e.A.logo(href="#")
+        +e.IMG.pic(src='/icon/icon-logo-mini.svg' alt='')
+      +e.BUTTON.catalog.js-open-catalog
+        +e.icon
+          svg(width='15' height='12' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M1.5 6.25h12M1.5 1.5h12M1.5 11h12' stroke='#fff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+        span Каталог
+      +e.search
+        +e.BUTTON.open-search
+        +e.FORM.search-action
+          +e.INPUT.field(type="text")
+          +e.BUTTON.reset(type="reset")
+            svg(width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M16.2 1.8 1.8 16.2m0-14.4 14.4 14.4' stroke='#AEAEAE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+          +e.close Отмена
+    +e.middle
+      +e.list
+        +e.item
+          +e.A.link(href="#") Комплексное оснащение
+        +e.item
+          +e.A.link(href="#") Производство
+        +e.item
+          +e.A.link(href="#") Дилерам
+        +e.hidden
+          +e.item_hidden
+            +e.A.link(href="#") Портфолио
+          +e.item_hidden
+            +e.A.link(href="#") О заводе
+          +e.item_hidden
+            +e.A.link(href="#") Контакты
+        +e.item_last
+          +e.BUTTON.open-nav
+            svg(width='18' height='4' fill='none' xmlns='http://www.w3.org/2000/svg')
+              circle(cx='9' cy='2' r='2' fill='#666F0F')
+              circle(cx='2' cy='2' r='2' fill='#666F0F')
+              circle(cx='16' cy='2' r='2' fill='#666F0F')
+    +e.right
+      +e.cnt
+        +e.A.act(href="mailto:order+168830@evro-market.ru") order+168830@evro-market.ru
+        +e.A.act(href="tel:+7 495 320 02 54") +7 495 320 02 54
+      +e.BUTTON.call.btn-outline_black.js-open-popup Обратный звонок
+      +b.basket-mini
+        +e.info
+          svg(width='25' height='26' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(fill-rule='evenodd' clip-rule='evenodd' d='M5.955 1.583a1 1 0 0 0-.8.4L2.03 6.15a1 1 0 0 0-.2.6v14.583a3.083 3.083 0 0 0 3.084 3.084h14.583a3.083 3.083 0 0 0 3.083-3.084V6.75a1 1 0 0 0-.2-.6l-3.125-4.167a1 1 0 0 0-.8-.4h-12.5Z' fill='#020F19')
+            path(d='M5.208 7.792h14.584M16.667 13a4.167 4.167 0 1 1-8.334 0' stroke='#fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+          +e.count 0

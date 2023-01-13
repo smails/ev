@@ -1,0 +1,58 @@
+.staff
+  &__inner
+    max-width: 1536px
+  &__title
+    margin-bottom: 2rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 3.1vw
+    +screen('max', 1500)
+      grid-gap: 1vw
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 35%)
+      grid-gap: 3vw
+      justify-content: center
+    +screen('max', 600)
+      grid-template-columns: repeat(2, 1fr)
+  &__item
+    text-align: center
+    border: 2px solid $c3
+    border-radius: 20px
+    padding: 5rem 4.5rem
+    box-sizing: border-box
+    +screen('max', 1500)
+      padding: 5rem 3rem
+    +screen('max', 600)
+      padding: 3rem 2.5rem
+  &__pic
+    max-width: 239px
+    max-height: 239px
+    border-radius: 100%
+    border: 2px solid $c3
+    box-sizing: border-box
+    +screen('max', 1200)
+      max-width: 150px
+      max-height: 150px
+    +screen('max', 600)
+      max-width: 100px
+      height: 100px
+  &__caption
+    +fs(20px)
+    font-weight: 700
+    margin-top: 2.7rem
+    line-height: 1.5
+    +screen('max', 600)
+      +fs(12px)
+      margin-top: 1.3rem
+  &__phone
+    +fs(26px)
+    color: $c4
+    margin-top: 2.7rem
+    transition: .3s ease
+    display: inline-block
+    +screen('max', 600)
+      +fs(16px)
+      margin-top: 1.3rem
+    &:hover
+      color: $c5

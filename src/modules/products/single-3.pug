@@ -1,0 +1,66 @@
+include ../callback/callback-card
+include ../callback/form-equipment
++b.product-info
+  +e.inner.inner
+    +e.left
+      +b.product-main
+        +e.pictures_full
+          +e.slider-main
+            +e.IMG.slide-main(src='/img/product--slide-1.png' alt='')
+            +e.IMG.slide-main(src='/img/product--slide-1.png' alt='')
+            +e.IMG.slide-main(src='/img/product--slide-1.png' alt='')
+            +e.IMG.slide-main(src='/img/product--slide-1.png' alt='')
+          +e.slider-thumb
+            +e.IMG.slide-thumb(src='/img/product--slide-1.png' alt='')
+            +e.IMG.slide-thumb(src='/img/product--slide-1.png' alt='')
+            +e.IMG.slide-thumb(src='/img/product--slide-1.png' alt='')
+            +e.IMG.slide-thumb(src='/img/product--slide-1.png' alt='')
+      +e.line
+        +e.H2.title Описание
+        +e.text
+          p ЦЕНЫ УКАЗАНЫ ЗА СТЕЛЛАЖ С ОДНОЙ СТОЙКОЙ ДЛЯ УСТАНОВКИ В РЯД, БЕЗ ЦОКОЛЯ, ОГРАНИЧИТЕЛЕЙ И ЦЕННИКОДЕРЖАТЕЛЕЙ
+          p Используется для выкладки продуктов питания и непродовольственных товаров. Фриз стеллажа пристенного можно использовать для размещения бренда продукции, рекламы товара, важной информации.
+          .hidden
+            p В целом, конечно, начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации инновационных методов управления процессами. А также непосредственные участники технического прогресса будут превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Но разбавленное изрядной долей эмпатии, рациональное мышление предопределяет высокую востребованность модели развития... 
+          a(href="#" class="toogle-more bold") Показать еще
+      +e.line
+        +e.H2.title Характеристики
+        +e.P.sign Покраска в любой цвет и комбинации цветов
+        +e.UL.list
+          +e.LI.item
+            p Вид стеллажа
+            p Пристенный
+          +e.LI.item
+            p Материал стеллажа
+            p Сталь
+          +e.LI.item
+            p Толщина стали
+            p Полки, стенки -0.8 мм, стойки 2.5 мм
+          +e.LI.item
+            p Нагрузка на стеллаж
+            p До 900 кг (зависит от комплектации)
+        +e.BUTTON.more Показать еще
+      +call_card('Оснащение')
+      include ../hall/hall
+    +e.right
+      +e.sticky
+        +b.product-main
+          +e.H1.title Овощной стеллаж с зеркальным фризом и подсветкой полок
+          +e.P.art Артикул: ПС001
+          +e.prices
+            +e.new-price 3 924 руб.
+            +e.old-price 25 851
+          +e.A.mgcall(href="#") Оптовые цены уточняйте у менеджеров
+          +e.control
+            +e.A.calc.btn_orange.js-open-modal(href="#calc") Рассчитать стоимость?
+            +e.BUTTON.add.btn-outline_green В корзину
+          +b.select-size
+            +e.P.title Размеры 
+              span высота x ширина x глубина, см
+            select(name="size")
+              option(value="225 x 65 x 40-30-30-30-30") 225 x 65 x 40-30-30-30-30
+              option(value="225 x 65 x 40-30-30-30-30") 225 x 65 x 40-30-30-30-30
+              option(value="225 x 65 x 40-30-30-30-30") 225 x 65 x 40-30-30-30-30
+              option(value="225 x 65 x 40-30-30-30-30") 225 x 65 x 40-30-30-30-30
+              option(value="225 x 65 x 40-30-30-30-30") 225 x 65 x 40-30-30-30-30
+        +form-eq('white-box mt')

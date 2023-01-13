@@ -1,0 +1,74 @@
+.clients
+  background: $c3
+  padding: 7rem 0
+  +screen('max', 600)
+    padding: 4.25rem 0
+  &__list
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    grid-auto-rows: 128px
+    grid-gap: 1.55vw
+    justify-content: space-between
+    margin-bottom: 3rem
+    +screen('max', 1200)
+      grid-template-columns: repeat(5, 1fr)
+    +screen('max', 1023)
+      grid-template-columns: repeat(4, 1fr)
+    +screen('max', 600)
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 20px
+      grid-auto-rows: 100px
+  &__item
+    background: $c2
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 15px
+    padding: 10px 20px
+    box-sizing: border-box
+    border: 2px solid transparent
+    transition: .3s ease
+    &:hover
+      border-color: $c4
+    picture
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+  &__pic
+    vertical-align: middle
+    max-width: 100%
+    max-height: 100%
+    object-fit: contain
+  &__control
+    display: flex
+    justify-content: center
+  &__overflow
+    scrollbar-width: 0
+    +screen('max', 600)
+      overflow-x: auto
+      display: flex
+      width: calc(100vw - 20px)
+      align-items: center
+    &::-webkit-scrollbar
+      height: 0
+    .clients__list
+      +screen('max', 600)
+        display: flex
+    .clients__item
+      +screen('max', 600)
+        width: 200px
+        height: 100px
+        flex-shrink: 0
+        margin-right: 3rem
+  &__btn
+    +screen('max', 600)
+      background: $c2
+      border: 2px solid $c4
+      border-radius: 5px
+      color: #333
+      +fs(16px)
+      margin: -3rem 3rem 0 0
+      width: 150px
+      padding: 28px 14px

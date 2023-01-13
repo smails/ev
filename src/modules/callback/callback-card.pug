@@ -1,0 +1,17 @@
+mixin call_card(state)
+  if state == 'Замер'
+    +b.call-card.section
+      +e.inner.inner
+        +e.IMG.pic(src='/img/call-card-1.png' alt='')
+        +e.content
+          +e.P.title.display-2 Вызов замерщика
+          +e.text Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. 
+          +e.A.btn.btn_green.js-open-modal(href='#callback') Отправить заявку
+  if state == 'Оснащение'
+    +b.call-card.section
+      +e.inner.inner
+        +e.IMG.pic(src='/img/call-card-2.png' alt='')
+        +e.content
+          +e.P.title.display-2 Комплексное оснащение
+          +e.text Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. 
+          +e.A.btn.btn_green.js-open-modal(href='#callback') Отправить заявку
