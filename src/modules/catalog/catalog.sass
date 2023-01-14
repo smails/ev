@@ -297,6 +297,29 @@
     cursor: pointer
   &__tooltyp
     display: none
+  &__slider-wrap
+    display: flex
+    justify-content: space-between
+    margin-top: 1.5rem
+  &__slider-val
+    background: $c2
+    border: 2px solid $c3
+    border-radius: 10px
+    width: 45%
+    padding: 10px 15px 10px 40px
+    box-sizing: border-box
+    position: relative
+    &:before
+      color: #AEAEAE
+      position: absolute
+      bottom: 10px
+      left: 15px
+    &#price-val-lower
+      &:before
+        content: 'от'
+    &#price-val-upper
+      &:before
+        content: 'до'
 
 .catalog-sort
   display: flex

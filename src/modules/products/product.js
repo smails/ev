@@ -83,13 +83,27 @@ $('.addoption__btn input').change(function(){
 });
 
 
-var slider = document.getElementById('price');
+const slider = document.getElementById('price');
+const snapValues = [
+  document.getElementById('price-val-lower'),
+  document.getElementById('price-val-upper')
+];
 
-noUiSlider.create(slider, {
-    start: [20, 80],
+
+if(slider != undefined && slider != null){
+  noUiSlider.create(slider, {
+    start: [0, 5000],
     connect: true,
+    step: 1,
+    behaviour: 'tap',
     range: {
         'min': 0,
-        'max': 100
-    }
-});
+        'max': 5000
+    },
+  });
+
+  slider.noUiSlider.on("update", function (values, handle) {
+    snapValues[handle].innerHTML = values[handle].slice(0, -3);
+  });
+}
+

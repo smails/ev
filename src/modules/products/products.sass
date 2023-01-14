@@ -283,6 +283,9 @@
     display: inline-block
     margin-top: 1rem
     margin-bottom: 2rem
+    transition: .3s ease
+    &:hover
+      color: $c4
     +screen('max', 600)
       +fs(12px)
   &__hidden
@@ -306,6 +309,9 @@
     a
       color: #6FA300
       text-decoration: underline
+      transition: .3s ease
+      &:hover
+        color: $c6
   &__buy
     margin-top: 2rem
     width: 100%
@@ -425,6 +431,9 @@
     border-radius: 5px
     margin-top: 3rem
     display: inline-block
+    transition: .3s ease
+    &:hover
+      background: $c4
     +screen('max', 600)
       display: none
   &__clrs-popup

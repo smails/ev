@@ -121,3 +121,42 @@ body
     +screen('max', 600)
       +fs(12px)
       white-space: nowrap
+
+
+.noUi-base
+  width: 100%
+  height: 100%
+  position: relative
+  z-index: 1
+
+.noUi-connects
+  height: 6px
+  background: #D5DC87
+  border-radius: 5px
+  overflow: hidden
+  .noUi-connect
+    background: $c4
+    height: 100%
+
+.noUi-origin, .noUi-connect
+  will-change: transform
+  position: absolute
+  z-index: 1
+  top: 0
+  right: 0
+  height: 100%
+  width: 100%
+  transform-origin: 0 0
+  transform-style: flat
+
+.noUi-handle
+  width: 24px
+  height: 24px
+  border-radius: 100%
+  background: $c4
+  position: absolute
+  right: -17px
+  top: -9px
+  cursor: pointer
+  &.noUi-handle-upper
+    right: -5px
