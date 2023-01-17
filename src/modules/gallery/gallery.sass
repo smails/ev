@@ -4,16 +4,16 @@
     margin-top: 3rem
     grid-gap: 1.55vw
     grid-auto-rows: 230px
-    +screen('max', 600)
+    +screen('max', 767)
       grid-gap: 5vw
       grid-auto-rows: 25vw
     &_left
       grid-template-columns: 1.32fr repeat(3, 1fr)
-      +screen('max', 600)
+      +screen('max', 767)
         grid-template-columns: repeat(2, 1fr)
     &_right
       grid-template-columns: repeat(3, 1fr) 1.32fr
-      +screen('max', 600)
+      +screen('max', 767)
         display: none
   &__item
     position: relative
@@ -42,7 +42,7 @@
       grid-row-end: 3
       grid-column-start: 1
       grid-column-end: 2
-      +screen('max', 600)
+      +screen('max', 767)
         grid-column-end: 3
         grid-row-end: 4
     &_last
@@ -60,5 +60,5 @@
     height: 100%
     object-fit: cover
     border-radius: 20px
-    +screen('max', 600)
+    +screen('max', 767)
       border-radius: 15px

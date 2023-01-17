@@ -20,7 +20,7 @@
     width: 100%
     @media screen and ( max-height: 700px) and (orientation:landscape)
       padding: 2rem
-    +screen('max', 600)
+    +screen('max', 767)
       padding: 3rem 0 3rem 3rem
       height: 100%
       border-radius: 0
@@ -40,7 +40,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-    +screen('max', 600)
+    +screen('max', 767)
       position: relative
       width: 100vw
       left: -3rem
@@ -48,7 +48,7 @@
       border-bottom: 1px solid $c3
       margin-bottom: 1rem
     .modal__close
-      +screen('max', 600)
+      +screen('max', 767)
         top: 0rem
         right: 3rem
   &__back
@@ -63,7 +63,7 @@
     +screen('min', 600)
       display: none
   &__middle
-    +screen('max', 600)
+    +screen('max', 767)
       overflow: auto
       height: 100%
       padding-right: 3rem
@@ -88,7 +88,7 @@
         width: 50%
         flex-shrink: 0
   &__right
-    +screen('max', 600)
+    +screen('max', 767)
       width: 100%
   &__pic
     vertical-align: middle
@@ -97,7 +97,7 @@
     margin-bottom: 3rem
     @media screen and ( max-height: 700px) and (orientation:landscape)
       margin-bottom: 1rem
-    +screen('max', 600)
+    +screen('max', 767)
       margin-bottom: 0
   &__title
     +fs(20px)
@@ -106,14 +106,14 @@
     margin-bottom: 3rem
     @media screen and ( max-height: 700px) and (orientation:landscape)
       margin-bottom: 1rem
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
       font-weight: 400
       margin-bottom: 1.5rem
   &__prices
     display: flex
     align-items: flex-end
-    +screen('max', 600)
+    +screen('max', 767)
       display: block
   &__new-price
     +fs(42px)
@@ -121,7 +121,7 @@
     margin-right: 0.5rem
     @media screen and ( max-height: 700px) and (orientation:landscape)
       +fs(30px)
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(16px)
       font-weight: 400
   &__old-price
@@ -133,7 +133,7 @@
     margin-left: 1rem
     @media screen and ( max-height: 700px) and (orientation:landscape)
       +fs(25px)
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
       margin-left: 0
       margin-top: 1rem
@@ -160,13 +160,13 @@
       margin-top: 1rem
     +screen('max', 1023)
       background-size: 30px
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(10px)
   &__control
     position: absolute
     bottom: 0
     right: 0
-    +screen('max', 600)
+    +screen('max', 767)
       position: fixed
       width: 100%
       background: #fff
@@ -181,7 +181,7 @@
     grid-template-columns: repeat(3, 1fr)
     grid-gap: 10px
     grid-auto-rows: 56px
-    +screen('max', 600)
+    +screen('max', 767)
       grid-template-columns: repeat(2, 1fr)
       grid-auto-rows: 40px
   &__btn
@@ -198,14 +198,14 @@
     text-align: left
     cursor: pointer
     line-height: 1.4
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(10px)
       font-weight: 400
     svg
       margin-right: 1rem
       vertical-align: middle
       flex-shrink: 0
-      +screen('max', 600)
+      +screen('max', 767)
         width: 16px
     path
       fill: $c4
@@ -235,7 +235,7 @@
     left: 0
     +screen('max', 1023)
       padding-bottom: 50px
-    +screen('max', 600)
+    +screen('max', 767)
       padding-bottom: 180px
   &__txt
     line-height: 1.4
@@ -259,7 +259,7 @@
   &__field
     margin-top: 3rem
   &__select
-    +screen('max', 600)
+    +screen('max', 767)
       background: none
       padding: 0
       border: 0
@@ -275,7 +275,7 @@
     width: 237px
   &__back
     width: 172px
-    +screen('max', 600)
+    +screen('max', 767)
       display: none
   &__chb
     display: none
@@ -285,7 +285,7 @@
       align-items: flex-start
 
 .modal-action
-  +screen('max', 600)
+  +screen('max', 767)
     padding-bottom: 100px
   &__row
     display: flex
@@ -321,7 +321,7 @@
     margin-top: 3rem
     @media screen and ( max-height: 700px) and (orientation:landscape)
       margin-bottom: 1rem
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
       font-weight: 400
       margin-bottom: 1.5rem
@@ -339,7 +339,7 @@
       margin-top: 1rem
     +screen('max', 1200)
       background-size: 30px
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(10px)
   &__field
     margin-top: 3rem
@@ -362,7 +362,7 @@
     overflow: auto
     padding-right: 15px
     box-sizing: border-box
-    +screen('max', 600)
+    +screen('max', 767)
       padding-right: 0
       max-height: 63vh
     &::-webkit-scrollbar
@@ -378,7 +378,7 @@
   &__item
     width: 68px
     margin-bottom: 20px
-    +screen('max', 600)
+    +screen('max', 767)
       margin-bottom: 25px
       width: 23%
   &__box
@@ -398,7 +398,7 @@
       width: 100%
       top: calc(100% + 7px)
       left: 0
-      +screen('max', 600)
+      +screen('max', 767)
         +fs(12px)
   &__hidden
     display: none
@@ -406,7 +406,7 @@
       border-color: $c4
   &__control
     position: relative
-    +screen('max', 600)
+    +screen('max', 767)
       text-align: center
     &::before
       content: ''
@@ -431,7 +431,7 @@
   background: rgba(2, 15, 25, 0.8)
   z-index: 999
   display: none
-  +screen('max', 600)
+  +screen('max', 767)
     background: none
   &__container
     position: absolute
@@ -446,7 +446,7 @@
     width: 100%
     @media screen and ( max-height: 700px) and (orientation:landscape)
       padding: 2rem
-    +screen('max', 600)
+    +screen('max', 767)
       padding: 3rem
       height: calc(100% - 60px)
       border-radius: 0
@@ -458,7 +458,7 @@
     top: 4.8rem
     right: 4rem
     cursor: pointer
-    +screen('max', 600)
+    +screen('max', 767)
       top: 3.8rem
       right: 2rem
     path
@@ -468,35 +468,35 @@
         stroke: $c4
   &__title
     margin-bottom: 4rem
-    +screen('max', 600)
+    +screen('max', 767)
       text-align: left
   &__wrap
     display: flex
     align-items: flex-start
     justify-content: space-between
     gap: 40px
-    +screen('max', 600)
+    +screen('max', 767)
       display: block
   &__info
     width: 48%
     text-align: right
-    +screen('max', 600)
+    +screen('max', 767)
       width: 100%
   &__sign
     line-height: 1.4
     margin-bottom: 4rem
     text-align: left
     max-width: 375px
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
   &__pic
     max-width: 100%
     vertical-align: middle
-    +screen('max', 600)
+    +screen('max', 767)
       display: none
   &__form
     width: 50%
-    +screen('max', 600)
+    +screen('max', 767)
       width: 100%
   &__field
     margin-bottom: 30px

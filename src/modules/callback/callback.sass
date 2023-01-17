@@ -7,7 +7,7 @@
   border-radius: 30px
   +screen('max', 1023)
     text-align: center
-  +screen('max', 600)
+  +screen('max', 767)
     padding: 4rem 3rem
     border-radius: 15px
   &_text-white
@@ -15,11 +15,11 @@
   &_type-1
     border: none
     background: linear-gradient(0deg, rgba(2, 15, 25, 0.6), rgba(2, 15, 25, 0.6)), url(../img/bg-call-1.png) center/cover no-repeat
-    +screen('max', 600)
+    +screen('max', 767)
       background: linear-gradient(0deg, rgba(2, 15, 25, 0.6), rgba(2, 15, 25, 0.6)), url(../img/bg-call-1--mobile.png) center/cover no-repeat
       padding: 6rem 3rem
   &__title
-    +screen('max', 600)
+    +screen('max', 767)
       margin-bottom: 3rem
   &__sign
     margin-top: 1rem
@@ -27,7 +27,7 @@
     line-height: 1.4
     +screen('max', 1023)
       max-width: 100%
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
   &__btn
     position: absolute
@@ -52,40 +52,40 @@
     margin: 0 auto
     padding: 7rem
     box-sizing: border-box
-    +screen('max', 600)
+    +screen('max', 767)
       padding: 4.25rem 2.95rem
       border-radius: 15px
   &__title
     margin-bottom: 4rem
-    +screen('max', 600)
+    +screen('max', 767)
       margin-bottom: 2.9rem
   &__wrap
     display: flex
     align-items: flex-start
     justify-content: space-between
     gap: 40px
-    +screen('max', 600)
+    +screen('max', 767)
       display: block
   &__info
     width: 48%
     text-align: right
-    +screen('max', 600)
+    +screen('max', 767)
       width: 100%
   &__sign
     line-height: 1.4
     margin-bottom: 4rem
     text-align: left
     max-width: 375px
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
   &__pic
     max-width: 100%
     vertical-align: middle
-    +screen('max', 600)
+    +screen('max', 767)
       display: none
   &__form
     width: 50%
-    +screen('max', 600)
+    +screen('max', 767)
       width: 100%
   &__field
     margin-bottom: 30px
@@ -101,7 +101,7 @@
   width: 100%
   box-sizing: border-box
   position: relative
-  +screen('max', 600)
+  +screen('max', 767)
     padding: 4.2rem 2.8rem
   &:before
     content: ''
@@ -117,37 +117,39 @@
     +screen('max', 1730)
       left: -20px
       width: 100%
-    +screen('max', 600)
+    +screen('max', 767)
       left: 0
       background: linear-gradient(0deg, rgba(251, 251, 243, 0.95), rgba(251, 251, 243, 0.95))
       border-radius: 15px
   &__inner
     display: flex
     align-items: center
-    +screen('max', 600)
+    +screen('max', 767)
       display: block
   &__content
     margin-left: 3vw
-    +screen('max', 600)
+    +screen('max', 767)
       text-align: center
   &__title
     margin-bottom: 3rem
   &__text
     line-height: 1.4
     margin-bottom: 3rem
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
   &__pic
-    +screen('max', 600)
+    width: 100%
+    +screen('max', 767)
       position: absolute
       top: 0
       left: 0
       z-index: -2
-      width: 100%
       height: 100%
       object-fit: cover
       border-radius: 15px
-
+  picture
+    max-width: 50%
+    flex-shrink: 0
 .form-eq
   padding: 3rem
   border-radius: 20px

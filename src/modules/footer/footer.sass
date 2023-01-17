@@ -1,7 +1,7 @@
 .footer
   padding: 7rem 0 4rem
   background: $c3
-  +screen('max', 600)
+  +screen('max', 767)
     padding: 4.25rem 0
   &__inner
     display: flex
@@ -24,7 +24,7 @@
     margin-bottom: 4rem
     +screen('max', 1023)
       flex-wrap: wrap
-    +screen('max', 600)
+    +screen('max', 767)
       margin-bottom: 0
   &__col
     padding-right: 3rem
@@ -36,7 +36,7 @@
       flex-grow: 1
       width: 45%
       margin-bottom: 5rem
-    +screen('max', 600)
+    +screen('max', 767)
       padding-right: 0
       margin-right: 0
       border-right: 0
@@ -61,17 +61,17 @@
     grid-template-columns: repeat(2, 200px)
     +screen('max', 1400)
       grid-template-columns: 1fr
-    +screen('max', 600)
+    +screen('max', 767)
       grid-template-columns: repeat(2, 48%)
       justify-content: space-between
   &__list
-    +screen('max', 600)
+    +screen('max', 767)
       display: grid
       grid-template-columns: repeat(2, 48%)
       justify-content: space-between
   &__sign
     line-height: 1.4
-    +screen('max', 600)
+    +screen('max', 767)
       border-bottom: 1px solid $c10
       padding-bottom: 4.25rem
   &__info
@@ -80,7 +80,7 @@
     +screen('max', 1200)
       margin-bottom: 5rem
       max-width: 55%
-    +screen('max', 600)
+    +screen('max', 767)
       max-width: 100%
       margin-top: 7.5rem
       margin-bottom: 4.25rem
@@ -141,12 +141,13 @@
   padding: 13px 0
   background: $c4
   color: $c5
-  +screen('max', 600)
+  +screen('max', 767)
     background: $c3
     padding-top: 0
     position: relative
+    overflow: hidden
   &:before
-    +screen('max', 600)
+    +screen('max', 767)
       content: ''
       position: absolute
       bottom: 0
@@ -160,16 +161,16 @@
     display: flex
     justify-content: space-between
     align-items: center
-    +screen('max', 600)
+    +screen('max', 767)
       display: block
   &__title
-    +screen('max', 600)
+    +screen('max', 767)
       margin-bottom: 6rem
       color: $c1
       line-height: 1.3
   &__link
     font-weight: 700
-    +screen('max', 600)
+    +screen('max', 767)
       text-align: center
       display: block
       text-decoration: underline

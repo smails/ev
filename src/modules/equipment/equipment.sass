@@ -6,7 +6,7 @@
     justify-content: space-between
     +screen('max', 1023)
       grid-template-columns: repeat(2, 1fr)
-    +screen('max', 600)
+    +screen('max', 767)
       grid-template-columns: repeat(1, 1fr)
       grid-gap: 20px
       grid-auto-rows: 100px
@@ -35,7 +35,7 @@
     width: 100%
     vertical-align: middle
     border-radius: 20px
-    +screen('max', 600)
+    +screen('max', 767)
       height: 100%
       object-fit: cover
   &__caption
@@ -51,7 +51,7 @@
     width: 100%
     +screen('max', 1200)
       +fs(20px)
-    +screen('max', 600)
+    +screen('max', 767)
       font-weight: 400
   &__elems
     margin-top: 3rem
@@ -61,7 +61,7 @@
     grid-gap: 1.55vw
     +screen('max', 1023)
       grid-template-columns: repeat(3, 1fr)
-    +screen('max', 600)
+    +screen('max', 767)
       grid-template-columns: repeat(2, 1fr)
       display: none
   &__elem
@@ -112,7 +112,7 @@
     +screen('max', 1023)
       +fs(20px)
       bottom: 15px
-    +screen('max', 600)
+    +screen('max', 767)
       font-weight: 400
       bottom: 10px
       +fs(16px)
@@ -141,7 +141,7 @@
     justify-content: space-between
     +screen('max', 1023)
       grid-template-columns: repeat(4, 1fr)
-    +screen('max', 600)
+    +screen('max', 767)
       grid-template-columns: repeat(1, 1fr)
       grid-gap: 20px
       grid-auto-rows: 100px
@@ -151,7 +151,7 @@
     border-radius: 20px
     transition: .3s ease
     &:nth-of-type(n+6)
-      +screen('max', 600)
+      +screen('max', 767)
         display: none
     &:hover
       box-shadow: 0px 10px 10px rgba(2, 15, 25, 0.2)
@@ -169,7 +169,7 @@
       position: absolute
       transition: .3s ease
       opacity: .8
-      +screen('max', 600)
+      +screen('max', 767)
         border-radius: 15px
     &_more
       background: $c4
@@ -177,13 +177,13 @@
         content: none
       &:hover
         background: $c5
-    +screen('max', 600)
+    +screen('max', 767)
       border-radius: 15px
   &__pic
     width: 100%
     vertical-align: middle
     border-radius: 20px
-    +screen('max', 600)
+    +screen('max', 767)
       height: 100%
       object-fit: cover
       border-radius: 15px

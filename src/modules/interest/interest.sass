@@ -11,7 +11,7 @@
     +screen('max', 1023)
       grid-template-columns: repeat(3, 1fr)
       grid-auto-rows: calc(100vw / 4)
-    +screen('max', 600)
+    +screen('max', 767)
       grid-template-columns: repeat(2, 1fr)
       grid-auto-rows: 200px
       grid-gap: 7vw 5vw
@@ -27,14 +27,14 @@
     justify-content: space-between
     flex-flow: column
     position: relative
-    +screen('max', 600)
+    +screen('max', 767)
       background: none
       border: none
       padding: 0
     &:hover
       border-color: $c4
     picture
-      +screen('max', 600)
+      +screen('max', 767)
         background: #F7F7F7
         border: 2px solid transparent
         border-radius: 15px
@@ -61,6 +61,6 @@
       +fs(15px)
     +screen('max', 1200)
       +fs(16px)
-    +screen('max', 600)
+    +screen('max', 767)
       margin-top: 1rem
       +fs(12px)

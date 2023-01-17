@@ -8,7 +8,7 @@
       // grid-auto-rows: calc(100vw / 5.5)
       +screen('max', 1023)
         grid-template-columns: repeat(3, 1fr)
-      +screen('max', 600)
+      +screen('max', 767)
         grid-template-columns: repeat(2, 1fr)
         grid-gap: 7.2vw
     &_six
@@ -20,7 +20,7 @@
         grid-auto-rows: 220px
       +screen('max', 1023)
         grid-template-columns: repeat(3, 1fr)
-      +screen('max', 600)
+      +screen('max', 767)
         grid-template-columns: repeat(2, 1fr)
         grid-gap: 7.2vw
         justify-content: center
@@ -36,7 +36,7 @@
     justify-content: space-between
     flex-flow: column
     position: relative
-    +screen('max', 600)
+    +screen('max', 767)
       background: none
       border: none
       padding: 0
@@ -53,7 +53,7 @@
         grid-column-start: auto
         grid-column-end: auto
     picture
-      +screen('max', 600)
+      +screen('max', 767)
         background: #F7F7F7
         border: 2px solid transparent
         border-radius: 15px
@@ -74,7 +74,7 @@
       max-width: 120px
     +screen('max', 1200)
       width: 120px
-    +screen('max', 600)
+    +screen('max', 767)
       width: 100px
   &__caption
     +fs(20px)
@@ -89,7 +89,7 @@
       +fs(15px)
     +screen('max', 1200)
       +fs(16px)
-    +screen('max', 600)
+    +screen('max', 767)
       margin-top: 1rem
     &_big
       +fs(30px)
@@ -110,13 +110,13 @@
         grid-template-columns: repeat(5,1fr)
       +screen('max', 1023)
         grid-template-columns: repeat(4,1fr)
-      +screen('max', 600)
+      +screen('max', 767)
         grid-template-columns: repeat(3,1fr)
     &_three
       grid-template-columns: repeat(3,1fr)
-      +screen('max', 600)
+      +screen('max', 767)
         grid-template-columns: 1fr
-    +screen('max', 600)
+    +screen('max', 767)
       grid-gap: 10px
     &[data-attr]
       display: none
@@ -131,7 +131,7 @@
       display: block
       text-align: center
       transition: .3s ease
-      +screen('max', 600)
+      +screen('max', 767)
         padding: 15px
         border-radius: 10px
     &_big
@@ -139,7 +139,7 @@
         padding: 50px 25px
         +screen('max', 1023)
           padding: 25px
-        +screen('max', 600)
+        +screen('max', 767)
           padding: 15px
     &:hover
       picture
@@ -165,7 +165,7 @@
     justify-content: center
     align-items: center
     text-align: center
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(10px)
     &_big
       +fs(20px)
@@ -206,7 +206,7 @@
   transition: .3s ease
   +screen('max', 1023)
     padding: 10px
-  +screen('max', 600)
+  +screen('max', 767)
     border-radius: 15px
   &:hover
     z-index: 10
@@ -220,7 +220,7 @@
     text-align: center
     +screen('max', 1200)
       height: 200px
-    +screen('max', 600)
+    +screen('max', 767)
       height: 145px
   &__pic
     vertical-align: middle
@@ -237,7 +237,7 @@
     z-index: 3
     top: 0
     left: 0
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
   &__sale
     background: #FB4D3D
@@ -254,13 +254,13 @@
     font-weight: 700
     color: #595959
     margin-right: 0.5rem
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
   &__old-price
     position: relative
     +fs(18px)
     color: #595959
-    +screen('max', 600)
+    +screen('max', 767)
       display: none
     &:before
       content: ''
@@ -275,7 +275,7 @@
     margin-top: 2rem
     line-height: 1.3
     display: block
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
   &__more
     text-decoration: underline
@@ -286,7 +286,7 @@
     transition: .3s ease
     &:hover
       color: $c4
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
   &__hidden
     display: none
@@ -299,12 +299,12 @@
     line-height: 1
     +screen('max', 1500)
       +fs(12px)
-    +screen('max', 600)
+    +screen('max', 767)
       display: block
     p
       &:first-of-type
         color: #929292
-        +screen('max', 600)
+        +screen('max', 767)
           margin-bottom: 4px
     a
       color: #6FA300
@@ -318,20 +318,20 @@
     border-radius: 10px
 
 .product-main
-  +screen('max', 600)
+  +screen('max', 767)
     overflow: hidden
   &__inner
     display: flex
     justify-content: space-between
     align-items: flex-start
     gap: 15px
-    +screen('max', 600)
+    +screen('max', 767)
       display: block
   &__pictures
     max-width: 915px
     flex-shrink: 0
     width: 55%
-    +screen('max', 600)
+    +screen('max', 767)
       width: 100%
       height: 228px
     .slick-slide
@@ -355,11 +355,12 @@
       max-width: 100%
       width: 100%
   &__slider-thumb
-    +screen('max', 600)
+    +screen('max', 767)
       display: none
   &__slide-main
     max-width: 100%
     height: 100%
+    max-height: 579px
     margin: 0 auto
     object-fit: contain
   &__slide-thumb
@@ -369,17 +370,17 @@
     margin-top: 4rem
   &__content
     max-width: 610px
-    +screen('max', 600)
+    +screen('max', 767)
       margin-top: 1.3rem
   &__title
     +fs(26px)
     font-weight: 400
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(18px)
   &__art
     color: #929292
     margin-top: 2rem
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
   &__prices
     display: flex
@@ -389,14 +390,14 @@
     +fs(42px)
     font-weight: 600
     margin-right: 2rem
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(24px)
   &__old-price
     position: relative
     +fs(26px)
     color: #B9BCC1
     position: relative
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(18px)
     &:before
       content: ''
@@ -412,22 +413,21 @@
     text-decoration-line: underline
     color: #929292
     display: inline-block
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
   &__control
     display: flex
     align-items: center
     margin-top: 2rem
-    +screen('max', 1200)
+    +screen('max', 1400)
       display: block
   &__add
     margin: 0 1vw
     padding: 12px 20px 14px
     color: $c1
-    +screen('max', 1200)
+    +screen('max', 1400)
       margin-left: 0
-      margin-top: 2rem
-    +screen('max', 600)
+    +screen('max', 767)
       width: 100%
   &__call
     padding: .4rem 1.3rem
@@ -438,7 +438,7 @@
     transition: .3s ease
     &:hover
       background: $c4
-    +screen('max', 600)
+    +screen('max', 767)
       display: none
   &__clrs-popup
     width: 100vw
@@ -458,7 +458,7 @@
       display: none
   &__calc
     padding: 14px 14px 16px
-    +screen('max', 600)
+    +screen('max', 767)
       width: 100%
   &__allgallery
     display: block
@@ -474,7 +474,16 @@
     justify-content: space-between
     grid-template-columns: repeat(2, 1fr)
     max-width: 1000px
-
+  &__count
+    display: flex
+    justify-content: space-between
+    +screen('max', 1400)
+      margin-top: 2rem
+      max-width: 300px
+    +screen('max', 767)
+      max-width: 100%
+  &__slider-main
+    max-height: 579px
 .select-size
   margin-top: 2rem
   max-width: 340px
@@ -484,7 +493,7 @@
       color: #929292
 
 .colrs
-  +screen('max', 600)
+  +screen('max', 767)
     display: none
   &__title
     margin: 1rem 0 3rem
@@ -541,15 +550,12 @@
       display: none
   &__line
     margin-bottom: 3rem
-    &_desck
-      +screen('max', 600)
-        display: none
   &__title
     margin-bottom: 2rem
   &__text
     line-height: 1.4
     max-width: 690px
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
     p
       margin-bottom: 2rem
@@ -557,7 +563,7 @@
       display: none
   &__sign
     margin-bottom: 2rem
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
   &__list
     max-width: 690px
@@ -567,7 +573,7 @@
     padding: .8rem 1.4rem
     line-height: 1.5
     margin-bottom: 0
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(10px)
     &:nth-of-type(2n + 1)
       background: #fbfbf3
@@ -580,17 +586,25 @@
     color: $c4
     margin-top: 2rem
     background: none
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
   &__table
     margin-bottom: 3rem
+    max-width: 100%
+    overflow: auto
+    table
+      width: 100%
     td,th
       border: 1px solid $c3
+      +screen('max', 767)
+        font-size: 14px
     th
       padding: 1.5rem 1.2rem
       text-align: left
       background: $c6
       color: #929292
+      +screen('max', 767)
+        white-space: nowrap
     td
       padding: 1rem 1.2rem
       a
@@ -663,6 +677,9 @@
     grid-template-columns: repeat(3, 1fr)
     grid-gap: 1.55vw
     grid-auto-rows: 80px
+    +screen('max', 767)
+      grid-template-columns: repeat(2, 1fr)
+      grid-auto-rows: 40px
   &__btn
     font-weight: 700
     padding: 1.8rem 3.1vw
@@ -675,10 +692,15 @@
     align-items: center
     text-align: left
     cursor: pointer
+    +screen('max', 767)
+      +fs(10px)
+      font-weight: 400
     svg
       margin-right: 1rem
       vertical-align: middle
       flex-shrink: 0
+      +screen('max', 767)
+        transform: scale(.7)
     path
       fill: $c4
       transition: .3s ease
@@ -694,10 +716,18 @@
         opacity: 1
       path
         fill: $c2
+    &:hover
+      &:not(.active)
+        background: $c6
   &__call
     position: absolute
     bottom: 10px
     right: 0
+    +screen('max', 767)
+      width: 48%
+      +fs(10px)
+      padding: 12px 18px 14px
+      bottom: 3px
 
 .option-repair
   &__title
@@ -709,6 +739,8 @@
     grid-auto-rows: 364px
     +screen('max', 1500)
       grid-auto-rows: 440px
+    +screen('max', 767)
+      display: block
   &__item
     background: $c2
     border: 1px solid $c3
@@ -718,15 +750,33 @@
     display: flex
     align-items: flex-start
     gap: 1.55vw
+    +screen('max', 767)
+      border: 0
+      padding: 0 20px
+      margin-bottom: 1rem
+      align-items: center
   &__pic
     width: 150px
     flex-shrink: 0
+    +screen('max', 767)
+      width: 32px
+      height: 32px
+      border-radius: 100%
+      object-fit: cover
+      border: 1px solid $c2
+      margin-right: 10px
   &__caption
     +fs(20px)
     font-weight: 700
     margin-bottom: 2rem
     line-height: 1.4
     margin-top: 1rem
+    +screen('max', 767)
+      +fs(12px)
+      font-weight: 400
+      margin: 0
   &__text
     line-height: 1.4
     color: #929292
+    +screen('max', 767)
+      display: none

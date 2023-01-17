@@ -12,11 +12,66 @@ mixin header()
       +e.middle
         +e.A.logo(href="#")
           +e.IMG.pic(src='/icon/icon-logo.svg' alt='')
-        +e.FORM.search
-          +e.INPUT.field(type="text" placeholder="Поиск...")
-          +e.BUTTON.reset(type="reset")
-            svg(width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg')
-              path(d='M16.2 1.8 1.8 16.2m0-14.4 14.4 14.4' stroke='#AEAEAE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+        +b.FORM.search-cat
+          +e.head
+            +e.INPUT.field(type="text" placeholder="Поиск...")
+            +e.BUTTON.reset(type="reset")
+              svg(width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M16.2 1.8 1.8 16.2m0-14.4 14.4 14.4' stroke='#AEAEAE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+          +e.result
+            +e.items
+              +e.A.item(href="#")
+                +e.IMG.icon(src='/img/product-mini-1.png' alt='')
+                +e.content
+                  +e.P.txt Торговый 
+                    b стеллаж 
+                    | с пятью проволочными корзинами
+              +e.A.item(href="#")
+                +e.IMG.icon(src='/img/product-mini-2.png' alt='')
+                +e.content
+                  +e.P.txt Торговый 
+                    b стеллаж 
+                    | без полок
+              +e.A.item(href="#")
+                +e.IMG.icon(src='/img/product-mini-3.png' alt='')
+                +e.content
+                  +e.P.txt
+                    b Cтеллаж 
+                    | пристенный с фризом
+              +e.A.item(href="#")
+                +e.IMG.icon(src='/img/product-mini-4.png' alt='')
+                +e.content
+                  +e.P.txt Сетчатый 
+                    b Cтеллаж 
+                    | с корзинами и фризом
+            +e.cats
+              +e.A.item(href="#")
+                +e.IMG.icon(src='/img/product-mini-2.png' alt='')
+                +e.content
+                  +e.B.txt Торговые стеллажи
+                  +e.nav Каталог / Стеллажи
+              +e.A.item(href="#")
+                +e.IMG.icon(src='/img/product-mini-2.png' alt='')
+                +e.content
+                  +e.B.txt Стеллажи для овощных магазинов
+                  +e.nav Каталог / Стеллажи
+              +e.A.item(href="#")
+                +e.IMG.icon(src='/img/product-mini-2.png' alt='')
+                +e.content
+                  +e.B.txt Стеллажи для алкоголя
+                  +e.nav Каталог / Стеллажи
+              +e.A.item(href="#")
+                +e.IMG.icon(src='/img/product-mini-2.png' alt='')
+                +e.content
+                  +e.B.txt Стеллажи для хлеба и выпечки
+                  +e.nav Каталог / Стеллажи
+              +e.A.item(href="#")
+                +e.IMG.icon(src='/img/product-mini-2.png' alt='')
+                +e.content
+                  +e.B.txt Стеллажи для хлеба и выпечки
+                  +e.nav Каталог / Стеллажи
+            +e.control
+              +e.A.more.btn-outline_green(href='/search-page-full.html') Смотреть все результаты
         +e.control
           +e.A.phone(href="tel:+7 495 320 02 54") +7 495 320 02 54
           +e.A.phone(href="tel:8 800 302 32 14") 8 800 302 32 14

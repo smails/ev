@@ -8,7 +8,7 @@
     justify-content: space-between
     +screen('max', 1200)
       grid-template-columns: repeat(2, 1fr)
-    +screen('max', 600)
+    +screen('max', 767)
       grid-template-columns: repeat(1, 1fr)
       grid-gap: 20px
       grid-auto-rows: 144px
@@ -19,7 +19,7 @@
     box-sizing: border-box
     color: $c2
     overflow: hidden
-    +screen('max', 600)
+    +screen('max', 767)
       padding: 20px
     &_green
       background: linear-gradient(104.04deg, #ABB910 0%, #666F0F 100%)
@@ -39,7 +39,7 @@
       display: block
       background: rgba(255, 255, 255, 0.3)
       border-radius: 100%
-      +screen('max', 600)
+      +screen('max', 767)
         width: 224px
         height: 224px
         right: -112px
@@ -52,7 +52,7 @@
     max-width: 65%
     +screen('max', 1500)
       max-width: 70%
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
   &__pic
     position: absolute
@@ -60,5 +60,5 @@
     right: 20px
     bottom: 20px
     z-index: 3
-    +screen('max', 600)
+    +screen('max', 767)
       width: 60px

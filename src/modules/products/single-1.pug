@@ -37,15 +37,16 @@ include ../callback/form-equipment
       +e.A.clrs-popup.js-open-modal(href="#color") Любые цвета
       +e.control
         +e.A.calc.btn_orange.js-open-modal(href="#addparam") Рассчитать стоимость?
-        +e.BUTTON.add.btn-outline_green В корзину
-        +b.number
-          +e.btn_minus
-            svg(width='10' height='18' fill='none' xmlns='http://www.w3.org/2000/svg')
-              path(fill-rule='evenodd' clip-rule='evenodd' d='M9.69.468c.455.57.403 1.436-.117 1.935L3.148 8.571l6.425 6.169c.52.498.572 1.365.118 1.935-.455.57-1.245.627-1.764.128l-7.5-7.2A1.432 1.432 0 0 1 0 8.571C0 8.176.156 7.8.427 7.54l7.5-7.2c.52-.5 1.309-.442 1.764.128Z' fill='#020F19')
-          +e.INPUT.field(type="text" value="1")
-          +e.btn_plus
-            svg(width='10' height='18' fill='none' xmlns='http://www.w3.org/2000/svg')
-              path(fill-rule='evenodd' clip-rule='evenodd' d='M.31 17.532c-.455-.57-.403-1.436.117-1.935l6.425-6.168L.427 3.26c-.52-.498-.572-1.365-.118-1.935.455-.57 1.245-.627 1.764-.128l7.5 7.2c.271.26.427.636.427 1.032 0 .395-.156.771-.427 1.031l-7.5 7.2c-.52.5-1.309.442-1.764-.128Z' fill='#020F19')
+        +e.count
+          +e.BUTTON.add.btn-outline_green В корзину
+          +b.number
+            +e.btn_minus
+              svg(width='10' height='18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd' clip-rule='evenodd' d='M9.69.468c.455.57.403 1.436-.117 1.935L3.148 8.571l6.425 6.169c.52.498.572 1.365.118 1.935-.455.57-1.245.627-1.764.128l-7.5-7.2A1.432 1.432 0 0 1 0 8.571C0 8.176.156 7.8.427 7.54l7.5-7.2c.52-.5 1.309-.442 1.764.128Z' fill='#020F19')
+            +e.INPUT.field(type="text" value="1")
+            +e.btn_plus
+              svg(width='10' height='18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd' clip-rule='evenodd' d='M.31 17.532c-.455-.57-.403-1.436.117-1.935l6.425-6.168L.427 3.26c-.52-.498-.572-1.365-.118-1.935.455-.57 1.245-.627 1.764-.128l7.5 7.2c.271.26.427.636.427 1.032 0 .395-.156.771-.427 1.031l-7.5 7.2c-.52.5-1.309.442-1.764-.128Z' fill='#020F19')
       +b.select-size
         +e.P.title Размеры 
           span высота x ширина x глубина, см
@@ -109,41 +110,42 @@ include ../callback/form-equipment
             p Нагрузка на стеллаж
             p До 900 кг (зависит от комплектации)
         +e.BUTTON.more Показать еще
-      +e.line_desck
+      +e.line
         +e.H2.title Все размеры подетально
-        +e.TABLE.table
-          thead
-            tr
-              th Наименование параметра
-              th Ширина, мм
-              th Глубина, мм
-              th Высота, мм
-          tbody
-            tr
-              td СК 065
-              td 656
-              td 300-800
-              td 1100-2900
-            tr
-              td СК 080
-              td 806
-              td 300-800
-              td 1100-2900
-            tr
-              td СК 100
-              td 1006
-              td 300-800
-              td 1100-2900
-            tr
-              td СК 125
-              td 1261
-              td 300-800
-              td 1100-2900
-            tr
-              td СК 132
-              td 1326
-              td 300-800
-              td 1100-2900
+        +e.table
+          table
+            thead
+              tr
+                th Наименование параметра
+                th Ширина, мм
+                th Глубина, мм
+                th Высота, мм
+            tbody
+              tr
+                td СК 065
+                td 656
+                td 300-800
+                td 1100-2900
+              tr
+                td СК 080
+                td 806
+                td 300-800
+                td 1100-2900
+              tr
+                td СК 100
+                td 1006
+                td 300-800
+                td 1100-2900
+              tr
+                td СК 125
+                td 1261
+                td 300-800
+                td 1100-2900
+              tr
+                td СК 132
+                td 1326
+                td 300-800
+                td 1100-2900
         +e.hidden
           +e.line
             +e.H3.caption.text-center Габаритные размеры

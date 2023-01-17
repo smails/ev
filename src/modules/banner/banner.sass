@@ -1,10 +1,10 @@
 .banner
   margin: 3rem 0
-  +screen('max', 600)
+  +screen('max', 767)
     margin: 0
   & + .prodcat
     margin-top: 3rem
-    +screen('max', 600)
+    +screen('max', 767)
       margin-top: 4.2rem
   &__slide
     padding: 3rem 3rem 7rem 6rem
@@ -15,7 +15,7 @@
     transition: all .3s ease
     +screen('max', 1023)
       padding: 3rem 6rem 7rem 6rem
-    +screen('max', 600)
+    +screen('max', 767)
       padding: 30px 20px
       border-radius: 0
     &:before
@@ -43,7 +43,7 @@
         right: 0
         width: 50%
         flex-shrink: 0
-      +screen('max', 600)
+      +screen('max', 767)
         width: 150px
   &__line
     +screen('max', 1023)
@@ -53,13 +53,13 @@
       margin-top: 20px
   &__title
     margin: 3rem 0 1rem
-    +screen('max', 600)
+    +screen('max', 767)
       margin: 0 0 10px
   &__sign
     +fs(20px)
     font-weight: 600
     color: $c5
-    +screen('max', 600)
+    +screen('max', 767)
       +fs(12px)
       font-weight: 700
   &__list
@@ -69,7 +69,7 @@
     margin-top: 4.5rem
     +screen('max', 1023)
       grid-template-columns: repeat(2, 150px)
-    +screen('max', 600)
+    +screen('max', 767)
       display: block
   &__item
     line-height: 1.4
@@ -77,22 +77,22 @@
     background-image: url(../icon/icon-check.svg)
     background-repeat: no-repeat
     background-position: left center
-    +screen('max', 600)
+    +screen('max', 767)
       margin-bottom: 10px
     &:last-of-type, &:nth-last-of-type(2)
-      +screen('max', 600)
+      +screen('max', 767)
         display: none
   &__control
     display: flex
     align-items: center
     margin-top: 4.5rem
-    +screen('max', 600)
+    +screen('max', 767)
       display: block
       text-align: center
   &__btn
     width: 264px
     margin-right: 5rem
-    +screen('max', 600)
+    +screen('max', 767)
       margin-right: 0
       margin-bottom: 10px
   &__pic
@@ -105,7 +105,7 @@
       height: 400px
     +screen('max', 1023)
       height: 615px
-    +screen('max', 600)
+    +screen('max', 767)
       height: 475px
     &.slick-active
       .banner__slide

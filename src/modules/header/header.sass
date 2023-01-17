@@ -1,5 +1,4 @@
 .header
-  overflow: hidden
   +screen('max', 1200)
     display: none
   &__top
@@ -20,6 +19,7 @@
       z-index: -1
       +screen('max', 1690)
         left: -20px
+        width: calc(100vw - 20px)
   &__left
     display: flex
     align-items: center
@@ -99,6 +99,7 @@
       z-index: -1
       +screen('max', 1690)
         left: -20px
+        width: calc(100vw - 17px)
   &__list
     display: flex
     justify-content: space-between
@@ -130,33 +131,6 @@
       vertical-align: middle
     path
       transition: .3s ease
-  &__search
-    flex-grow: 1
-    position: relative
-  &__field
-    border: 2px solid $c10
-    padding: 8px 44px
-    width: 100%
-    border-radius: 100px
-    display: block
-    transition: .3s ease
-    background-image: url(../icon/icon-search.svg)
-    background-position: 10px center
-    background-repeat: no-repeat
-    &::placeholder
-      color: #AEAEAE
-    &:hover
-      border-color: $c5
-    &:focus
-      border-color: $c4
-  &__reset
-    position: absolute
-    top: 50%
-    right: 15px
-    background: none
-    transform: translateY(-50%)
-    display: none
-    cursor: pointer
 
 .basket-mini
   display: flex
@@ -318,59 +292,6 @@
     margin-right: 10px
     max-width: 24px
     transition: .3s ease
-  &__search
-    position: relative
-    width: 40px
-    height: 40px
-  &__open-search
-    position: absolute
-    top: 50%
-    left: 10px
-    transform: translateY(-45%)
-    width: 20px
-    height: 18px
-    background-image: url(../icon/icon-search.svg)
-    background-repeat: no-repeat
-    background-position: center
-    background-size: contain
-    z-index: 4
-    cursor: pointer
-  &__search-action
-    display: flex
-    justify-content: space-between
-    align-items: center
-    max-width: 810px
-    z-index: 3
-    position: absolute
-    top: 0
-    left: 0
-    width: 0
-    visibility: hidden
-    opacity: 0
-    transition: .3s linear
-    &.view
-      width: 43vw
-      visibility: visible
-      opacity: 1
-  &__field
-    border: 2px solid $c10
-    padding: 8px 44px
-    width: 100%
-    border-radius: 100px
-    display: block
-    transition: .3s ease
-    &::placeholder
-      color: #AEAEAE
-    &:hover
-      border-color: $c5
-    &:focus
-      border-color: $c4
-  &__close
-    margin-left: 3rem
-    cursor: pointer
-    transition: .3s ease
-    &:hover
-      color: $c4
   &__middle
     margin: 0 1.5vw 0 1vw
     flex-grow: 1
@@ -437,6 +358,104 @@
     align-items: center
     background: none
     cursor: pointer
+
+.fix-search
+  position: relative
+  width: 40px
+  height: 40px
+  &.noempty
+    .fix-search__field
+      border-color: transparent
+  &__open
+    position: absolute
+    top: 50%
+    left: 10px
+    transform: translateY(-45%)
+    width: 20px
+    height: 18px
+    background-image: url(../icon/icon-search.svg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    z-index: 4
+    cursor: pointer
+  &__box
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 810px
+    z-index: 3
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    visibility: hidden
+    opacity: 0
+    transition: .3s linear
+    &.view
+      width: 43vw
+      visibility: visible
+      opacity: 1
+  &__field
+    border: 2px solid $c10
+    padding: 8px 44px
+    width: 100%
+    border-radius: 100px
+    display: block
+    transition: .3s ease
+    z-index: 2
+    &::placeholder
+      color: #AEAEAE
+    &:hover
+      border-color: $c5
+    &:focus
+      border-color: $c4
+  &__close
+    margin-left: 3rem
+    cursor: pointer
+    transition: .3s ease
+    &:hover
+      color: $c4
+  &__result
+    padding: 5px
+    box-sizing: border-box
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    width: calc(100% - 90px)
+    background: $c2
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25)
+    border-radius: 25px
+    padding-top: 45px
+    box-sizing: border-box
+    transition: .3s ease
+  &__item
+    display: flex
+    align-items: center
+    padding: 8px 12px
+    transition: .3s ease
+    border-radius: 10px
+    &:hover
+      background: $c3
+  &__icon
+    vertical-align: middle
+    width: 48px
+    height: 48px
+  &__content
+    margin-left: 1rem
+  &__nav
+    margin-top: 1rem
+    +fs(12px)
+    color: #AEAEAE
+    display: block
+  &__cats
+    margin-top: 2rem
+    border-top: 2px solid $c10
+    padding-top: 2rem
+  &__control
+    text-align: center
+    margin: 2rem 0
   &__reset
     position: absolute
     top: 50%
@@ -445,6 +464,7 @@
     transform: translateY(-50%)
     display: none
     cursor: pointer
+    z-index: 3
 
 .catalog-menu
   position: fixed
@@ -470,6 +490,9 @@
     opacity: 0
     visibility: hidden
     transition: .3s ease
+    +screen('max', 1200)
+      width: 100%
+      max-width: 100%
   &__close
     transition: .3s ease
     z-index: 3
@@ -487,7 +510,7 @@
     flex-shrink: 0
     background: $c2
     +screen('max', 1200)
-      max-width: 220px
+      max-width: 260px
   &__head
     padding: 3rem
     display: flex
@@ -506,8 +529,14 @@
   &__nav
     padding: 3rem 3.8rem 3rem 3rem
     box-sizing: border-box
+    +screen('max', 1200)
+      padding: 3rem
   &__item
     margin-bottom: 2rem
+    @media (pointer:coarse)
+      display: flex
+      align-items: center
+      justify-content: space-between
   &__link
     font-weight: 700
     transition: .3s ease
@@ -515,8 +544,15 @@
     &:hover
       color: $c5
   &__mobile-move
-    +screen('min', 600)
-      display: none
+    @media (pointer:coarse)
+      display: block
+      width: 14px
+      height: 14px
+      flex-shrink: 0
+      background-image: url(../icon/icon-arrow-next-green.svg)
+      background-repeat: no-repeat
+      background-position: center
+      background-color: #fff
   &__mobile-title
     +screen('min', 600)
       display: none
@@ -530,6 +566,7 @@
 .search-cat
   position: relative
   z-index: 3
+  flex-grow: 1
   &.noempty
     .search-cat__field
       border-color: transparent
@@ -601,6 +638,7 @@
   &__control
     text-align: center
     margin: 2rem 0
+
 
 .catalog-links-box
   &__title
