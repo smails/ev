@@ -3,36 +3,53 @@ mixin viewed(title='Просмотренные товары')
     +e.inner.inner
       +e.H2.title=title
       +e.list
-        - for (var i = 0; i < 5; i ++){
-          +e.item
-            +b.product
-              +e.visible
-                +e.top
-                  a(href="#")
-                    +e.IMG.pic(src='/img/catalog-1.png' alt='')
-                +e.bottom
-                  +e.prices
-                    +e.new-price 11 924 руб.
-                  +e.A.caption(href="#") Овощной стеллаж с металлическим полками без фриза
-                  +e.A.more(href='#') Смотреть варианты размеров
-              +e.hidden
-                +e.item
-                  p Тип охлаждения
-                  p Динамическое
-                +e.item
-                  p Холодильный агрегат
-                  p Выносное / встроенное
-                +e.item
-                  p Температурный режим
-                  p 0 - 45°C
-                +e.item
-                  p Конструкция
-                  p с прямым стеклом
-                +e.item
-                  p Назначение
-                  a(href="#") Гастрономическая
-                +e.item
-                  p Габаритные размеры
-                  p 2000 мм x 9999 мм х 5555 мм
-                +e.BUTTON.buy.btn_green Купить
-        - }
+        +e.A.item(href="#")
+          +e.top
+            +e.IMG.pic(src='/img/popular-0.png' alt='')
+          +e.bottom
+            +e.prices
+              +e.new-price 11 924 руб.
+            +e.caption Развал для овощей и фруктов островной, удлиненный, в виде телеги
+        +e.A.item_sale(href="#")
+          +e.top
+            +e.sale Скидка!
+            +e.IMG.pic(src='/img/popular-1.png' alt='')
+          +e.bottom
+            +e.prices
+              +e.new-price 3 924 руб.
+              +e.old-price 25 851 
+            +e.caption Покупательская тележка класса эконом
+        +e.A.item(href="#")
+          +e.top
+            +e.best Бестселлер!
+            +e.IMG.pic(src='/img/popular-2.png' alt='')
+          +e.bottom
+            +e.prices
+              +e.new-price 5 924 руб.
+            +e.caption Стеллаж для бензопил
+        +e.A.item_sale(href="#")
+          +e.top
+            +e.best Бестселлер!
+            +e.sale Скидка!
+            +e.IMG.pic(src='/img/popular-3.png' alt='')
+          +e.bottom
+            +e.prices
+              +e.new-price 11 924 руб.
+              +e.old-price 25 851 
+            +e.caption Подставка для облучателя ПОБ-02-1
+        +e.A.item(href="#")
+          +e.top
+            +e.best Бестселлер!
+            +e.IMG.pic(src='/img/popular-4.png' alt='')
+          +e.bottom
+            +e.prices
+              +e.new-price 5 924 руб.
+            +e.caption Стеллаж для бензопил
+        +e.A.item(href="#")
+          +e.top
+            +e.best Бестселлер!
+            +e.IMG.pic(src='/img/popular-4.png' alt='')
+          +e.bottom
+            +e.prices
+              +e.new-price 5 924 руб.
+            +e.caption Стеллаж для бензопил

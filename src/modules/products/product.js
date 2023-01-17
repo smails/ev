@@ -107,3 +107,16 @@ if(slider != undefined && slider != null){
   });
 }
 
+$('.product-info__rollup').click(function () {
+  $(this).prev('.product-info__hidden').slideToggle();
+})
+
+$('.product-info__rollup').click(function () {
+  if($(this).hasClass('open')){
+    $(this).removeClass('open').text('Показать все размеры');
+    $(this).prev('.product-info__hidden').slideUp();
+  } else{
+    $(this).addClass('open').text('Свернуть все размеры');
+    $(this).prev('.product-info__hidden').slideDown();
+  }
+})
