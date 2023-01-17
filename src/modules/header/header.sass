@@ -238,7 +238,117 @@
     background-position: center
     background-size: contain
     margin-right: 3vw
-
+  &__hidden
+    position: fixed
+    width: 100%
+    height: calc(100% - 60px)
+    top: 60px
+    left: 0
+    background: rgba(2, 15, 25, 0.8)
+    z-index: 99
+    display: none
+    &.open
+      display: block
+      .header-mobile__nav
+        opacity: 1
+        visibility: visible
+        transform: translateX(0%)
+  &__nav
+    max-width: 360px
+    width: 100%
+    height: 100%
+    position: relative
+    background: #fff
+    padding: 20px
+    box-sizing: border-box
+    overflow: hidden
+    opacity: 0
+    visibility: hidden
+    transition: .5s ease
+    +screen('max', 450)
+      max-width: 100%
+  &__holder
+    font-weight: 700
+    +fs(20px)
+    border-bottom: 1px solid $c3
+    padding-bottom: 2rem
+    margin-bottom: 2rem
+  &__back-link
+    font-weight: 700
+    +fs(20px)
+    border-bottom: 1px solid $c3
+    padding-bottom: 2rem
+    margin-bottom: 2rem
+    margin-right: 3rem
+    padding-left: 30px
+    background-image: url(../icon/icon-arrow-prev-black.svg)
+    background-position: left 0
+    background-repeat: no-repeat
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-shrink: 0
+    width: 100%
+  &__item
+    border-bottom: 1px solid $c3
+    padding-bottom: 2rem
+    margin-bottom: 2rem
+  &__link
+    font-weight: 700
+  &__slide
+    width: 14px
+    height: 14px
+    background-image: url(../icon/icon-arrow-next-green.svg)
+    background-repeat: no-repeat
+    background-position: center
+    background-color: #fff
+    flex-shrink: 0
+  &__move
+    width: 14px
+    height: 14px
+    background-image: url(../icon/icon-bottom--green.svg)
+    background-repeat: no-repeat
+    background-position: center
+    background-color: #fff
+    flex-shrink: 0
+    transition: .3s ease
+    &.open
+      transform: rotate(180deg)
+  &__submenu
+    width: calc(100% - 20px)
+    position: absolute
+    top: 20px
+    background: #fff
+    max-height: 58vh
+    min-height: 300px
+    overflow: auto
+    transform: translateX(100%)
+    visibility: hidden
+    opacity: 0
+    transition: .3s ease
+    +screen('max', 450)
+      height: 53vh
+    &.open
+      visibility: visible
+      opacity: 1
+      transform: translate(0)
+  &__caption
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-weight: 700
+    border-bottom: 1px solid $c3
+    padding-bottom: 2rem
+    margin-bottom: 2rem
+    margin-right: 3rem
+  &__items
+    margin-bottom: 3rem
+    display: none
+    margin-right: 3rem
+  &__uri
+    display: block
+    margin-bottom: 2rem
 .menu-fix
   position: fixed
   top: 0
@@ -475,6 +585,8 @@
   background: rgba(2, 15, 25, 0.8)
   z-index: 9999
   display: none
+  +screen('max', 1200)
+    display: none!important
   &.open
     .catalog-menu__container
       opacity: 1
@@ -490,9 +602,6 @@
     opacity: 0
     visibility: hidden
     transition: .3s ease
-    +screen('max', 1200)
-      width: 100%
-      max-width: 100%
   &__close
     transition: .3s ease
     z-index: 3
@@ -500,8 +609,6 @@
     &.open
       position: absolute
       left: calc(100% + 20px)
-      +screen('max', 1200)
-        left: 97%
       path
         stroke: $c2
   &__small
@@ -509,8 +616,6 @@
     width: 30%
     flex-shrink: 0
     background: $c2
-    +screen('max', 1200)
-      max-width: 260px
   &__head
     padding: 3rem
     display: flex
@@ -526,36 +631,19 @@
     max-width: 940px
     background: $c2
     display: none
+    height: 100%
+    overflow: auto
   &__nav
     padding: 3rem 3.8rem 3rem 3rem
     box-sizing: border-box
-    +screen('max', 1200)
-      padding: 3rem
   &__item
     margin-bottom: 2rem
-    @media (pointer:coarse)
-      display: flex
-      align-items: center
-      justify-content: space-between
   &__link
     font-weight: 700
     transition: .3s ease
     line-height: 1.25
     &:hover
       color: $c5
-  &__mobile-move
-    @media (pointer:coarse)
-      display: block
-      width: 14px
-      height: 14px
-      flex-shrink: 0
-      background-image: url(../icon/icon-arrow-next-green.svg)
-      background-repeat: no-repeat
-      background-position: center
-      background-color: #fff
-  &__mobile-title
-    +screen('min', 600)
-      display: none
   &__boxes
     margin-top: 3rem
   &__box
@@ -638,7 +726,6 @@
   &__control
     text-align: center
     margin: 2rem 0
-
 
 .catalog-links-box
   &__title
@@ -728,8 +815,15 @@
   right: 0
   top: 380px
   width: 30%
+  background: #fff
   @media screen and ( max-height: 700px) and (orientation:landscape)
     display: none
+  +screen('max', 1200)
+    top: auto
+    bottom: 30px
+    width: 100%
+    left: 20px
+    right: auto
   &__title
     font-weight: 700
     color: #AEAEAE

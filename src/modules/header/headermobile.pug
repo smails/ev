@@ -1,7 +1,7 @@
 +b.header-mobile
   +e.inner.inner
     +e.left
-      +e.BUTTON.cat.js-open-catalog
+      +e.BUTTON.cat.js-open-menu-mobile
         span
         span
         span
@@ -16,3 +16,53 @@
             path(fill-rule='evenodd' clip-rule='evenodd' d='M5.955 1.583a1 1 0 0 0-.8.4L2.03 6.15a1 1 0 0 0-.2.6v14.583a3.083 3.083 0 0 0 3.084 3.084h14.583a3.083 3.083 0 0 0 3.083-3.084V6.75a1 1 0 0 0-.2-.6l-3.125-4.167a1 1 0 0 0-.8-.4h-12.5Z' fill='#020F19')
             path(d='M5.208 7.792h14.584M16.667 13a4.167 4.167 0 1 1-8.334 0' stroke='#fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
           +e.count 0
+  +e.hidden
+    +e.nav
+      -var elms = [ "Торговые стеллажи", "Торговые стойки", "Оборудование для кассовых зон", "Другое оборудование для магазинов", "Холодильное оборудование", "Торговая мебель", "Оборудование для ресторанов", "Рециркуляторы", "Покупательские тележки", "Брендированное оборудование",]
+      +e.P.holder Главное меню 
+      +e.UL.list
+        +e.LI.item
+          +e.head
+            +e.A.link(href="#") Каталог
+            +e.BUTTON.slide
+          +e.submenu
+            +e.back-link Каталог
+            each item in elms
+              +e.caption
+                a(href="#")=item
+                +e.BUTTON.move
+              +e.items
+                +e.A.uri(href="#") Стеллажи
+                +e.A.uri(href="#") Для овощных магазинов
+                +e.A.uri(href="#") Для алкоголя
+                +e.A.uri(href="#") Для хлеба и выпечки
+                +e.A.uri(href="#") Другое оборудование для магазинов
+        +e.LI.item
+          +e.head
+            +e.A.link(href="#") Комплексное оснащение
+            +e.BUTTON.slide
+        +e.LI.item
+          +e.head
+            +e.A.link(href="#") Производство
+            +e.BUTTON.slide
+        +e.LI.item
+          +e.head
+            +e.A.link(href="#") Дилерам
+            +e.BUTTON.slide
+        +e.LI.item
+          +e.head
+            +e.A.link(href="#") Портфолио
+            +e.BUTTON.slide
+        +e.LI.item
+          +e.A.link(href="#") О заводе
+        +e.LI.item
+          +e.A.link(href="#") Контакты
+      +b.catalog-call
+        +e.P.title Не нашли, что искали?
+        +e.P.sign Оставьте телефон, и наш специалист подберет для вас необходимое оборудование.
+        +e.FORM.action
+          +e.field.field__
+            +e.INPUT.input.required(placeholder="Ваш телефон" type="tel")
+          +e.LABEL.checkbox.polit__
+            +e.INPUT.hidden(type="checkbox" checked)
+            +e.SPAN.txt Я даю согласие на хранение и обработку моих персональных данных компанией Евромаркет.

@@ -13,7 +13,6 @@
           each item, index in elms
             +e.LI.item(data-target=index+1)
               +e.A.link(href="#")=item
-              +e.BUTTON.mobile-move
     +e.big
       +b.FORM.search-cat
         +e.head
@@ -76,7 +75,6 @@
           +e.control
             +e.A.more.btn-outline_green(href='/search-page-full.html') Смотреть все результаты
       +e.info
-        +e.P.mobile-title Главное меню
         +e.boxes
           each item, index in elms
             +e.box.catalog-links-box__(data-id=index+1)
