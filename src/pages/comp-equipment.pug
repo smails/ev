@@ -1,0 +1,13 @@
+//- mixins
+include ../static/pug/breadcrumb
+include ../static/pug/head
+
+
++head('Комплексное оснащение')
+body
+  +header()
+  +breadcrumb(['Главная', 'Комплексное оснащение'], 'Комплексное оснащение')
+  include ../modules/callback/consult
+  include ../modules/clients/clients-mini--white
+  include ../modules/footer/footer
+  include ../static/pug/scripts
