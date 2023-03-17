@@ -1,13 +1,47 @@
 //- mixins
 include ../static/pug/breadcrumb
 include ../static/pug/head
+include ../modules/copeq/banner
+include ../modules/callback/callback
 
 
 +head('Комплексное оснащение')
 body
   +header()
   +breadcrumb(['Главная', 'Комплексное оснащение'], 'Комплексное оснащение')
-  include ../modules/callback/consult
+  +banner('1')
+  +b.copeq-list
+    +e.inner.inner
+      +e.H2.title Проектируем и оснащаем предприятия любого формата
+      +e.row
+        +e.col.green
+          +e.head
+            +e.P.caption Оснащение продовольственных магазинов
+            +e.IMG.icon(src='/icon/copeq-icon-1.svg' alt='')
+          +e.UL.registry
+            each item in ["Магазин Фасоль под ключ","Продуктовый магазин","Универсам","Магазин-дискаунтер","Булочные и кондитерские","Гастроном","Мясной магазин","Овощной магазин","Рыбный магазин","Винные магазины","Алкомаркет","Рынки и магазины фермерских продуктов",]
+              +e.LI.item
+                +e.A.link(href="#")=item
+          +e.BUTTON.open Развернуть
+        +e.col.orange
+          +e.head
+            +e.P.caption Оснащение непродовольственных магазинов
+            +e.IMG.icon(src='/icon/copeq-icon-2.svg' alt='')
+          +e.UL.registry
+            each item in ["Оснащение АЗС","Зоомагазин","Магазин спортивного питания и товаров","Магазин хозтоваров","Магазин строительных инструментов","Магазин электроники","Магазин детских товаров","Цветочный магазин","Книжный магазин",]
+              +e.LI.item
+                +e.A.link(href="#")=item
+          +e.BUTTON.open Развернуть
+        +e.col.blue
+          +e.head
+            +e.P.caption Оснащение предприятий общественного питания
+            +e.IMG.icon(src='/icon/copeq-icon-3.svg' alt='')
+          +e.UL.registry
+            each item in ["Ресторан","Пекарня","Бар","Кофейня","Кофе корнер","Бистро","Кулинария","Фуд корт","Столовая",]
+              +e.LI.item
+                +e.A.link(href="#")=item
+          +e.BUTTON.open Развернуть
+  +callback('2')
   include ../modules/clients/clients-mini--white
   include ../modules/footer/footer
   include ../static/pug/scripts

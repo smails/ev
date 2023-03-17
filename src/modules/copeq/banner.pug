@@ -1,0 +1,31 @@
+mixin banner(state)
+  if state == '1'
+    +b.banner(style="")
+      +e.inner.inner
+        +e.content
+          +e.H1.title
+            span Комплексное оснащение 
+            | предприятий торговли и общественного питания
+          +e.txt Завод-производитель предлагает оснащение торговых предприятий и заведений общепита по заводским ценам под ключ. Мы предлагаем комплексные решения для создания эффективного предприятия торговли и общепита.
+          +e.list
+            +e.item
+              +e.IMG.icon(src='/icon/copeq-banner-icon-1.svg' alt='')
+              +e.P.caption Работаем без посредников
+            +e.item
+              +e.IMG.icon(src='/icon/copeq-banner-icon-2.svg' alt='')
+              +e.P.caption Собственное производство
+            +e.item
+              +e.IMG.icon(src='/icon/copeq-banner-icon-3.svg' alt='')
+              +e.P.caption Бесплатный план расстановки
+        +e.callback
+          +e.FORM.acation
+            +e.P.holder Расчет стоимости
+            +e.INPUT.field.place(type="text" placeholder="Вас интересует:")
+            +e.INPUT.field.name(type="text" placeholder="Имя")
+            +e.INPUT.field.phone(type="tel" placeholder="Ваш контактный телефон")
+            +e.TEXTAREA.field.mess(placeholder="Комментарий к заказу")
+            +e.BUTTON.btn.btn_green Отправить заявку
+            +e.LABEL.checkbox
+              +e.INPUT.hidden(type="checkbox")
+              +e.SPAN.check-txt Нажимая на кнопку, вы принимаете условия 
+                a(href="#")  передачи данных
