@@ -1,0 +1,159 @@
+//- mixins
+include ../static/pug/breadcrumb
+include ../static/pug/head
+include ../modules/copeq/banner
+include ../modules/callback/callback
+include ../modules/callback/form
+include ../modules/callback/consult
+
+
++head('Наше портфолио')
+body
+  +header()
+  +breadcrumb(['Главная', 'Наше портфолио'], 'Наше портфолио')
+  +b.portfolio
+    +e.inner.inner
+      +e.H1.title Наше портфолио
+      +b.portfolio-nav
+        +e.line
+          +e.row
+            +e.A.link.active(href="#") Все оборудование
+            +e.A.link(href="#") Торговые стеллажи
+            +e.A.link(href="#") Холодильные витрины
+          select(name="eqp-all")
+            option(value="Все оборудование" selected) Все оборудование
+            option(value="Торговые стеллажи") Торговые стеллажи
+            option(value="Холодильные витрины") Холодильные витрины
+        +e.line
+          +e.row
+            +e.A.link.active(href="#") Все заведения
+            +e.A.link(href="#") Рестораны
+            +e.A.link(href="#") Кофейни
+            +e.A.link(href="#") Столовые
+            +e.A.link(href="#") Пекарни
+            +e.A.link(href="#") Рынки
+            +e.A.link(href="#") Магазины
+            +e.A.link(href="#") Фастфуд
+          select(name="eqp-list")
+            option(value="Все заведения" selected) Все заведения
+            option(value="Рестораны") Рестораны
+            option(value="Кофейни") Кофейни
+            option(value="Столовые") Столовые
+            option(value="Пекарни") Пекарни
+            option(value="Рынки") Рынки
+            option(value="Магазины") Магазины
+            option(value="Фастфуд") Фастфуд
+      +b.portfolio-gallery
+        +e.list_left._two-row
+          - for(var i = 0; i < 7; i++){
+            if i == 0
+              +e.item_main
+                +e.IMG.pic_big(src='/img/gallery-'+ i +'.png' alt='')
+                +e.content
+                  +e.P.title Пекарня “Мудрый пекарь”
+                  +e.text "Мудрый Пекарь" - это пекарни современного формата. Они соответствуют высоким европейским стандартам.
+                  +e.A.more.btn_green(href="#") Смотреть проект
+            else
+              +e.item
+                +e.IMG.pic(src='/img/prf-line-first-'+ i +'.png' alt='')
+          -}
+      +b.porfolio-gallery
+        +e.list_right._two-row
+          - for(var i = 0; i < 7; i++){
+            if i == 6
+              +e.item_main
+                +e.IMG.pic_big(src='/img/prf-line-sec-'+ i +'.png' alt='')
+                +e.content
+                  +e.P.title Сеть “Седьмой континент”
+                  +e.text Сеть «Седьмой континент» состоит из супермаркетов и гипермаркетов.
+                  +e.A.more.btn_green(href="#") Смотреть проект
+            else
+              +e.item
+                +e.IMG.pic(src='/img/prf-line-sec-'+ i +'.png' alt='')
+          -}
+      +b.porfolio-gallery
+        +e.list_left._row
+          - for(var i = 0; i < 4; i++){
+            if i == 0
+              +e.item_main
+                +e.IMG.pic_big(src='/img/prf-line-three-'+ i +'.png' alt='')
+                +e.content
+                  +e.P.title Супермаркет «Премьер»
+                  +e.text В супермаркете «Премьер» есть большое количество отделов: овощные, мясные, кондитерские, бакалейные, алкогольные и прочее.
+                  +e.A.more.btn_green(href="#") Смотреть проект
+            else
+              +e.item
+                +e.IMG.pic(src='/img/prf-line-three-'+ i +'.png' alt='')
+          -}
+      +callback('1')
+      +b.porfolio-gallery
+        +e.list_right._row
+          - for(var i = 0; i < 4; i++){
+            if i == 3
+              +e.item_main
+                +e.IMG.pic_big(src='/img/prf-line-four-'+ i +'.png' alt='')
+                +e.content
+                  +e.P.title Балтик мастер Волконский
+                  +e.text "Волконский" - крупная сеть пекарен, кафе и кондитерских, которые работают по французской технологии, объединяя это с русскими традициями.
+                  +e.A.more.btn_green(href="#") Смотреть проект
+            else
+              +e.item
+                +e.IMG.pic(src='/img/prf-line-four-'+ i +'.png' alt='')
+          -}
+      +b.porfolio-gallery
+        +e.list_left._two-row
+          - for(var i = 0; i < 6; i++){
+            if i == 0
+              +e.item_main
+                +e.IMG.pic_big(src='/img/prf-line-five-'+ i +'.png' alt='')
+                +e.content
+                  +e.P.title Ашан суши
+                  +e.text ."Ашан" - признанный лидер среди гипермаркетов в России, поскольку продаёт по низким ценам огромное количество качественных продовольственных и непродовольственных товаров.
+                  +e.A.more.btn_green(href="#") Смотреть проект
+            if i == 5
+              +e.item_form
+                +form-eq()
+            else
+              +e.item
+                +e.IMG.pic(src='/img/prf-line-five-'+ i +'.png' alt='')
+          -}
+      +b.porfolio-gallery
+        +e.list_right._two-row
+          - for(var i = 0; i < 7; i++){
+            if i == 6
+              +e.item_main
+                +e.IMG.pic_big(src='/img/prf-line-six-'+ i +'.png' alt='')
+                +e.content
+                  +e.P.title Торговое пространство «Арбуз».
+                  +e.text Торговый комплекс «Арбуз» - торговое пространство нового формата с обширным ассортиментом - от продуктов питания до хозяйственных товаров.
+                  +e.A.more.btn_green(href="#") Смотреть проект
+            else
+              +e.item
+                +e.IMG.pic(src='/img/prf-line-six-'+ i +'.png' alt='')
+          -}
+      +e.control
+        +e.BUTTON.btn.btn_green Показать еще
+        +b.pagination
+          +e.UL.list
+            +e.LI.item
+              +e.A.link.active(href='#') 1
+            +e.LI.item
+              +e.A.link(href='#') 2
+            +e.LI.item
+              +e.A.link(href='#') 3
+            +e.LI.item
+              +e.A.link(href='#') 4
+            +e.LI.item
+              +e.A.link(href='#') 5
+            +e.LI.item
+              +e.A.link(href='#') 6
+            +e.LI.item
+              +e.A.link(href='#') 7
+            +e.LI.item
+              +e.A.link(href='#') ...
+            +e.LI.end
+              +e.A.next(href="#") Следующая страница
+  +form()
+  include ../modules/clients/clients-mini--white
+  include ../modules/footer/footer
+  include ../static/pug/scripts

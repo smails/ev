@@ -5,13 +5,13 @@
     +e.list
       - for(var i = 0; i < 5; i++){
         if i == 0
-          +e.item_first
+          +e.A.item_first(href='/img/gallery-'+ i +'.png' data-fancybox)
             +e.IMG.pic_big(src='/img/gallery-'+ i +'.png' alt='')
         else if i == 4
-          +e.item_last(data-sign="+10")
+          +e.A.item_last(data-sign="+10")(href='/img/gallery-'+ i +'.png' data-fancybox)
             +e.IMG.pic(src='/img/gallery-'+ i +'.png' alt='')
         else
-          +e.item
+          +e.A.item(href='/img/gallery-'+ i +'.png' data-fancybox)
             +e.IMG.pic(src='/img/gallery-'+ i +'.png' alt='')
       - }
 

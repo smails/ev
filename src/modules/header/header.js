@@ -107,6 +107,10 @@ $('.js-open-catalog').click(function () {
   }, 100);
 })
 
+$('.catalog-main-list__open-cat').click(function () {
+  $('.catalog-nav').slideToggle();
+})
+
 
 $('.catalog-links-box__more').click(function () {
   if($(this).hasClass('open')){

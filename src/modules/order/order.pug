@@ -74,7 +74,7 @@
                       +e.BUTTON.btn.btn_green Добавить
                   +e.A.item(href="#")
                     +e.top
-                      +e.sale Скидка!
+                      +e.sale.sticker-2 Скидка!
                       +e.IMG.pic(src='/img/catalog-1.png' alt='')
                     +e.bottom
                       +e.prices
@@ -84,7 +84,7 @@
                       +e.BUTTON.btn.btn_green Добавить
                   +e.A.item(href="#")
                     +e.top
-                      +e.best Бестселлер!
+                      +e.best.sticker-1 Бестселлер!
                       +e.IMG.pic(src='/img/catalog-1.png' alt='')
                     +e.bottom
                       +e.prices
@@ -93,8 +93,8 @@
                       +e.BUTTON.btn.btn_green Добавить
                   +e.A.item(href="#")
                     +e.top
-                      +e.best Бестселлер!
-                      +e.sale Скидка!
+                      +e.best.sticker-1 Бестселлер!
+                      +e.sale.sticker-2 Скидка!
                       +e.IMG.pic(src='/img/catalog-1.png' alt='')
                     +e.bottom
                       +e.prices
@@ -104,7 +104,7 @@
                       +e.BUTTON.btn.btn_green Добавить
                   +e.A.item(href="#")
                     +e.top
-                      +e.best Бестселлер!
+                      +e.best.sticker-1 Бестселлер!
                       +e.IMG.pic(src='/img/catalog-1.png' alt='')
                     +e.bottom
                       +e.prices
@@ -113,7 +113,7 @@
                       +e.BUTTON.btn.btn_green Добавить
                   +e.A.item(href="#")
                     +e.top
-                      +e.best Бестселлер!
+                      +e.best.sticker-1 Бестселлер!
                       +e.IMG.pic(src='/img/catalog-1.png' alt='')
                     +e.bottom
                       +e.prices
@@ -191,7 +191,7 @@
                       +e.BUTTON.btn.btn_green Добавить
                   +e.A.item(href="#")
                     +e.top
-                      +e.sale Скидка!
+                      +e.sale.sticker-2 Скидка!
                       +e.IMG.pic(src='/img/catalog-1.png' alt='')
                     +e.bottom
                       +e.prices
@@ -201,7 +201,7 @@
                       +e.BUTTON.btn.btn_green Добавить
                   +e.A.item(href="#")
                     +e.top
-                      +e.best Бестселлер!
+                      +e.best.sticker-1 Бестселлер!
                       +e.IMG.pic(src='/img/catalog-1.png' alt='')
                     +e.bottom
                       +e.prices
@@ -210,8 +210,8 @@
                       +e.BUTTON.btn.btn_green Добавить
                   +e.A.item(href="#")
                     +e.top
-                      +e.best Бестселлер!
-                      +e.sale Скидка!
+                      +e.best.sticker-1 Бестселлер!
+                      +e.sale.sticker-2 Скидка!
                       +e.IMG.pic(src='/img/catalog-1.png' alt='')
                     +e.bottom
                       +e.prices
@@ -221,7 +221,7 @@
                       +e.BUTTON.btn.btn_green Добавить
                   +e.A.item(href="#")
                     +e.top
-                      +e.best Бестселлер!
+                      +e.best.sticker-1 Бестселлер!
                       +e.IMG.pic(src='/img/catalog-1.png' alt='')
                     +e.bottom
                       +e.prices
@@ -230,7 +230,7 @@
                       +e.BUTTON.btn.btn_green Добавить
                   +e.A.item(href="#")
                     +e.top
-                      +e.best Бестселлер!
+                      +e.best.sticker-1 Бестселлер!
                       +e.IMG.pic(src='/img/catalog-1.png' alt='')
                     +e.bottom
                       +e.prices
@@ -262,7 +262,7 @@
               +e.field
                 +e.P.name Адрес
                 +b.field
-                  +e.INPUT.input.required(placeholder="город, улица, дом, этаж, вартира")
+                  +e.INPUT.input.required(placeholder="город, улица, дом, этаж, вартира" disabled name="addr_del")
             +e.BUTTON.submit.btn_orange Подтверждаю заказ
           +e.sign Нажимая кнопку "Подтверждаю заказ", Вы принимаете условия 
             a(href="#") Договора оферты
@@ -279,6 +279,8 @@
           +e.total
             span 25 851 
             |руб.
-          +e.A.link(href="#") Условия доставки
-            img(src="/icon/icon-bottom--green.svg", alt="")
+          +e.DETAILS.link
+            summary Условия доставки
+              img(src="/icon/icon-bottom--green.svg", alt="")
+            span.hidden Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptate a iste excepturi numquam quisquam sapiente accusantium vero minima, assumenda natus saepe nihil officia sit maxime veritatis eos illum. Atque.
           +e.A.link(href="#") Договор оферты

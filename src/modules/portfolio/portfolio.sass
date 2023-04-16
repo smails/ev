@@ -1,0 +1,28 @@
+.portfolio
+  &__title
+    margin-bottom: 3rem
+
+.portfolio-nav
+  margin-bottom: 2rem
+  &__line
+    overflow: hidden
+    width: 100%
+    margin-bottom: 2rem
+    .select2-container
+      +screen('min', 601)
+        display: none
+  &__row
+    display: flex
+    flex-wrap: wrap
+    gap: 10px
+  &__link
+    padding: 7px 13px 9px
+    text-align: center
+    background: $c3
+    transition: .5s ease
+    border-radius: 5px
+    &.active
+      background: $c4
+      color: #fff
+    &:hover
+      background: $c10

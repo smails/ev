@@ -50,35 +50,53 @@ include ../callback/form-equipment
       +b.select-size
         +e.P.title Размеры 
           span высота x ширина x глубина, см
-        select(name="size")
+        select(name="size-1")
           option(value="225 x 65 x 40-30-30-30-30") 225 x 65 x 40-30-30-30-30
           option(value="225 x 65 x 40-30-30-30-30") 225 x 65 x 40-30-30-30-30
           option(value="225 x 65 x 40-30-30-30-30") 225 x 65 x 40-30-30-30-30
           option(value="225 x 65 x 40-30-30-30-30") 225 x 65 x 40-30-30-30-30
           option(value="225 x 65 x 40-30-30-30-30") 225 x 65 x 40-30-30-30-30
+        select(name="size-2")
+          option(value="225 x 65 x 40-30-30-30-40") 225 x 65 x 40-30-30-30-40
+          option(value="225 x 65 x 40-30-30-30-40") 225 x 65 x 40-30-30-30-40
+          option(value="225 x 65 x 40-30-30-30-40") 225 x 65 x 40-30-30-30-40
+          option(value="225 x 65 x 40-30-30-30-40") 225 x 65 x 40-30-30-30-40
+          option(value="225 x 65 x 40-30-30-30-40") 225 x 65 x 40-30-30-30-40
       +b.colrs
         +e.P.title Основной цвет RAL: 
-          span 1000
-        +e.list
-          +e.BUTTON.btn.active(data-color="1000")
-            +e.IMG.pic(src='/img/color-main-1.png' alt='')
-          +e.BUTTON.btn(data-color="2000")
-            +e.IMG.pic(src='/img/color-main-2.png' alt='')
-          +e.BUTTON.btn(data-color="3000")
-            +e.IMG.pic(src='/img/color-main-3.png' alt='')
-          +e.A.more.js-open-modal(href="#color")
+          span(data-color-val="RAL") 1000
+        +e.list(data-color-list="RAL")
+          +e.LABEL.btn
+            input(type="radio" name="RAL" value="1000" checked)
+            +e.SPAN.box
+              +e.IMG.pic(src='/img/color-main-1.png' alt='')
+          +e.LABEL.btn
+            input(type="radio" name="RAL" value="2000")
+            +e.SPAN.box
+              +e.IMG.pic(src='/img/color-main-2.png' alt='')
+          +e.LABEL.btn
+            input(type="radio" name="RAL" value="3000")
+            +e.SPAN.box
+              +e.IMG.pic(src='/img/color-main-3.png' alt='')
+          +e.BUTTON.more.js-open-modal(href="#color-1")
             +e.IMG.more-pic(src='/icon/icon-plus.svg' alt='')
       +b.colrs
         +e.P.title Цвет отделки: 
-          span H1424 ST22
-        +e.list
-          +e.BUTTON.btn.active(data-color="H1424 ST22")
-            +e.IMG.pic(src='/img/color-finish-1.png' alt='')
-          +e.BUTTON.btn(data-color=" H1424 ST30")
-            +e.IMG.pic(src='/img/color-finish-2.png' alt='')
-          +e.BUTTON.btn(data-color=" H1424 ST40")
-            +e.IMG.pic(src='/img/color-finish-3.png' alt='')
-          +e.A.more.js-open-modal(href="#color")
+          span(data-color-val="H10") H1424 ST22
+        +e.list(data-color-list="H10")
+          +e.LABEL.btn
+            input(type="radio" name="H10" value="H1424 ST22" checked)
+            +e.SPAN.box
+              +e.IMG.pic(src='/img/color-finish-1.png' alt='')
+          +e.LABEL.btn
+            input(type="radio" name="H10" value="H1424 ST33")
+            +e.SPAN.box
+              +e.IMG.pic(src='/img/color-finish-2.png' alt='')
+          +e.LABEL.btn
+            input(type="radio" name="H10" value="H1424 ST44")
+            +e.SPAN.box
+              +e.IMG.pic(src='/img/color-finish-3.png' alt='')
+          +e.BUTTON.more.js-open-modal(href="#color-2")
             +e.IMG.more-pic(src='/icon/icon-plus.svg' alt='')
       +e.A.call.js-open-modal(href="#calculation") Заказать изготовление по индивидуальным размерам
 

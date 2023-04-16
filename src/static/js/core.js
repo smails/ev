@@ -1,5 +1,9 @@
 import $ from 'jquery'
 
+import { Fancybox } from "../../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.esm.js";
+
+Fancybox.bind("[data-fancybox]");
+
 let isValid;
 let check;
 $('form').submit(function (e) {
@@ -54,25 +58,25 @@ $('.toogle-more').click(function(e){
 })
 
 
-$(document).on('click', '.number__btn_plus', function () {
-  const val = parseInt($(this).prev().val());
-  if (val < 999) {
-    $(this).prev().val(val + 1);
-  }
-});
-$(document).on('click', '.number__btn_minus', function () {
-  const val = parseInt($(this).next().val());
-  if (val > 1) {
-    $(this).next().val(val - 1);
-  }
-});
-$(document).on('keyup', '.number__field', function () {
-  this.value = this.value.replace(/[^0-9]/, '');
-  const val = parseInt($(this).val());
-  if (val > 999) {
-    $(this).val(999);
-  }
-});
+// $(document).on('click', '.number__btn_plus', function () {
+//   const val = parseInt($(this).prev().val());
+//   if (val < 999) {
+//     $(this).prev().val(val + 1);
+//   }
+// });
+// $(document).on('click', '.number__btn_minus', function () {
+//   const val = parseInt($(this).next().val());
+//   if (val > 1) {
+//     $(this).next().val(val - 1);
+//   }
+// });
+// $(document).on('keyup', '.number__field', function () {
+//   this.value = this.value.replace(/[^0-9]/, '');
+//   const val = parseInt($(this).val());
+//   if (val > 999) {
+//     $(this).val(999);
+//   }
+// });
 
 $('.js-open-modal').click((e) => {
   e.preventDefault();

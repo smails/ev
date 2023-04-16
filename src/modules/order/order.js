@@ -41,3 +41,13 @@ $('.related__open').click(function () {
     $(this).parent().next().find(".related__list").slick('reinit');
   }
 })
+
+$('.toggl__hidden').change(function () {
+  if (!$(this).attr('checked')){
+    $(this).attr("checked", true);
+    $('[name="addr_del"]').removeAttr('disabled')
+  } else{
+    $(this).attr("checked", false);
+    $('[name="addr_del"]').attr('disabled', 'disabled')
+  }
+})

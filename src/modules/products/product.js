@@ -111,6 +111,16 @@ $('.product-info__rollup').click(function () {
   $(this).prev('.product-info__hidden').slideToggle();
 })
 
+$('.product-main__allgallery').click(function () {
+  if ($('[data-hidden-mobile]').attr('data-hidden-mobile') == 'false'){
+    $('[data-hidden-mobile]').attr('data-hidden-mobile', 'true');
+    $(this).text('Скрыть фотогалерею')
+  } else{
+    $('[data-hidden-mobile]').attr('data-hidden-mobile', 'false');
+    $(this).text('Открыть фотогалерею')
+  }
+})
+
 $('.product-info__rollup').click(function () {
   if($(this).hasClass('open')){
     $(this).removeClass('open').text('Показать все размеры');
@@ -119,4 +129,25 @@ $('.product-info__rollup').click(function () {
     $(this).addClass('open').text('Свернуть все размеры');
     $(this).prev('.product-info__hidden').slideDown();
   }
+})
+
+$(document).on('change', '.colrs__btn input', function () {
+  $(`[data-color-val="${this.name}"]`).text(this.value)
+})
+
+$(document).on('change', '.modal-color__hidden', function () {
+  $(`[data-color-val="${this.dataset.name}"]`).text(this.value);
+  $(`[data-color-list="${this.dataset.name}"]`).find('.colrs__btn')[2].remove();
+
+  const img = $(this).next().find('img').attr('src');
+  const el = `
+    <label class="colrs__btn">
+      <input type="radio" name="${this.dataset.name}" value="${this.value}" checked="checked">
+      <span class="colrs__box">
+        <img class="colrs__pic" src="${img}" alt="" role="presentation">
+      </span>
+    </label>
+  `
+  $(`[data-color-list="${this.dataset.name}"]`).prepend(el);
+
 })
