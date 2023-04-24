@@ -44,38 +44,42 @@ body
             option(value="Магазины") Магазины
             option(value="Фастфуд") Фастфуд
       +b.portfolio-gallery
-        +e.list_left._two-row
+        +e.list_row-left._row-min
           - for(var i = 0; i < 7; i++){
             if i == 0
-              +e.item_main
+              +e.item_two-row-left
                 +e.IMG.pic_big(src='/img/gallery-'+ i +'.png' alt='')
                 +e.content
-                  +e.P.title Пекарня “Мудрый пекарь”
+                  +e.P.title Пекарня 
+                    br
+                    | “Мудрый пекарь”
                   +e.text "Мудрый Пекарь" - это пекарни современного формата. Они соответствуют высоким европейским стандартам.
                   +e.A.more.btn_green(href="#") Смотреть проект
             else
               +e.item
                 +e.IMG.pic(src='/img/prf-line-first-'+ i +'.png' alt='')
           -}
-      +b.porfolio-gallery
-        +e.list_right._two-row
+      +b.portfolio-gallery
+        +e.list_row-right._row-min
           - for(var i = 0; i < 7; i++){
             if i == 6
-              +e.item_main
-                +e.IMG.pic_big(src='/img/prf-line-sec-'+ i +'.png' alt='')
+              +e.item_two-row-right
+                +e.IMG.pic_big(src='/img/prf-line-sec-0.png' alt='')
                 +e.content
-                  +e.P.title Сеть “Седьмой континент”
+                  +e.P.title Сеть 
+                    br
+                    | “Седьмой континент”
                   +e.text Сеть «Седьмой континент» состоит из супермаркетов и гипермаркетов.
                   +e.A.more.btn_green(href="#") Смотреть проект
             else
               +e.item
-                +e.IMG.pic(src='/img/prf-line-sec-'+ i +'.png' alt='')
+                +e.IMG.pic(src='/img/prf-line-sec-'+ (i+1) +'.png' alt='')
           -}
-      +b.porfolio-gallery
-        +e.list_left._row
+      +b.portfolio-gallery
+        +e.list_row-left._row-big
           - for(var i = 0; i < 4; i++){
             if i == 0
-              +e.item_main
+              +e.item
                 +e.IMG.pic_big(src='/img/prf-line-three-'+ i +'.png' alt='')
                 +e.content
                   +e.P.title Супермаркет «Премьер»
@@ -86,50 +90,50 @@ body
                 +e.IMG.pic(src='/img/prf-line-three-'+ i +'.png' alt='')
           -}
       +callback('1')
-      +b.porfolio-gallery
-        +e.list_right._row
+      +b.portfolio-gallery
+        +e.list_row-right._row-big
           - for(var i = 0; i < 4; i++){
             if i == 3
-              +e.item_main
-                +e.IMG.pic_big(src='/img/prf-line-four-'+ i +'.png' alt='')
+              +e.item
+                +e.IMG.pic_big(src='/img/prf-line-four-0.png' alt='')
                 +e.content
                   +e.P.title Балтик мастер Волконский
                   +e.text "Волконский" - крупная сеть пекарен, кафе и кондитерских, которые работают по французской технологии, объединяя это с русскими традициями.
                   +e.A.more.btn_green(href="#") Смотреть проект
             else
               +e.item
-                +e.IMG.pic(src='/img/prf-line-four-'+ i +'.png' alt='')
+                +e.IMG.pic(src='/img/prf-line-four-'+ (i+1) +'.png' alt='')
           -}
-      +b.porfolio-gallery
-        +e.list_left._two-row
-          - for(var i = 0; i < 6; i++){
+      +b.portfolio-gallery
+        +e.list_row-middle._row-min
+          - for(var i = 0; i < 5; i++){
             if i == 0
-              +e.item_main
+              +e.item_two-row-start
                 +e.IMG.pic_big(src='/img/prf-line-five-'+ i +'.png' alt='')
                 +e.content
                   +e.P.title Ашан суши
                   +e.text ."Ашан" - признанный лидер среди гипермаркетов в России, поскольку продаёт по низким ценам огромное количество качественных продовольственных и непродовольственных товаров.
                   +e.A.more.btn_green(href="#") Смотреть проект
-            if i == 5
-              +e.item_form
+            if i == 4
+              +e.item_two-row-form
                 +form-eq()
             else
               +e.item
                 +e.IMG.pic(src='/img/prf-line-five-'+ i +'.png' alt='')
           -}
-      +b.porfolio-gallery
-        +e.list_right._two-row
+      +b.portfolio-gallery
+        +e.list_row-right._row-min
           - for(var i = 0; i < 7; i++){
             if i == 6
-              +e.item_main
-                +e.IMG.pic_big(src='/img/prf-line-six-'+ i +'.png' alt='')
+              +e.item_two-row-right
+                +e.IMG.pic_big(src='/img/prf-line-six-0.png' alt='')
                 +e.content
                   +e.P.title Торговое пространство «Арбуз».
                   +e.text Торговый комплекс «Арбуз» - торговое пространство нового формата с обширным ассортиментом - от продуктов питания до хозяйственных товаров.
                   +e.A.more.btn_green(href="#") Смотреть проект
             else
               +e.item
-                +e.IMG.pic(src='/img/prf-line-six-'+ i +'.png' alt='')
+                +e.IMG.pic(src='/img/prf-line-six-'+ (i + 1) +'.png' alt='')
           -}
       +e.control
         +e.BUTTON.btn.btn_green Показать еще
