@@ -4,6 +4,8 @@
   +screen('max', 767)
     padding: 4.25rem 0
     overflow: hidden
+  &_white
+    background: #fff
   &__list
     display: grid
     grid-template-columns: repeat(6, 1fr)
@@ -27,7 +29,7 @@
     border-radius: 15px
     padding: 10px 20px
     box-sizing: border-box
-    border: 2px solid transparent
+    border: 2px solid $c3
     transition: .3s ease
     &:hover
       border-color: $c4

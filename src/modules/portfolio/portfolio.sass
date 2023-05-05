@@ -82,8 +82,6 @@
       grid-row-end: 3
       grid-column-start: 1
       grid-column-end: 2
-      +screen('max', 767)
-        display: block
     &_two-row-right
       grid-row-start: 1
       grid-row-end: 3
@@ -94,8 +92,6 @@
         grid-row-end: 3
         grid-column-start: 1
         grid-column-end: 2
-      +screen('max', 767)
-        display: block
     &_two-row-start
       grid-row-start: 1
       grid-row-end: 3
@@ -103,8 +99,6 @@
       grid-column-end: 2
       +screen('max', 1280)
         grid-column-end: 3
-      +screen('max', 767)
-        display: block
     &_two-row-form
       grid-row-start: 1
       grid-row-end: 3
@@ -114,6 +108,9 @@
         grid-row-start: 1
         grid-row-end: 3
         grid-column-start: 3
+    &_mobile-fisrt
+      +screen('max', 767)
+        display: block
   &__content
     width: 100%
     height: 100%
@@ -161,3 +158,254 @@
     display: flex
     flex-flow: column
     justify-content: center
+
+.portfolio-heading
+  height: 570px
+  &__inner
+    position: relative
+  &__content
+    margin-top: 10rem
+    padding: 0 8vw
+    color: #fff
+    max-width: 700px
+  &__title
+    margin-bottom: 3rem
+    span
+      color: $c4
+      display: block
+  &__txt
+    line-height: 1.5
+    +fs(20px)
+    font-weight: 700
+  .breadcrumb
+    padding-top: 3rem
+    margin-top: 0
+    color: #fff
+
+.portfolio-info
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 30px
+    max-width: 1415px
+  &__pic
+    vertical-align: middle
+    width: 280px
+    object-fit: contain
+    flex-shrink: 0
+  &__text
+    +fs(20px)
+    line-height: 1.5
+    max-width: 1015px
+    p
+      margin-bottom: 2rem
+
+.porfolio-big-slider
+  position: relative
+  height: 700px
+  margin: 7rem 0
+  .slick-prev
+    left: 7vw
+  .slick-next
+    right: 7vw
+  .slick-slide
+    opacity: 0.5
+    transition: .5s ease
+    div
+      text-align: center
+    img
+      display: inline-block
+      max-width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 20px
+    &.slick-active
+      opacity: 1
+
+.task-info
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 30px
+    max-width: 1610px
+  &__title
+    margin-bottom: 3rem
+  &__pictures
+    width: 50%
+    max-width: 645px
+    flex-shrink: 0
+    display: grid
+    grid-template-columns: repeat(2, 240px)
+    grid-auto-rows: 150px
+    grid-gap: 30px
+  &__content
+    max-width: 855px
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    max-width: 1015px
+    p
+      margin-bottom: 2rem
+  &__pic
+    border-radius: 20px
+    &:first-of-type
+      margin-left: 7vw
+
+.decision-info
+  padding: 8rem 0 10rem
+  background: $c6
+  &__inner
+    max-width: 1520px
+  &__title
+    margin-bottom: 4rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 40px
+    counter-reset: list
+  &__item
+    padding-left: 80px
+    line-height: 1.5
+    box-sizing: border-box
+    position: relative
+    &:before
+      counter-increment: list
+      content: counter(list)
+      border-radius: 100%
+      width: 50px
+      height: 50px
+      background: $c4
+      color: #fff
+      text-align: center
+      line-height: 50px
+      font-weight: 700
+      +fs(26px)
+      position: absolute
+      left: 0
+      top: 0
+
+.result-info
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 30px
+    max-width: 1610px
+  picture
+    max-width: 772px
+    width: 50%
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 20px
+    height: 490px
+    object-fit: cover
+  &__content
+    max-width: 730px
+    width: 50%
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    max-width: 1015px
+    p
+      margin-bottom: 2rem
+  &__title
+    margin-bottom: 3rem
+
+.conclusion
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    gap: 8vw
+    max-width: 1610px
+    margin-right: calc((100% - 1800px) / 2)
+  &__content
+    max-width: 730px
+    width: 50%
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    max-width: 1015px
+    p
+      margin-bottom: 2rem
+  &__title
+    margin-bottom: 3rem
+  &__quote
+    max-width: 772px
+    border: 2px solid #E5E5E5
+    padding: 7rem 6rem
+    box-sizing: border-box
+    border-radius: 20px
+  &__text
+    +fs(20px)
+    color: #595959
+    line-height: 1.35
+    padding-left: 11rem
+    background-image: url(../icon/icon-quote.svg)
+    background-repeat: no-repeat
+    background-position: left top
+  &__pers
+    padding-left: 11rem
+    display: flex
+    align-items: center
+    gap: 30px
+    margin-top: 4rem
+  &__name
+    margin-bottom: .5rem
+    font-weight: 700
+  &__sign
+    color: #595959
+
+.similar
+  &__title
+    margin-bottom: 3rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 10px
+  &__item
+    position: relative
+  &__content
+    width: 100%
+    height: 100%
+    position: absolute
+    display: flex
+    flex-flow: column
+    justify-content: center
+    align-items: flex-start
+    top: 0
+    left: 0
+    background: linear-gradient(0deg, rgba(2, 15, 25, 0.5), rgba(2, 15, 25, 0.5))
+    border-radius: 20px
+    z-index: 1
+    opacity: 1
+    transition: .3s ease
+    color: #fff
+    padding: 4rem
+    box-sizing: border-box
+  &__pic
+    vertical-align: middle
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 20px
+    +screen('max', 767)
+      border-radius: 15px
+  &__caption
+    font-weight: 700
+    +fs(32px)
+    line-height: 1.3
+    margin-bottom: 2rem
+    +screen('max', 767)
+      +fs(20px)
+      font-weight: 400
+  &__txt
+    font-weight: 700
+    line-height: 1.4
+    margin-bottom: 2rem
+    +screen('max', 767)
+      +fs(12px)
+      font-weight: 400

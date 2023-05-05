@@ -78,10 +78,10 @@ $('.toogle-more').click(function(e){
 //   }
 // });
 
-$('.js-open-modal').click((e) => {
+$('.js-open-modal').click(function(e) {
   e.preventDefault();
   $('.modal').hide();
-  const modal = e.target.getAttribute('href') != null ? e.target.getAttribute('href') : e.target.parentElement.getAttribute('href');
+  const modal = this.getAttribute('href') != null ? this.getAttribute('href') : this.parentElement.getAttribute('href');
   $(`[data-modal="${modal.substring(1)}"]`).fadeIn();
 });
 
