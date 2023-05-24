@@ -1,0 +1,38 @@
++b.solution
+  +e.inner.inner
+    +e.H2.title Готовые решения для оснащения
+    +e.list
+      - var price = ["2 941 261 руб.","786 949 руб.","437 792 руб.","168 233 руб.","1 182 384 руб."]
+      each item, index in ["Ресторан", "Столовая", "Фастфуд", "Кафе", "Магазин"]
+        +e.item
+          +e.top
+            +e.IMG.pic(src='/img/solution-' + index + '.png' alt='')
+            +e.P.caption=item
+            +e.P.price= 'от ' + price[index]
+          +e.bottom
+            +e.P.sign=item
+            +e.rate
+              +e.line
+                span Услуги
+                span 98 7770 руб.
+              +e.line
+                span Инвентарь
+                span 11 944 руб.
+              +e.line
+                span Кассовые боксы
+                span 8 437 руб.
+              +e.line
+                span Торговые стеллажи
+                span 179 473 руб.
+              +e.line
+                span Дополнительное оборудование
+                span 288 398 руб.
+              +e.line
+                span Холодильное оборудование
+                span 774 835 руб.
+              +e.line
+                span
+                  b Итого
+                span
+                  b=price[index]
+            +e.A.more(href='#') Подробнее

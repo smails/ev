@@ -95,7 +95,28 @@
   &__btn
     display: block
     width: 100%
-
+  &__list
+    counter-reset: heading
+  &__item
+    text-align: left
+    display: flex
+    align-items: center
+    gap: 12px
+    line-height: 1.3
+    margin-bottom: 3rem
+    &:before
+      counter-increment: heading
+      content: counter(heading)
+      flex-shrink: 0
+      width: 40px
+      height: 40px
+      display: flex
+      justify-content: center
+      align-items: center
+      color: #fff
+      background: $c4
+      border-radius: 100%
+      line-height: 1
 .call-card
   padding: 7rem 8rem 7rem 0
   width: 100%

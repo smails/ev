@@ -3,6 +3,7 @@ include ../static/pug/breadcrumb
 include ../static/pug/head
 include ../modules/copeq/banner
 include ../modules/callback/callback
+include ../modules/callback/form
 
 
 +head('Комплексное оснащение')
@@ -42,6 +43,47 @@ body
                 +e.A.link(href="#")=item
           +e.BUTTON.open Развернуть
   +callback('2')
+  include ../modules/solution/solution
+  include ../modules/work/work
+  +b.copeq-map
+    +e.IMG.pic(src='/img/map.png' alt='')
+    +e.inner.inner
+      +e.info
+        +e.line
+          +e.IMG.icon(src='/icon/icon-map-1.svg' alt='')
+          +e.content
+            +e.P.title.display-2
+              span Представительство 
+              |в регионах
+            +e.P.sign Открываем магазины и предприятия общепита во всех городах России.
+        +e.line
+          +e.IMG.icon(src='/icon/icon-map-2.svg' alt='')
+          +e.content
+            +e.P.title.display-2
+              span Доставка 
+              |транспортной компанией
+            +e.P.sign Осуществляем доставку транспортной компанией на ваш выбор.
+      +e.A.btn.btn_green.js-open-modal(href='#callback') Оставить заявку на оснащение
+  +b.copeq-step
+    +e.H2.title.text-center Этапы комплексного оснащения
+    +e.container
+      +e.IMG.pic(src='/img/step.png' alt='')
+      +e.wrap
+        +e.P.sign Изучаем план схемы помещения
+        +e.P.sign Разрабатываем
+          br
+          | концепцию
+        +e.P.sign Разрабатываем 
+          br
+          | дизайн-проект
+        +e.P.sign Расстановка оборудования согласно планировки помещения
+        +e.P.sign Подготовка объектов к открытию
+        +e.P.sign Производим монтаж оборудования и пуско-наладочные работы
+        +e.P.sign Подбираем и изготавливаем оборудование и мебель
+        +e.P.sign Составление 
+          br
+          | сметы
+  +form('Бесплатная консультация по оснащению')
   include ../modules/clients/clients-mini--white
   include ../modules/footer/footer
   include ../static/pug/scripts

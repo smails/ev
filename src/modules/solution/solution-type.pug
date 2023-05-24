@@ -1,0 +1,10 @@
++b.solution-type.section
+  +e.inner.inner
+    +e.H2.title Готовые решения для оснащения магазина продуктов
+    +e.list
+      - var price = ["2 941 261 руб.","786 949 руб.","437 792 руб.","168 233 руб.","1 182 384 руб."]
+      each item, index in ["Продуктовый магазин № 1", "Продуктовый магазин № 2", "Продуктовый магазин № 3", "Продуктовый магазин № 4", "Продуктовый магазин № 5"]
+        +e.item
+          +e.IMG.pic(src='/img/solution-type-' + index + '.png' alt='')
+          +e.P.caption=item
+          +e.P.price= 'от ' + price[index]

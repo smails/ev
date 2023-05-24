@@ -1,0 +1,101 @@
+.solution
+  &__title
+    margin-bottom: 3rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    grid-gap: 12px
+  &__item
+    background: #FFFFFF
+    position: relative
+    box-sizing: border-box
+    z-index: 2
+    position: relative
+    &:hover
+      .solution__top
+        border-radius: 20px 20px 0 0
+        border-bottom-color: transparent
+      .solution__bottom
+        display: block
+  &__top
+    text-align: center
+    box-sizing: border-box
+    padding: 2rem
+    border: 2px solid $c4
+    border-radius: 20px
+  &__caption
+    text-align: left
+    margin-top: 2rem
+    +fs(20px)
+    font-weight: 700
+  &__price
+    margin-top: 1rem
+    +fs(26px)
+    color: #595959
+    text-align: left
+  &__bottom
+    padding-top: 2rem
+    border: 2px solid $c4
+    border-top: 0
+    position: absolute
+    background: #FFFFFF
+    border-radius: 0 0 20px 20px
+    top: calc(100% - 2px)
+    box-sizing: border-box
+    padding: 2rem
+    width: 100%
+    display: none
+    &:before
+      content: ''
+      width: 100%
+      top: -2rem
+      left: 0
+      height: 1px
+      background: #eaeaea
+      position: relative
+      display: block
+  &__sign
+    color: #929292
+  &__rate
+    margin-top: 2rem
+  &__line
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 1rem
+    +fs(12px)
+    line-height: 1.3
+    span
+      &:first-of-type
+        color: #929292
+        max-width: 50%
+  &__more
+    margin: 1rem 0 .5rem
+    font-weight: 700
+    color: $c8
+    display: inline-block
+    text-decoration: underline
+
+.solution-type
+  &__title
+    margin-bottom: 3rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    grid-gap: 48px
+  &__item
+    background: #FFFFFF
+    position: relative
+    box-sizing: border-box
+    z-index: 2
+    position: relative
+  &__caption
+    margin-top: 2rem
+    +fs(20px)
+    font-weight: 700
+  &__price
+    margin-top: 1rem
+    +fs(26px)
+    color: #595959
+  &__pic
+    width: 100%
