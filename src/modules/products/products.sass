@@ -331,11 +331,14 @@
     max-width: 915px
     flex-shrink: 0
     width: 55%
-    +screen('max', 767)
+    +screen('max', 1023)
       width: 100%
+      height: 500px
+      overflow: hidden
+    +screen('max', 767)
       height: 228px
     &[data-hidden-mobile="true"]
-      +screen('max', 767)
+      +screen('max', 1023)
         height: auto
     .slick-slide
       height: auto
@@ -461,8 +464,9 @@
       display: none
   &__calc
     padding: 14px 14px 16px
-    +screen('max', 767)
+    +screen('max', 1200)
       width: 100%
+      margin-bottom: 1rem
   &__allgallery
     display: block
     max-width: 305px
@@ -489,6 +493,10 @@
       max-width: 100%
   &__slider-main
     max-height: 579px
+  &__hidden-mobile
+    margin-top: 20px
+    +screen('min', 769)
+      display: none
 .select-size
   margin-top: 2rem
   max-width: 340px
@@ -501,6 +509,7 @@
     margin-bottom: 2rem
     &:last-of-type, &.select2-container--open
       margin-bottom: 0
+
 .colrs
   +screen('max', 767)
     display: none
@@ -551,6 +560,8 @@
   &__inner
     display: flex
     gap: 30px
+    +screen('max', 1023)
+      display: block
   &__left
     width: 65%
     max-width: 1050px
@@ -558,9 +569,17 @@
     +screen('max', 1200)
       max-width: 100%
       width: 100%
+    &_half-mobile
+      +screen('max', 1200)
+        width: 65%
+      +screen('max', 1023)
+        width: 100%
   &__right
     +screen('max', 1200)
       display: none
+    &_tomobile
+      +screen('max', 1200)
+        display: block
   &__line
     margin-bottom: 3rem
   &__title
@@ -645,6 +664,8 @@
     top: 110px
   &__hidden
     display: none
+  &__over
+    height: calc(100% - 550px)
 
 .type-coldsupply
   margin-top: 3rem

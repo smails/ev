@@ -5,14 +5,20 @@
     display: grid
     grid-template-columns: 256px 1fr
     grid-gap: 30px
+    +screen('max', 1690)
+      width: 100%
+    +screen('max', 1023)
+      display: block
   &__left
+    +screen('max', 1023)
+      margin-bottom: 4rem
     .select2-container
       width: 100%
-      +screen('min', 601)
+      +screen('min', 1024)
         display: none
   &__nav
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25))
-    +screen('max', 600)
+    +screen('max', 1023)
       display: none
   &__nav-item
     border: 1px solid #E5E5E5
@@ -51,36 +57,64 @@
     display: grid
     grid-template-columns: repeat(4, 1fr)
     grid-gap: 30px
+    +screen('max', 1690)
+      grid-template-columns: repeat(3, 1fr)
+    +screen('max', 1260)
+      grid-gap: 10px
+    +screen('max', 1150)
+      grid-template-columns: repeat(2, 1fr)
   &__item
     background: #FFFFFF
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
     border-radius: 20px
     padding: 2rem
     box-sizing: border-box
+    +screen('max', 767)
+      box-shadow: none
+      padding: 0
   &__pic
     width: 268px
     height: 268px
     object-fit: contain
     margin: 0 auto
     display: block
+    +screen('max', 767)
+      width: 130px
+      height: 130px
   &__caption
     margin: 1rem 0
     line-height: 1.35
     display: block
+    +screen('max', 767)
+      +fs(12px)
   &__info
     display: flex
     justify-content: space-between
     align-items: center
+    +screen('max', 1023)
+      display: block
   &__price
     +fs(20px)
     font-weight: 700
     color: #595959
+    +screen('max', 767)
+      +fs(12px)
   &__more
     border-radius: 10px
     padding: 1rem 2rem
+    +screen('max', 767)
+      +fs(12px)
+      margin-top: 1.5rem
   &__cat
     max-width: 276px
     display: block
     margin: 5rem auto 0
   .callback-mini
     grid-column: 1 / span 4
+    grid-row: 3 / span 4
+    +screen('max', 1690)
+      grid-column: 1 / span 3
+    +screen('max', 1150)
+      grid-column: 1 / span 2
+    +screen('max', 1023)
+      display: none

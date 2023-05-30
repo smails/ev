@@ -49,7 +49,7 @@ mixin goods(title='Изделия, использованные в проект�
         - for(var i=0; i<10; i++){
           +e.content
             +e.list
-              - for(var k=0; k<8; k++){
+              - for(var k=0; k<16; k++){
                 +e.item
                   a(href="#")
                     +e.IMG.pic(src='/img/catalog-1.png' alt='')
@@ -59,14 +59,5 @@ mixin goods(title='Изделия, использованные в проект�
                     +e.A.more.btn_green Подробнее
               - }
               +callback('3')
-              - for(var l=0; l < 8; l++){
-                +e.item
-                  a(href="#")
-                    +e.IMG.pic(src='/img/catalog-1.png' alt='')
-                  +e.A.caption(href="#") Овощной стеллаж с металлическим полками без фриза
-                  +e.info
-                    +e.P.price 11 924 руб.
-                    +e.A.more.btn_green Подробнее
-              - }
             +e.A.cat.btn_orange(href='#') Перейти в каталог
         -}

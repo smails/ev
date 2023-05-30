@@ -5,34 +5,54 @@
     display: grid
     grid-template-columns: repeat(5, 1fr)
     grid-gap: 12px
+    justify-content: center
+    +screen('max', 1690)
+      grid-template-columns: repeat(3, 1fr)
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 767)
+      grid-template-columns: repeat(1, 1fr)
   &__item
     background: #FFFFFF
     position: relative
     box-sizing: border-box
     z-index: 2
     position: relative
-    &:hover
-      .solution__top
-        border-radius: 20px 20px 0 0
-        border-bottom-color: transparent
-      .solution__bottom
-        display: block
+    @media (hover: hover)
+      &:hover
+        z-index: 3
+        .solution__top
+          border-radius: 20px 20px 0 0
+          border-bottom-color: transparent
+        .solution__bottom
+          display: block
   &__top
     text-align: center
     box-sizing: border-box
     padding: 2rem
     border: 2px solid $c4
     border-radius: 20px
+    +screen('max', 767)
+      display: flex
+      gap: 20px
+      text-align: left
+  &__pic
+    +screen('max', 767)
+      width: 100px
   &__caption
     text-align: left
     margin-top: 2rem
     +fs(20px)
     font-weight: 700
+    +screen('max', 767)
+      +fs(16px)
   &__price
     margin-top: 1rem
     +fs(26px)
     color: #595959
     text-align: left
+    +screen('max', 767)
+      +fs(18px)
   &__bottom
     padding-top: 2rem
     border: 2px solid $c4
@@ -75,6 +95,10 @@
     color: $c8
     display: inline-block
     text-decoration: underline
+    &_mobile
+      margin: 2rem 0 0
+      +screen('min', 769)
+        display: none
 
 .solution-type
   &__title
@@ -83,6 +107,17 @@
     display: grid
     grid-template-columns: repeat(5, 1fr)
     grid-gap: 48px
+    overflow: auto
+    scrollbar-width: 0
+    &::-webkit-scrollbar
+      display: none
+    +screen('max', 1690)
+      grid-template-columns: repeat(3, 1fr)
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 767)
+      grid-template-columns: repeat(5, 200px)
+      grid-gap: 20px
   &__item
     background: #FFFFFF
     position: relative
@@ -93,9 +128,13 @@
     margin-top: 2rem
     +fs(20px)
     font-weight: 700
+    +screen('max', 767)
+      +fs(12px)
   &__price
     margin-top: 1rem
     +fs(26px)
     color: #595959
+    +screen('max', 767)
+      +fs(12px)
   &__pic
     width: 100%

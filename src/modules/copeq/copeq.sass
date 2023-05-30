@@ -9,6 +9,8 @@
     align-items: center
     gap: 20px
     max-width: 1315px
+    +screen('max', 1023)
+      display: block
   &__content
     max-width: 725px
   &__title
@@ -23,24 +25,38 @@
     letter-spacing: -0.02em
     max-width: 645px
     margin-bottom: 6rem
+    +screen('max', 767)
+      +fs(14px)
+      margin-top: 3rem
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-gap: 1rem
     justify-content: space-between
+    +screen('max', 767)
+      display: block
   &__item
     display: flex
     align-items: center
     gap: 2rem
+    +screen('max', 767)
+      margin-bottom: 2rem
   &__caption
     font-weight: 700
     line-height: 1.3
+    +screen('max', 767)
+      font-weight: 400
   &__callback
     background: #FFFFFF
     border-radius: 20px
     padding: 3rem 3.5rem 4rem
     box-sizing: border-box
     max-width: 440px
+    flex-shrink: 0
+    +screen('max', 1023)
+      margin-top: 3rem
+    +screen('max', 767)
+      display: none
   &__holder
     text-align: center
     color: $c1
@@ -99,27 +115,47 @@
       color: $c4
       border-bottom: 1px solid $c4
       display: inline-block
+  &__call
+    margin: 30px auto 0
+    display: block
+    max-width: 255px
+    +screen('min', 768)
+      display: none
 
 .copeq-list
   margin: 3rem 0 7rem
+  overflow: hidden
   &__title
     +fs(42px)
     font-weight: 600
     margin-bottom: 3rem
+    +screen('max', 767)
+      +fs(24px)
+      font-weight: 400
   &__row
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-gap: 3rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(1, 1fr)
   &__col
     background: radial-gradient(50% 681.96% at 50% 50%, rgba(255, 255, 255, 0.15) 46.88%, rgba(255, 255, 255, 0) 100%)
     border: 1px solid #E5E5E5
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
     border-radius: 20px
-    padding: 4rem
+    padding: 2vw
     box-sizing: border-box
     overflow: hidden
     position: relative
     z-index: 1
+    +screen('max', 1023)
+      padding: 4vw
+    +screen('max', 767)
+      padding: 30px 20px
+      background: none
+      border-radius: 0
+      box-shadow: none
+      border: 0
     &:before
       content: ''
       width: 384px
@@ -129,6 +165,20 @@
       bottom: -40px
       position: absolute
       z-index: -1
+      +screen('max', 1200)
+        width: 250px
+        height: 250px
+      +screen('max', 767)
+        top: 150%
+    &:after
+      width: calc(100% + 40px)
+      height: 1px
+      position: absolute
+      bottom: 0
+      left: -20px
+      background: #E5E5E5
+      +screen('max', 767)
+        content: ''
     &.green
       .copeq-list__link
         &:hover
@@ -159,23 +209,43 @@
     align-items: center
     gap: 2.5rem
     margin-bottom: 4rem
+    +screen('max', 1200)
+      flex-flow: row-reverse
   &__caption
     font-weight: 700
     +fs(26px)
     line-height: 1.4
+    +screen('max', 1690)
+      +fs(20px)
+    +screen('max', 767)
+      +fs(18px)
+      font-weight: 400
   &__item
-    margin-bottom: 2rem
+    margin-bottom: 24px
+    +screen('max', 767)
+      display: none
+    &:first-of-type, &:nth-of-type(2), &:nth-of-type(3) 
+      display: block
   &__link
     color: #595959
     font-weight: 700
     +fs(20px)
     transition: .5s ease
+    +screen('max', 767)
+      +fs(16px)
+      font-weight: 400
+      text-decoration: underline
+  &__icon
+    +screen('max', 767)
+      width: 48px
+      height: 48px
   &__open
     font-weight: 700
     color: $c4
     padding-right: 20px
     position: relative
     cursor: pointer
+    background: none
     +screen('min', 767)
       display: none
     &::after
@@ -196,20 +266,40 @@
     flex-flow: column
     justify-content: space-between
     height: calc(100% - 130px)
-
+    +screen('max', 767)
+      height: auto
+  
 .copeq-map
   display: flex
   justify-content: flex-start
   position: relative
+  overflow: hidden
+  +screen('max', 1200)
+    display: block
+  +screen('max', 767)
+    display: none
   &__info
     max-width: 800px
     margin-left: -10vw
     margin-top: 5rem
+    position: relative
+    z-index: 3
+    +screen('max', 1200)
+      margin: 0 auto
+      position: absolute
+      bottom: 23rem
+      left: 0
+      right: 0
+    +screen('max', 1023)
+      padding: 0 3rem
+      box-sizing: border-box
   &__line
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 8.5rem
+    +screen('max', 1200)
+      margin-bottom: 3rem
     &:first-of-type
       span
         color: $c4
@@ -234,13 +324,28 @@
     right: 0
     margin: 0 auto
     width: 392px
+  &__pic
+    position: relative
+    +screen('max', 1690)
+      left: -10vw
+    +screen('max', 1200)
+      left: 0
+  picture
+    max-width: 55%
+    +screen('max', 1200)
+      max-width: 100%
 
 .copeq-step
   padding: 5rem 0
   overflow: hidden
   background: #F5F5F5
+  +screen('max', 1023)
+    background: #fff
+    padding-bottom: 0
   &__container
     position: relative
+    +screen('max', 1023)
+      margin-top: 3rem
   &__wrap
     display: grid
     grid-template-columns: repeat(4, 316px)
@@ -252,13 +357,42 @@
     height: 100%
     justify-content: space-around
     margin: 0 auto
+    +screen('max', 1690)
+      top: 2vw
+    +screen('max', 1200)
+      grid-template-columns: repeat(4, 200px)
+    +screen('max', 1023)
+      display: block
+      position: relative
+      top: 0
+      height: auto
   &__sign
     +fs(20px)
     font-weight: 700
     line-height: 1.3
+    +screen('max', 1200)
+      +fs(16px)
+    +screen('max', 1023)
+      display: flex
+      align-items: center
+      gap: 30px
+    +screen('max', 767)
+      +fs(12px)
     &:nth-of-type(2n + 1)
       position: relative
       top: 28rem
+      +screen('max', 1690)
+        top: 16vw
+      +screen('max', 1023)
+        top: 0
+  &__pic
+    +screen('max', 1690)
+      width: 100%
+    +screen('max', 1023)
+      display: none
+  &__icon
+    +screen('min', 1024)
+      display: none
 
 .plane
   margin: 8rem 0
@@ -266,9 +400,13 @@
     display: grid
     grid-template-columns: repeat(2, 1fr)
     grid-gap: 3rem
+    +screen('max', 767)
+      display: block
   &__item
     position: relative
     display: block
+    +screen('max', 767)
+      margin-bottom: 3rem
     &:before
       content: ''
       width: 100%
@@ -288,6 +426,7 @@
       background-image: url(../icon/icon-zoom.svg)
       background-repeat: no-repeat
       background-position: center
+      background-size: contain
       position: absolute
       top: 50%
       left: 50%
@@ -295,6 +434,9 @@
       z-index: 1
       transition: .5s ease
       opacity: 0
+      +screen('max', 767)
+        width: 70px
+        height: 70px
     &:hover
       &:before, &:after
           opacity: 1

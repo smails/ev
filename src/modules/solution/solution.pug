@@ -7,8 +7,10 @@
         +e.item
           +e.top
             +e.IMG.pic(src='/img/solution-' + index + '.png' alt='')
-            +e.P.caption=item
-            +e.P.price= 'от ' + price[index]
+            +e.box
+              +e.P.caption=item
+              +e.P.price= 'от ' + price[index]
+              +e.A.more_mobile(href='#') Подробнее
           +e.bottom
             +e.P.sign=item
             +e.rate
