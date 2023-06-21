@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import 'slick-carousel'
 
 import { Fancybox } from "../../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.esm.js";
 
@@ -123,3 +124,11 @@ $('.modal__back').click(function () {
   }
 })
 
+
+
+$('.content-slider').slick({
+  slidesToShow: 1,
+  speed: 300,
+  useTransform: true,
+  cssEase: 'cubic-bezier(0.770, 0.000, 0.175, 1.000)',
+});

@@ -10,7 +10,6 @@ include ../modules/callback/form
 +head('Оснащение магазина продуктов')
 body
   +header()
-  +breadcrumb(['Главная', 'Комплексное оснащение', 'Оснащение магазина продуктов'], 'Оснащение магазина продуктов')
   +banner('2')
   include ../modules/solution/solution-type
   +goods('Оборудование, необходимое при оснащении продуктового магазина')
@@ -24,7 +23,17 @@ body
           +e.IMG.pic(src='/img/plane-1.png' alt='')
         +e.A.item(href="/img/plane-2.png" data-fancybox="fa")
           +e.IMG.pic(src='/img/plane-2.png' alt='')
-  include ../modules/solution/solution
+  +b.vis
+    +e.inner.inner
+      +e.H2.title 3D визуализация проекта
+      +e.slider
+        +e.slide
+          +e.IMG.pic(src='/img/vis.jpg' alt='')
+        +e.slide
+          +e.IMG.pic(src='/img/vis.jpg' alt='')
+        +e.slide
+          +e.IMG.pic(src='/img/vis.jpg' alt='')
+  include ../modules/solution/solution-mini
   +form('Бесплатная консультация по оснащению')
   include ../modules/clients/clients-mini--white
   include ../modules/footer/footer

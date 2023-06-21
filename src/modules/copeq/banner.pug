@@ -1,6 +1,7 @@
 mixin banner(state)
   if state == '1'
     +b.banner-copeq(style="background-image: url(../img/banner-copeq-1.png)")
+      +breadcrumb(['Главная', 'Комплексное оснащение', 'Оснащение магазина продуктов'], 'Оснащение магазина продуктов')
       +e.inner.inner
         +e.content
           +e.H1.title
@@ -34,6 +35,7 @@ mixin banner(state)
                 a(href="#")  передачи данных
   if state == '2'
     +b.banner-copeq(style="background-image: url(../img/banner-copeq-2.png)")
+      +breadcrumb(['Главная', 'Комплексное оснащение', 'Оснащение магазина продуктов'], 'Оснащение магазина продуктов')
       +e.inner.inner
         +e.content
           +e.H1.title Оснащение магазина продуктов

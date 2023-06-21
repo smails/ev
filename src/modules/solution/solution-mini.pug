@@ -1,0 +1,10 @@
++b.solution
+  +e.inner.inner
+    +e.H2.title Также мы оснащаем
+    +e.slider
+      each item, index in ["Ресторан", "Столовая", "Фастфуд", "Кафе", "Магазин", "Магазин"]
+        +e.el
+          +e.top
+            +e.IMG.pic(src='/img/solution-' + index + '.png' alt='')
+            +e.box
+              +e.P.caption.text-center=item

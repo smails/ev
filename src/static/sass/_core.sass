@@ -164,3 +164,126 @@ body
 
 .sticker-2
   top: 44px
+
+.content
+  margin-bottom: 5rem
+  &__inner
+    max-width: 1164px
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 30px
+    margin-bottom: 7rem
+    picture
+      display: block
+      position: relative
+      +screen('max', 1200)
+        overflow: hidden
+      +screen('max', 767)
+        display: none
+      &::before
+        content: ''
+        background: $c6
+        border-radius: 20px
+        position: absolute
+        right: -30px
+        bottom: -30px
+        z-index: -1
+        display: block
+        width: 100%
+        height: 100%
+  &__box
+    max-width: 514px
+  &__title
+    font-weight: 700
+    margin-bottom: 2rem
+  &__sign
+    font-weight: 700
+    +fs(20px)
+    color: #595959
+    line-height: 1.35
+  &__info
+    display: flex
+    gap: 30px
+    +screen('max', 1023)
+      display: block
+  &__left
+    width: 65%
+    max-width: 700px
+    flex-shrink: 0
+    +screen('max', 1200)
+      max-width: 100%
+      width: 100%
+  &__right
+    +screen('max', 1200)
+      display: none
+  &__text
+    h2
+      margin-bottom: 2rem
+      margin-top: 4rem
+      &:first-of-type
+        margin-top: 0
+    p
+      margin-bottom: 2rem
+    & > p, & > a
+      +fs(20px)
+      line-height: 1.5
+      +screen('max', 1023)
+        +fs(16px)
+    a:not(.btn)
+      color: #6FA300
+      &:hover
+        color: $c5
+    img
+      margin: 2rem 0
+      max-width: 100%
+    .goods
+      &__inner
+        grid-template-columns: 1fr
+      &__info
+        +screen('max', 1023)
+          display: block
+  &__links
+    margin-top: 3rem
+    +fs(20px)
+    line-height: 1.5
+    +screen('max', 1023)
+      +fs(16px)
+    p
+      margin-bottom: 2rem
+    a
+      display: block
+      text-decoration: underline
+      margin-bottom: 2rem
+      &:hover
+        color: $c5
+
+.content-slider
+  position: relative
+  .slick-slide
+    height: auto
+  .slick-arrow
+    transform: translateY(-100%)
+    z-index: 1
+    +screen('max', 767)
+      transform: translateY(-50%)
+    &:before
+      content: ''
+      width: 100px
+      height: 100px
+      background: rgba(255, 255, 255, 0.5)
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      border-radius: 100%
+      z-index: -1
+  .slick-prev
+    left: 40px
+    +screen('max', 767)
+      left: 0
+  .slick-next
+    right: 40px
+    +screen('max', 767)
+      right: 0

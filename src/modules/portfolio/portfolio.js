@@ -18,5 +18,28 @@ $('.porfolio-big-slider').slick({
   slidesToShow: 1,
   speed: 300,
   useTransform: true,
-  cssEase: 'cubic-bezier(0.770, 0.000, 0.175, 1.000)'
+  cssEase: 'cubic-bezier(0.770, 0.000, 0.175, 1.000)',
+  responsive: [
+    {
+      breakpoint: 1023,
+      settings: {
+        centerPadding: '50px',
+      }
+    },
+  ]
+})
+
+window.addEventListener("load", function () {
+  if (window.innerWidth < 1024) {
+    $('.porfolio-big-slider').slick("unslick");
+  }
+});
+
+$('.vis__slider').slick({
+  centerMode: true,
+  slidesToShow: 1,
+  speed: 300,
+  fade: true,
+  useTransform: true,
+  cssEase: 'cubic-bezier(0.770, 0.000, 0.175, 1.000)',
 })

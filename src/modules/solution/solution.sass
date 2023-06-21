@@ -44,6 +44,8 @@
     margin-top: 2rem
     +fs(20px)
     font-weight: 700
+    &.text-center
+      text-align: center
     +screen('max', 767)
       +fs(16px)
   &__price
@@ -78,6 +80,8 @@
     color: #929292
   &__rate
     margin-top: 2rem
+  &__el
+    margin-right: 1rem
   &__line
     display: flex
     justify-content: space-between
@@ -99,6 +103,17 @@
       margin: 2rem 0 0
       +screen('min', 769)
         display: none
+  .slick-slide
+    height: auto
+    margin-right: 1rem
+  .slick-prev
+    left: -20px
+    +screen('max', 1300)
+      left: -10px
+  .slick-next
+    right: 0
+  .slick-slide img
+    max-width: 100%
 
 .solution-type
   &__title
@@ -134,6 +149,7 @@
     margin-top: 1rem
     +fs(26px)
     color: #595959
+    margin-bottom: 1rem
     +screen('max', 767)
       +fs(12px)
   &__pic

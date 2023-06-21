@@ -1,5 +1,6 @@
 .goods
   margin: 4rem 0
+  position: relative
   &__inner
     max-width: 1688px
     display: grid
@@ -16,6 +17,9 @@
       width: 100%
       +screen('min', 1024)
         display: none
+  &__box-nav
+    .select2-container
+      display: block
   &__nav
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25))
     +screen('max', 1023)
@@ -23,7 +27,7 @@
   &__nav-item
     border: 1px solid #E5E5E5
     border-bottom-width: 0
-    height: 70px
+    min-height: 70px
     display: flex
     align-items: center
     justify-content: space-between
@@ -63,12 +67,18 @@
       grid-gap: 10px
     +screen('max', 1150)
       grid-template-columns: repeat(2, 1fr)
+    &_two
+      grid-template-columns: repeat(2, 1fr)
   &__item
     background: #FFFFFF
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
     border-radius: 20px
     padding: 2rem
     box-sizing: border-box
+    +screen('max', 1023)
+      display: none
+    &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4)
+      display: block
     +screen('max', 767)
       box-shadow: none
       padding: 0
@@ -91,8 +101,6 @@
     display: flex
     justify-content: space-between
     align-items: center
-    +screen('max', 1023)
-      display: block
   &__price
     +fs(20px)
     font-weight: 700
@@ -109,6 +117,16 @@
     max-width: 276px
     display: block
     margin: 5rem auto 0
+  &__btn-more
+    margin: 20px auto 0
+    width: 200px
+    display: block
+    +screen('min', 1024)
+      display: none
+    +screen('max', 767)
+      +fs(14px)
+      padding: 10px 20px
+      width: 160px
   .callback-mini
     grid-column: 1 / span 4
     grid-row: 3 / span 4

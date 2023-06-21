@@ -1,0 +1,129 @@
+//- mixins
+include ../static/pug/breadcrumb
+include ../static/pug/head
+include ../modules/callback/form
+
+
++head('Контакты')
+body
+  +header()
+  +breadcrumb(['Главная', 'Контакты'], 'Контакты')
+  +b.contacts
+    +e.inner.inner
+      +e.H1.title Контакты
+    +e.map-box
+      script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1ae86b3be5c6344b5f80d81c13174f3fdba95c6a3155a42687ff1bc95a7ec5c5&width=100%25&height=100%&lang=ru_RU&scroll=false')
+    +e.inner.inner
+      +e.line
+        +e.H2.caption Центральный офис – Москва 
+        +e.box
+          +e.IMG.pic(src='/img/map-stub.png' alt='')
+          +e.col
+            +e.A.map(href="#") г. Москва, ул. Нижняя Первомайская, д. 43а, офис 1
+            +e.time Пн – Пт 
+              span
+              | 09:00 – 20:00
+            +e.A.map-more.btn-outline_green(href="#") Показать на карте
+          +e.col
+            +e.phone
+              b Москва
+              big
+                a(href="tel:+7 (495) 320-02-54") +7 (495) 320-02-54
+            +e.phone
+              b Россия
+              big
+                a(href="tel:+7 (800) 302-32-14") +7 (800) 302-32-14
+              span звонок по РФ бесплатный
+            +e.mail
+              b E-mail для заказа
+              a(href="mailto:order+598595@evro-market.ru") order+598595@evro-market.ru
+          +e.col
+            +e.cnt
+              +e.B.cnt-title Бухгалтерия
+              +e.phone-gray
+                a(href="tel:+7 (967) 081-18-56") +7 (967) 081-18-56
+              +e.mail-gray
+                a(href="mailto:2018evromarketbuh@mail.ru") 2018evromarketbuh@mail.ru
+            +e.cnt
+              +e.B.cnt-title Отдел логистики
+              +e.phone-gray
+                a(href="tel:+7 (985) 221-28-52") +7 (985) 221-28-52
+              +e.mail-gray
+                a(href="mailto:logist@evro-market.ru") logist@evro-market.ru
+            +e.soc
+              +e.A.soc-link(href="#")
+                +e.IMG.soc-icon(src='/img/tg-link.png' alt='')
+              +e.A.soc-link(href="#")
+                +e.IMG.soc-icon(src='/img/vk-link.png' alt='')
+      +e.line
+        +e.H2.caption Производство – Московская область, г.Электросталь
+        +e.box_green
+          +e.IMG.pic(src='/img/contact-production.png' alt='')
+          +e.col
+            +e.A.map(href="#") г. Электросталь, Территория ОАО «ЭЗТМ» ул. Красная, д.11а
+            +e.A.map-more.btn-outline_green(href="#") Показать на карте
+          +e.col
+            +e.phone
+              b Проходная
+              big
+                a(href="tel:+7 (496) 577-76-01") +7 (496) 577-76-01
+            +e.phone
+              b Алексей (мобильный)
+              a(href="tel:+7 963 687-83-98") +7 963 687-83-98
+            +e.phone
+              b Валерий (мобильный)
+              a(href="tel:+7 967 078-99-18") +7 967 078-99-18
+          +e.col
+            +e.cnt
+              +e.B.cnt-title Информация о юридическом лице
+              +e.cnt-info
+                p ООО «ТОРГОВОЕ ОБОРУДОВАНИЕ «ЕВРОМАРКЕТ»
+                p ОГРН: 1107746622433 
+                p Почтовый адрес: 144000, Московская область, г. Электросталь, а/я 80
+                p Юридический адрес: 105203 Москва, Нижняя Первомайская улица, 43А
+      +e.line
+        +e.H2.caption Представительства в других регионах России и СНГ
+        +e.box
+          +e.IMG.pic(src='/img/map-stub.png' alt='')
+          +e.col
+            +e.H3.holder Санкт-Петербург
+            +e.A.map(href="#") 199155 Санкт-Петербург, ул. Уральская 1, к.2,оф.356 БЦ АкадэмиА (м. Василеостровская)
+            +e.time Пн – Пт 
+              span
+              | 10:00 – 19:00
+            +e.A.map-more.btn-outline_green(href="#") Показать на карте
+          +e.col_pt-holder
+            +e.phone
+              b
+                a(href="tel:+7 (812) 602-66-81") +7 (812) 602-66-81
+            +e.mail
+              b
+                a(href="mailto:orderspb@evro-market.ru") orderspb@evro-market.ru
+          +e.col_pt-holder
+            +e.site
+              b Региональный сайт
+              a(href="https://spb.evro-market.ru") https://spb.evro-market.ru
+        +e.box
+          +e.IMG.pic(src='/img/map-stub.png' alt='')
+          +e.col
+            +e.H3.holder Ростов-на-Дону
+            +e.A.map(href="#") 344065, Ростов-на-Дону, ул. Туполева, 16 Е,офис 17
+            +e.time Пн – Пт 
+              span
+              | 10:00 – 17:00
+            +e.A.map-more.btn-outline_green(href="#") Показать на карте
+          +e.col_pt-holder
+            +e.phone
+              b
+                a(href="tel:+7 (863) 310-14-18") +7 (863) 310-14-18
+            +e.mail
+              b
+                a(href="mailto:rnd@evro-market.ru") rnd@evro-market.ru
+          +e.col_pt-holder
+            +e.site
+              b Региональный сайт
+              a(href="rnd@evro-market.ru") rnd@evro-market.ru
+  +form('Бесплатная консультация по оснащению')
+  include ../modules/clients/clients-mini--white
+  include ../modules/footer/footer
+  include ../static/pug/scripts

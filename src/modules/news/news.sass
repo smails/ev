@@ -1,0 +1,102 @@
+.news
+  &__inner
+    max-width: 1280px
+  &__title
+    margin-bottom: 3rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    // grid-auto-rows: 340px
+    gap: 50px 30px
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 600)
+      grid-template-columns: 1fr
+      gap: 30px
+  &__link
+    position: relative
+    border-radius: 20px
+    box-sizing: border-box
+    height: 340px
+    +screen('max', 600)
+      min-height: 204px
+      height: auto
+    &_nopic
+      background: $c3
+      padding: 3rem
+      display: flex
+      flex-flow: column
+      justify-content: center
+      .news__caption
+        +fs(24px)
+        +screen('max', 600)
+          +fs(18px)
+    &_bg
+      padding: 3rem
+      display: flex
+      flex-flow: column
+      justify-content: flex-end
+      &:before
+        content: ''
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background: linear-gradient(0deg, rgba(2, 15, 25, 0.8) 18.75%, rgba(2, 15, 25, 0) 100%)
+        z-index: 2
+        border-radius: 20px
+      .news__caption
+        color: #fff
+      .news__sign
+        color: #EAEAEA
+  &__pic
+    width: 100%
+    height: 150px
+    object-fit: cover
+    border-radius: 20px
+    margin-bottom: 3rem
+    +screen('max', 600)
+      height: 114px
+      margin-bottom: 2rem
+    &_bg
+      position: absolute
+      z-index: 1
+      top: 0
+      left: 0
+      height: 100%
+  &__caption
+    +fs(20px)
+    font-weight: 700
+    line-height: 1.35
+    margin-bottom: 1rem
+    position: relative
+    z-index: 3
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow: hidden
+    +screen('max', 600)
+      +fs(18px)
+  &__sign
+    +fs(18px)
+    line-height: 1.5
+    color: #595959
+    position: relative
+    z-index: 3
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow: hidden
+    +screen('max', 600)
+      +fs(13px)
+  .callback-mini
+    grid-column-start: 1
+    grid-column-end: 4
+    margin: 0
+    +screen('max', 1023)
+      grid-column-end: 3
+    +screen('max', 600)
+      grid-column-end: 2

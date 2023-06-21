@@ -8,6 +8,13 @@ $('.goods__left select').select2({
   dropdownParent: $('.goods__left'),
 })
 
+$('.goods__box-nav select').select2({
+  minimumResultsForSearch: Infinity,
+  width: 'style',
+  selectOnClose: true,
+  dropdownParent: $('.goods__box-nav'),
+})
+
 $('.goods__nav-item').mouseenter(function() {
   $(this).addClass('active').siblings().removeClass('active');
   $('.goods__content').hide();

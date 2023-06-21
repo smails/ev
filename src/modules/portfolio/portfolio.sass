@@ -161,6 +161,8 @@
 
 .portfolio-heading
   height: 570px
+  +screen('max', 767)
+    height: 400px
   &__inner
     position: relative
   &__content
@@ -168,6 +170,11 @@
     padding: 0 8vw
     color: #fff
     max-width: 700px
+    +screen('max', 1500)
+      margin-top: 18rem
+      padding: 0
+    +screen('max', 767)
+      margin-top: 4rem
   &__title
     margin-bottom: 3rem
     span
@@ -177,6 +184,9 @@
     line-height: 1.5
     +fs(20px)
     font-weight: 700
+    +screen('max', 767)
+      font-weight: 400
+      +fs(16px)
   .breadcrumb
     padding-top: 3rem
     margin-top: 0
@@ -189,15 +199,23 @@
     justify-content: space-between
     gap: 30px
     max-width: 1415px
+    +screen('max', 767)
+      display: block
+      text-align: center
   &__pic
     vertical-align: middle
     width: 280px
     object-fit: contain
     flex-shrink: 0
+    +screen('max', 767)
+      width: 150px
   &__text
     +fs(20px)
     line-height: 1.5
     max-width: 1015px
+    text-align: left
+    +screen('max', 767)
+      +fs(12px)
     p
       margin-bottom: 2rem
 
@@ -205,6 +223,19 @@
   position: relative
   height: 700px
   margin: 7rem 0
+  +screen('max', 1200)
+    height: 500px
+  +screen('max', 1023)
+    height: 400px
+  +screen('max', 767)
+    height: auto
+    width: 100vw
+    display: grid
+    grid-gap: 20px
+    grid-template-columns: repeat(2, 1fr)
+    padding: 0 20px
+    box-sizing: border-box
+    grid-auto-rows: 92px
   .slick-prev
     left: 7vw
   .slick-next
@@ -220,9 +251,52 @@
       height: 100%
       object-fit: cover
       border-radius: 20px
+      +screen('max', 767)
+        width: 100%
     &.slick-active
       opacity: 1
-
+  &__slide
+    &:last-of-type
+      +screen('max', 767)
+        position: relative
+      &:after
+        font-weight: 600
+        position: absolute
+        top: 0
+        left: 0
+        color: $c2
+        z-index: 3
+        line-height: .95
+        display: block
+        width: 100%
+        height: 100%
+        background: linear-gradient(0deg, rgba(2, 15, 25, 0.5), rgba(2, 15, 25, 0.5))
+        +fs(30px)
+        text-align: center
+        line-height: 3
+        +screen('max', 767)
+          content: attr(data-sign)
+  &__pic
+    +screen('max', 767)
+      width: 100%
+      height: 100%
+      object-fit: cover
+.vis
+  padding: 4rem 0
+  background: #FBFBF3
+  margin: 5rem 0
+  &__title
+    margin-bottom: 3rem
+  .slick-prev
+    left: 0
+  .slick-next
+    right: 0
+  .slick-slide
+    transition: .5s ease
+    height: auto
+  &__pic
+    margin: 0 auto
+    max-width: 100%
 .task-info
   &__inner
     display: flex
@@ -230,8 +304,17 @@
     justify-content: space-between
     gap: 30px
     max-width: 1610px
+    +screen('max', 1023)
+      flex-flow: column-reverse
+      position: relative
+      padding-top: 60px
+      align-items: flex-start
   &__title
     margin-bottom: 3rem
+    +screen('max', 1023)
+      position: absolute
+      top: 0
+      left: 20px
   &__pictures
     width: 50%
     max-width: 645px
@@ -240,36 +323,59 @@
     grid-template-columns: repeat(2, 240px)
     grid-auto-rows: 150px
     grid-gap: 30px
+    +screen('max', 767)
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 10px
+      width: 100%
+      grid-auto-rows: 96px
   &__content
     max-width: 855px
   &__txt
     +fs(20px)
     line-height: 1.5
     max-width: 1015px
+    +screen('max', 767)
+      +fs(12px)
     p
       margin-bottom: 2rem
   &__pic
     border-radius: 20px
+    +screen('max', 767)
+      width: 100%
+      height: 100%
+      object-fit: cover
     &:first-of-type
       margin-left: 7vw
+      +screen('max', 1200)
+        margin-left: 0
 
 .decision-info
   padding: 8rem 0 10rem
   background: $c6
+  +screen('max', 767)
+    padding: 3rem 0 5rem
   &__inner
     max-width: 1520px
   &__title
     margin-bottom: 4rem
+    +screen('max', 767)
+      margin-bottom: 3rem
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-gap: 40px
     counter-reset: list
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 767)
+      grid-template-columns: 1fr
   &__item
     padding-left: 80px
     line-height: 1.5
     box-sizing: border-box
     position: relative
+    +screen('max', 767)
+      +fs(12px)
     &:before
       counter-increment: list
       content: counter(list)
@@ -293,22 +399,43 @@
     justify-content: space-between
     gap: 30px
     max-width: 1610px
+    +screen('max', 1023)
+      position: relative
+      padding-top: 60px
+      flex-wrap: wrap
+    +screen('max', 767)
+      padding-top: 45px
   picture
     max-width: 772px
     width: 50%
+    +screen('max', 1023)
+      width: 100%
+  &__title
+    +screen('max', 1023)
+      position: absolute
+      top: 0
+      left: 20px
   &__pic
     width: 100%
     vertical-align: middle
     border-radius: 20px
     height: 490px
     object-fit: cover
+    +screen('max', 1023)
+      height: auto
+    +screen('max', 767)
+      height: 203px
   &__content
     max-width: 730px
     width: 50%
+    +screen('max', 1023)
+      width: 100%
   &__txt
     +fs(20px)
     line-height: 1.5
     max-width: 1015px
+    +screen('max', 767)
+      +fs(12px)
     p
       margin-bottom: 2rem
   &__title
@@ -322,13 +449,23 @@
     gap: 8vw
     max-width: 1610px
     margin-right: calc((100% - 1800px) / 2)
+    +screen('max', 1800)
+      margin-right: 0
+    +screen('max', 1400)
+      gap: 20px
+    +screen('max', 1100)
+      flex-flow: column
   &__content
     max-width: 730px
     width: 50%
+    +screen('max', 1100)
+      width: 100%
   &__txt
     +fs(20px)
     line-height: 1.5
     max-width: 1015px
+    +screen('max', 767)
+      +fs(12px)
     p
       margin-bottom: 2rem
   &__title
@@ -339,6 +476,8 @@
     padding: 7rem 6rem
     box-sizing: border-box
     border-radius: 20px
+    +screen('max', 767)
+      padding: 4rem 4.5rem
   &__text
     +fs(20px)
     color: #595959
@@ -347,17 +486,31 @@
     background-image: url(../icon/icon-quote.svg)
     background-repeat: no-repeat
     background-position: left top
+    +screen('max', 767)
+      background-size: 30px
+      padding-left: 7rem
+      +fs(12px)
   &__pers
     padding-left: 11rem
     display: flex
     align-items: center
     gap: 30px
     margin-top: 4rem
+    +screen('max', 767)
+      padding-left: 0
   &__name
     margin-bottom: .5rem
     font-weight: 700
+    +screen('max', 767)
+      +fs(12px)
   &__sign
     color: #595959
+    +screen('max', 767)
+      +fs(12px)
+  &__pic
+    border-radius: 100%
+    +screen('max', 767)
+      width: 40px
 
 .similar
   &__title
@@ -366,6 +519,10 @@
     display: grid
     grid-template-columns: repeat(2, 1fr)
     grid-gap: 10px
+    +screen('max', 1023)
+      grid-template-columns: 1fr
+    +screen('max', 767)
+      grid-auto-rows: 388px
   &__item
     position: relative
   &__content

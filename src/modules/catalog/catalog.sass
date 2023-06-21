@@ -405,7 +405,7 @@
       height: 0
   &__item
     padding: 8px 13px
-    background: #F5F5F5
+    background: $c3
     border-radius: 5px
     margin-bottom: 0
     transition: .3s ease
@@ -416,6 +416,13 @@
 
 .pagination
   margin: 3rem 0
+  &_between
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +screen('max', 1023)
+      flex-flow: column
+      gap: 20px
   &__list
     display: flex
     align-items: center
@@ -450,10 +457,13 @@
       background: #D5DC87
   &__end
     margin-bottom: 0
+    box-sizing: border-box
     +screen('max', 767)
-      margin-bottom: 15px
+      margin-bottom: 20px
       flex-grow: 1
       text-align: right
+      padding-right: 30px
+      +fs(20px)
   &__next
     font-weight: 700
     color: $c5
