@@ -1,0 +1,213 @@
+.box-info
+  &__row
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 30px
+    +screen('max', 1200)
+      flex-flow: column-reverse
+  &__title
+    margin-bottom: 2rem
+    +screen('max', 767)
+      +fs(22px)
+  &__text
+    +fs(18px)
+    line-height: 1.5
+  &__sign
+    text-transform: uppercase
+    margin-top: 3rem
+    color: $c4
+    +fs(22px)
+    font-weight: 600
+    +screen('max', 767)
+      +fs(16px)
+  &__list
+    margin-top: 2rem
+    +fs(20px)
+    +screen('max', 767)
+      +fs(16px)
+    li
+      position: relative
+      padding-left: 30px
+      margin-bottom: 1rem
+      background-image: url(../icon/icon-check.svg)
+      background-repeat: no-repeat
+      background-position: left center
+      background-size: contain
+  &__el
+    +fs(22px)
+    background-repeat: no-repeat
+    background-position: left center
+    background-size: contain
+    margin-bottom: 3rem
+    padding: 2rem 0 2rem 90px
+    +screen('max', 767)
+      +fs(18px)
+      padding: 1rem 0 1rem 40px
+      background-size: 30px
+  &__pic
+    max-width: 700px
+    width: 100%
+  &__right
+    flex-shrink: 0
+  &__line
+    max-width: 80%
+    margin-bottom: 5rem
+
+.gallery-slider
+  +screen('max', 1200)
+    margin-top: 5rem
+  &__slide
+    text-align: center
+    img
+      display: inline-block
+      max-width: 100%
+  .slick-slide
+    height: auto
+  .slick-prev
+    left: 7vw
+  .slick-next
+    right: 7vw
+
+.vnt
+  padding: 10rem 0
+  &__inner
+    display: flex
+    justify-content: space-evenly
+    gap: 50px
+    +screen('max', 767)
+      flex-wrap: wrap
+  &__item
+    text-align: center
+    max-width: 290px
+  &__pic
+    width: 120px
+    vertical-align: middle
+    margin-bottom: 3rem
+  &__title
+    +fs(25px)
+    font-weight: 600
+    line-height: 1.5
+    +screen('max', 767)
+      +fs(18px)
+
+.sol
+  background: $c6
+  padding: 10rem 0
+  &__inner
+    max-width: 1280px
+  &__title
+    margin-bottom: 2rem
+  &__row
+    display: grid
+    grid-auto-flow: column
+    gap: 60px
+    +screen('max', 767)
+      grid-template-columns: 1fr
+      grid-auto-flow: row
+      gap: 20px
+  &__caption
+    margin-bottom: 2rem
+    color: $c5
+    +screen('max', 767)
+      +fs(16px)
+  &__item
+    +fs(20px)
+    margin-bottom: 1.5rem
+    +screen('max', 767)
+      +fs(14px)
+  &__req
+    margin: 5rem auto 0
+    display: block
+    max-width: 255px
+
+.individual
+  &__inner
+    max-width: 1400px
+  &__title
+    margin-bottom: 3rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 40px
+    +screen('max', 1260)
+      grid-gap: 10px
+      grid-template-columns: repeat(3, 1fr)
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+  &__pic
+    width: 100%
+    object-fit: contain
+    margin-bottom: 2rem
+  &__caption
+    line-height: 1.35
+    display: block
+    +fs(20px)
+    font-weight: 600
+    margin-bottom: 1rem
+    +screen('max', 767)
+      +fs(16px)
+  &__txt
+    +fs(16px)
+    color: #595959
+    line-height: 1.3
+    +screen('max', 767)
+      +fs(12px)
+
+.tech-table
+  &__title
+    margin-bottom: 3rem
+  &__table
+    overflow: auto
+    width: 100%
+    table
+      width: 100%
+    td,th
+      border: 1px solid $c3
+      +screen('max', 767)
+        font-size: 14px
+      &:not(&:first-of-type)
+        text-align: center
+    th
+      padding: 1.5rem 1.2rem
+      text-align: left
+      background: $c6
+      color: #929292
+      +screen('max', 767)
+        white-space: nowrap
+    td
+      padding: 1rem 1.2rem
+      a
+        text-decoration: underline
+
+.about-info
+  &__line
+    display: flex
+    align-items: center
+    &:nth-of-type(2n)
+      background: $c10
+      flex-flow: row-reverse
+    +screen('max', 767)
+      display: block
+  &__pic
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__title
+    color: $c4
+  &__content
+    padding: 0 5vw
+    box-sizing: border-box
+    +screen('max', 767)
+      padding: 5vw
+  &__subtitle
+    line-height: 1.5
+    margin-top: 2rem
+  picture
+    height: 400px
+    width: 50%
+    flex-shrink: 0
+    display: block
+    +screen('max', 767)
+      height: 200px
+      width: 100%

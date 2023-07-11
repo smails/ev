@@ -1,0 +1,219 @@
+//- mixins
+include ../static/pug/breadcrumb
+include ../static/pug/head
+include ../modules/copeq/banner
+include ../modules/callback/callback
+include ../modules/callback/form
+
+
++head('Кондитерская витрина SOUL')
+body
+  +header()
+  +banner('3')
+  +b.box-info.section
+    +e.inner.inner
+      +e.row
+        +e.left
+          +e.H2.title SOUL - витрина без компромиссов!
+          +e.text Воздушная выкладка и идеальный обзор на уровне глаз - начало выкладки от пола на уровне 480мм - идеально демонстрирует товар. Благодаря ламинарному потоку за счет особой конструкции сот, распределению воздуха и слабому выдуву пирожные не подсыхают.
+          br
+          | РАВНОМЕРНАЯ ТЕМПЕРАТУРА НА ВСЕХ ПОЛКАХ И ОХЛАЖДЕНИЕ ВПЛОТЬ ДО НУЛЯ!
+          +e.P.sign НАСТРАИВАЕМЫЕ ТЕМПЕРАТУРНЫЕ РЕЖИМЫ, ИДЕАЛЬНЫЕ ДЛЯ:
+          +e.UL.list
+            li Тортов и пирожных
+            li Сэндвичей и снеков
+            li Шоколада
+        +e.right
+          figure
+            +e.IMG.pic(src='/img/ldsp-1.jpg' alt='')
+  +b.box-info
+    +e.inner.inner
+      +e.H2.title.text-center Стандартное оснащение
+      +e.row
+        +e.left
+          +e.el(style="background-image: url(/img/icon-el-1.png)") Полки из закаленного стекла
+          +e.el(style="background-image: url(/img/icon-el-2.png)") LED подсветка всех полок
+          +e.el(style="background-image: url(/img/icon-el-3.png)") Шторки и боковины из стеклопакетов
+        +e.right
+          +e.IMG.pic(src='/img/ldsp-2.jpg' alt='')
+  +b.gallery-slider
+    +e.slide
+      +e.IMG.pic(src='/img/gallery-1.png' alt='')
+    +e.slide
+      +e.IMG.pic(src='/img/gallery-1.png' alt='')
+    +e.slide
+      +e.IMG.pic(src='/img/gallery-1.png' alt='')
+    +e.slide
+      +e.IMG.pic(src='/img/gallery-1.png' alt='')
+    +e.slide
+      +e.IMG.pic(src='/img/gallery-1.png' alt='')
+  +callback('2')
+  +b.decision-info
+    +e.inner.inner
+      +e.H2.title.text-center Ключевые преимущества витрин SOUL
+      +e.list
+        +e.item Одинаковая температура на всех полках
+        +e.item Откидное переднее стекло
+        +e.item Возможен вариант для выносного холодоснабжения
+        +e.item Кристально чистые стекла всегда
+        +e.item Шторки и боковины из стеклопакетов
+        +e.item Подсветка каждой полки
+  +b.vnt
+    +e.inner.inner
+      +e.item
+        +e.IMG.pic(src='/icon/icon-vnt-1.svg' alt='')
+        +e.P.title Площадь экспозиции - от 1,42 м2
+      +e.item
+        +e.IMG.pic(src='/icon/icon-vnt-2.svg' alt='')
+        +e.P.title Экологически безопасный хладагент
+      +e.item
+        +e.IMG.pic(src='/icon/icon-vnt-3.svg' alt='')
+        +e.P.title Датские
+          br
+          | компрессоры
+  +b.sol
+    +e.inner.inner
+      +e.H2.title.text-center Множество вариантов фасадов и отделки
+      +e.row
+        +e.box
+          +e.H3.caption Вы можете выбрать для фасада любой материал
+          +e.UL.list
+            +e.LI.item Металл
+            +e.LI.item ЛДСП
+            +e.LI.item МДФ
+            +e.LI.item Массив дерва
+            +e.LI.item Искусственный камень.
+        +e.box
+          +e.H3.caption Мы можем окрасить фасад и экспозицию в любой цвет
+          +e.UL.list
+            +e.LI.item Металлический фасад и экспозиция в - любой цвет RAL или нержавейка
+            +e.LI.item Любой цвет ЛДСП и МДФ по каталогу Egger
+            +e.LI.item Марение натурального дерева в любой цвет или браширование
+      +e.A.req.btn_green.js-open-modal(href='#callback') Отправить заявку
+  +b.option-repair.section
+    +e.inner.inner
+      +e.list_auto
+        +e.item
+          +e.IMG.pic(src='/img/option-1.png' alt='')
+          +e.content
+            +e.P.caption Любой оттенок ЛДСП по каталогу Egger
+            +e.text Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.
+        +e.item
+          +e.IMG.pic(src='/img/option-2.png' alt='')
+          +e.content
+            +e.P.caption Окраска фасада и экспозиции в любой цвет
+            +e.text Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.
+        +e.item
+          +e.IMG.pic(src='/img/option-3.png' alt='')
+          +e.content
+            +e.P.caption Любой материал для фасада
+            +e.text Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.
+        +e.item
+          +e.IMG.pic(src='/img/option-4.png' alt='')
+          +e.content
+            +e.P.caption Варианты остекления
+            +e.text Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.
+  +b.individual
+    +e.inner.inner
+      +e.H2.title.text-center Индивидуализация
+      +e.list
+        - for (var i = 0; i < 8; i++){
+          +e.item
+            +e.IMG.pic(src='/img/indvid-0.jpg' alt='')
+            +e.P.caption Узкая экспозиция, светлое ЛДСП
+            +e.P.txt Данная витрина имеет менее глубокую выкладку в 600мм, и светлую окраску экспозиции за счет чего выглядит еще более воздушно. Отделка фасада - светлое ЛДСП.
+          +e.item
+            +e.IMG.pic(src='/img/indvid-0.jpg' alt='')
+            +e.P.caption Узкая экспозиция, "воздушные" верхние полки
+            +e.P.txt Кондитерская витрина под глубокую встройку в интерьер ресторана, две верхние полки имеют идеальный обзор не загораживаемый стойками.
+        - }
+      +callback('1')
+  +b.box-info
+    +e.inner.inner
+      +e.H2.title.text-center Исполнение в варианте "Самообслуживание"
+      +e.row
+        +e.left
+          +e.line
+            +e.H3.title Динамическое охлаждение
+            +e.text Распределяет холодный воздух по каждой полке за счет равномерного выдува с задней стенки.
+          +e.line
+            +e.H3.title Передний заградитель
+            +e.text Обеспечивает постоянную воздушную завесу, из холодного воздуха даже без стекла.
+        +e.right
+          figure
+            +e.IMG.pic(src='/img/ldsp-3.jpg' alt='')
+  +b.tech-table.section
+    +e.inner.inner
+      +e.H2.title.text-center Технические характеристики и цены стандартных моделей
+      +e.table
+        table
+          thead
+            tr
+              th Характеристика
+              th Sring D 938 BT
+              th Sring D 1250 BT
+              th Sring D 1563 BT
+              th Sring D 1875 BT
+          tbody
+            tr
+              td Габариты (Д*В*Г) мм
+              td
+                a(href="#") 938*1176*1073
+              td
+                a(href="#") 1250*1176*1073
+              td
+                a(href="#") 1563*1176*1073
+              td
+                a(href="#") 1875*1176*1073
+            tr
+              td Габариты в упаковке мм
+              td
+                a(href="#") 1038*1300*1173
+              td
+                a(href="#") 1350*1300*1173
+              td
+                a(href="#") 1663*1300*1173
+              td
+                a(href="#") 1975*1300*1173
+            tr
+              td Тип охлаждения
+              td Статическое
+              td Статическое
+              td Статическое
+              td Статическое
+            tr
+              td Микропроцессорный блок управления
+              td
+                img(src="/icon/icon-check-table.svg" alt="")
+              td
+                img(src="/icon/icon-check-table.svg" alt="")
+              td
+                img(src="/icon/icon-fall-table.svg" alt="")
+              td
+                img(src="/icon/icon-check-table.svg" alt="")
+            tr
+              td Тип оттайки
+              td Автоматическая ТЭНом
+              td Автоматическая ТЭНом
+              td Автоматическая ТЭНом
+              td Автоматическая ТЭНом
+  +b.about-info
+    +e.line
+      +e.IMG.pic(src='/img/about-1.jpg' alt='')
+      +e.content
+        +e.H2.title О заводе "Евромаркет"
+        +e.P.subtitle Завод торгового Оборудования «Евромарĸет» основан в 2010 году, - российсĸий производитель стеллажей из металла, ЛДСП и дерева с и холодильных витрин. Мы лидируем в области производства нестандартного оборудования а таĸже единственный завод имеющий мощный марĸетинговый интернет-ĸанал.
+    +e.line
+      +e.IMG.pic(src='/img/about-2.jpg' alt='')
+      +e.content
+        +e.H2.title Мы производим все детали витрин на лазере
+        +e.P.subtitle Поэтому они имеют идеальное качество сборки. Лазерная резка гарантирует точность изготовления каждой деталии.
+    +e.line
+      +e.IMG.pic(src='/img/about-1.jpg' alt='')
+      +e.content
+        +e.H2.title Ручная сборка и тестирование каждой витрины
+        +e.P.subtitle Каждая витрина собирается вручную и тестируется ОТК на отсутствие брака, а также инженерами на соответствие конструктивным холодильным характеристикам. Все витрины упаковываются в обрешетку.
+  +form('Бесплатная консультация по оснащению')
+  include ../modules/clients/clients-mini--white
+  include ../modules/footer/footer
+  include ../static/pug/scripts

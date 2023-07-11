@@ -3,6 +3,11 @@
   box-sizing: border-box
   margin-top: 7rem
   position: relative
+  min-height: 550px
+  background-position: center
+  background-size: cover
+  +screen('max', 1200)
+    min-height: 400px
   +screen('max', 767)
     margin-top: 0
     padding: 8rem 0 5rem
@@ -15,6 +20,9 @@
     color: #fff
     +screen('max', 1023)
       display: block
+    &_mod
+      margin-top: 10rem
+      color: $c1
   &__content
     max-width: 730px
   &__title
