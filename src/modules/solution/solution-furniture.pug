@@ -1,0 +1,10 @@
++b.solution_first
+  +e.inner.inner
+    +e.H2.title Мебель для торговли, которую мы производим
+    +e.slider-el
+      each item, index in ["Барные стойки", "Стойки ресепшн", "Торговые стойки", "Кофейные модули", "Кассовые прилавки"]
+        +e.el
+          +e.wrap
+            +e.IMG.icon(src='/img/furniture-' + index + '.png' alt='')
+            +e.box
+              +e.P.caption.text-center=item

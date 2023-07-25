@@ -1,4 +1,6 @@
 .solution
+  &_first
+    margin-top: 4rem
   &__title
     margin-bottom: 3rem
   &__list
@@ -36,6 +38,14 @@
       display: flex
       gap: 20px
       text-align: left
+  &__wrap
+    text-align: center
+    box-sizing: border-box
+    padding: 2rem
+    border: 2px solid $c4
+    border-radius: 20px
+    +screen('max', 767)
+      width: 70vw
   &__pic
     +screen('max', 767)
       width: 100px

@@ -1,0 +1,60 @@
+//- mixins
+include ../static/pug/breadcrumb
+include ../static/pug/head
+include ../modules/copeq/banner
+include ../modules/callback/callback
+include ../modules/callback/form
+
+
++head('Страница внутренняя изделия')
+body
+  +header()
+  +banner('2', 'Страница внутренняя изделия')
+  include ../modules/why/why
+  +b.products
+    +e.inner.inner
+      +e.H2.title Товары
+      +e.list
+        - for(var k=0; k<20; k++){
+          +e.item
+            +e.top
+              if k % 4 == 0
+                +e.best.sticker-1 Бестселлер!
+              a(href="#")
+                +e.IMG.pic(src='/img/catalog-1.png' alt='')
+            +e.P.price 11 924 руб.
+            +e.A.caption(href="#") Овощной стеллаж с металлическим полками без фриза
+            +e.A.link(href="#") Смотреть варианты размеров
+        - }
+        +callback('3')
+      +e.control
+        +e.BUTTON.btn-more.btn_orange Показать еще
+  +b.portfolio-box
+    +e.inner.inner
+      +e.list
+        - for(var i = 0; i < 7; i++){
+          if i == 0
+            +e.item_first
+              +e.IMG.pic_big(src='/img/gallery-'+ i +'.png' alt='')
+              +e.content
+                +e.P.title Пекарня “Мудрый пекарь”
+                +e.text Набережные Челны, 
+                  br
+                  | ул. Иванова, д. 4
+          else
+            +e.item
+              +e.IMG.pic(src='/img/gallery-'+ i +'.png' alt='')
+        -}
+      +e.control
+        +e.BUTTON.btn-more.btn_green Показать еще
+  +form('Бесплатная консультация по оснащению')
+  +b.content-text.section
+    +e.inner.inner
+      +e.txt 
+        h2 Заголовок
+        p В целом, конечно, начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации инновационных методов управления процессами. А также непосредственные участники технического прогресса будут превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Но разбавленное изрядной долей эмпатии, рациональное мышление предопределяет высокую востребованность модели развития... 
+        .hidden
+          p В целом, конечно, начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации инновационных методов управления процессами. А также непосредственные участники технического прогресса будут превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Но разбавленное изрядной долей эмпатии, рациональное мышление предопределяет высокую востребованность модели развития... 
+        a(href="#" class="toogle-text")  Читать далее....
+  include ../modules/footer/footer
+  include ../static/pug/scripts

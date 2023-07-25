@@ -822,3 +822,85 @@
     color: #929292
     +screen('max', 767)
       display: none
+
+.products
+  &__list
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    gap: 10px
+    +screen('max', 1690)
+      grid-template-columns: repeat(4, 1fr)
+    +screen('max', 1150)
+      grid-template-columns: repeat(3, 1fr)
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+  &__item
+    border-radius: 20px
+    padding: 2rem
+    box-sizing: border-box
+    +screen('max', 1023)
+      display: none
+    &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4)
+      display: block
+    +screen('max', 767)
+      box-shadow: none
+      padding: 0
+  &__top
+    position: relative
+  &__sale, &__best
+    +fs(14px)
+    font-weight: 700
+    color: $c2
+    position: absolute
+    padding: 8px 13px
+    border-radius: 5px
+    z-index: 3
+    top: 0
+    left: 0
+    +screen('max', 767)
+      +fs(12px)
+  &__sale
+    background: #FB4D3D
+  &__best
+    background: #C2D212
+  &__pic
+    width: 268px
+    height: 268px
+    object-fit: contain
+    margin: 0 auto
+    display: block
+    +screen('max', 767)
+      width: 130px
+      height: 130px
+  &__caption
+    margin: 2rem 0
+    line-height: 1.35
+    display: block
+    +screen('max', 767)
+      +fs(12px)
+  &__price
+    +fs(26px)
+    font-weight: 700
+    color: #595959
+    +screen('max', 767)
+      +fs(12px)
+  &__link
+    color: $c5
+    text-decoration: underline
+    +screen('max', 767)
+      +fs(12px)
+    &:hover
+      color: $c7
+  &__control
+    text-align: center
+    margin-top: 3rem
+  .callback-mini
+    grid-column: 1 / span 5
+    grid-row: 3 / span 4
+    +screen('max', 1690)
+      grid-column: 1 / span 4
+    +screen('max', 1150)
+      grid-column: 1 / span 3
+      grid-row: 4 / span 5
+    +screen('max', 1023)
+      display: none

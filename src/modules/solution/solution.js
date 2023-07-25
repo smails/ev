@@ -26,3 +26,24 @@ $('.solution__slider').slick({
     },
   ]
 });
+
+$('.solution__slider-el').slick({
+  slidesToShow: 5,
+  speed: 300,
+  useTransform: true,
+  responsive: [
+    {
+      breakpoint: 1300,
+      settings: {
+        slidesToShow: 4
+      }
+    },
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: true
+      }
+    },
+  ]
+});
