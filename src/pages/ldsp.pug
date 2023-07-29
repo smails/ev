@@ -213,6 +213,64 @@ body
       +e.content
         +e.H2.title Ручная сборка и тестирование каждой витрины
         +e.P.subtitle Каждая витрина собирается вручную и тестируется ОТК на отсутствие брака, а также инженерами на соответствие конструктивным холодильным характеристикам. Все витрины упаковываются в обрешетку.
+  +b.individual.section
+    +e.inner.inner
+      +e.H2.title Блок для номера 2, 4
+      +e.P.sign Данная витрина имеет менее глубокую выкладку в 600мм, и светлую окраску экспозиции за счет чего выглядит еще более воздушно. Отделка фасада - светлое ЛДСП.
+      +e.list
+        - for (var i = 0; i < 4; i++){
+          +e.item
+            +e.IMG.pic(src='/img/indvid-0.jpg' alt='')
+          +e.item
+            +e.IMG.pic(src='/img/indvid-0.jpg' alt='')
+        - }
+  +b.flow-work.section
+    +e.inner.inner
+      +e.picture
+        +e.slider-main(data-slick='{"slidesToShow": 1}')
+          +e.IMG.pic(src='/img/gallery_work-3.png' alt='')
+          +e.IMG.pic(src='/img/gallery_work-3.png' alt='')
+          +e.IMG.pic(src='/img/gallery_work-3.png' alt='')
+        +e.slider-nav(data-slick='{"slidesToShow": 3}')
+          +e.IMG.pic(src='/img/gallery_work-3.png' alt='')
+          +e.IMG.pic(src='/img/gallery_work-3.png' alt='')
+          +e.IMG.pic(src='/img/gallery_work-3.png' alt='')
+      +e.content
+        +e.H2.caption Блок для номера 3
+        +e.table
+          table
+            thead
+              tr
+                th Наименование параметра
+                th Ширина, мм
+                th Глубина, мм
+                th Высота, мм
+            tbody
+              tr
+                td СК 065
+                td 656
+                td 300-800
+                td 1100-2900
+              tr
+                td СК 080
+                td 806
+                td 300-800
+                td 1100-2900
+              tr
+                td СК 100
+                td 1006
+                td 300-800
+                td 1100-2900
+              tr
+                td СК 125
+                td 1261
+                td 300-800
+                td 1100-2900
+              tr
+                td СК 132
+                td 1326
+                td 300-800
+                td 1100-2900
   +form('Бесплатная консультация по оснащению')
   include ../modules/clients/clients-mini--white
   include ../modules/footer/footer
